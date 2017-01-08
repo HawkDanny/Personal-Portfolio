@@ -1,0 +1,102 @@
+* {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.clearBorder {
+    border-width: 0px;
+}
+
+#headerCanvas {
+    position: absolute;
+}
+
+body {
+    background-color: #F8F8F8;
+    font-size: 16pt;
+}
+
+a {
+    color: #242424;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.spaceVertical {
+    height: 100vh;
+}
+
+.flexContainer {
+    padding: 25px !important;
+    margin: auto !important;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexItem {
+    margin: 25px !important;
+    min-width: 400px;
+    min-height: 400px;
+    background-image: url("media/BoopThumb.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 1;
+    flex-basis: auto;
+    height: 200px;
+}
+
+.contactInfo {
+    margin: auto !important;
+    text-align: center;
+    width: 1207px;
+}
+
+.contactInfo ul {
+    list-style: none;
+}
+
+.contactInfo li {
+    float: left;
+    padding: 20px !important;
+    padding-bottom: 50px !important;
+}
+
+.diamond {
+	height: 1em;
+    width: 1em;
+    transform: rotate(45deg);
+}
+
+@media (max-width: 1207px) {
+    .contactInfo {
+        width: 200px;
+        text-align: center;
+    }
+
+    .contactInfo li {
+        float: none;
+        padding-top: 0px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .colored {
+        margin-left: 70px !important;
+    }
+
+    .diamond {
+        height: 20px;
+        width: 20px;
+    }
+}

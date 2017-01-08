@@ -1,0 +1,69 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    background: #FFF;
+    color: #111;
+    font-size: 16pt;
+    font-family: 'Ubuntu';
+}
+
+h1 {
+    font-size: 50pt;
+}
+
+h2 {
+    font-size: 36pt;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+h4 {
+    font-size: 20pt;
+}
+
+h5 {
+    font-size: 18pt;
+}
+
+i {
+    font-style: italic;
+}
+
+p {
+    line-height: 1.3em;
+}
+
+.headerImage{
+    width: 100vw;
+}
+
+article {
+    width: 800px;
+    margin: auto;
+}
+
+.header h1 {
+    padding-top: 50px;
+    font-family: 'Aref Ruqaa';
+}
+
+.header h4 {
+    padding-bottom: 50px;
+}
+
+.hline {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    height: 5px;
+    background: #111;
+}
+
+.topicHeader {
+    font-size: 32pt;
+}
+
+.cards {
+    margin-top: 50px;
+}
