@@ -48,7 +48,7 @@ a:hover {
     margin: 25px !important;
     min-width: 400px;
     min-height: 400px;
-    background-image: url("media/BoopThumb.png");
+    background-image: url("../media/BoopThumb.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
