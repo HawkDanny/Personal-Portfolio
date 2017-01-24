@@ -23,7 +23,11 @@ app.Fractal = function() {
         var centerX = this.canvas.width / 2;
         var centerY = this.canvas.height / 2;
 
-        var mousePos = getMousePos(this.canvas, event);
+        if (event) {
+            var mousePos = getMousePos(this.canvas, event);
+        } else {
+            var mousePos = {x: centerX, y: centerY};
+        }
 
         if (this.isMobile) {
             var distanceFromCenter = 75;

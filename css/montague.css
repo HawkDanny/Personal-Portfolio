@@ -1,69 +1,302 @@
 * {
     padding: 0px;
     margin: 0px;
-    background: #FFF;
+    background: #EEE;
     color: #111;
     font-size: 16pt;
-    font-family: 'Ubuntu';
+    font-family: 'Open Sans';
 }
 
-h1 {
-    font-size: 50pt;
+*:focus {
+    outline: 0;
+}
+
+html {
+    overflow-x: none;
 }
 
 h2 {
-    font-size: 36pt;
-}
-
-h3 {
-    font-size: 24pt;
-}
-
-h4 {
-    font-size: 20pt;
-}
-
-h5 {
+    color: #555;
     font-size: 18pt;
 }
 
-i {
-    font-style: italic;
+h3 {
+    color: #888;
+    font-size: 14pt;
+    padding-bottom: 25px !important;
 }
 
-p {
-    line-height: 1.3em;
+/*NAV*/
+.nav {
+    padding-left: 25px !important;
+    padding-top: 25px !important;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.headerImage{
-    width: 100vw;
+.nav a {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
 }
 
-article {
-    width: 800px;
-    margin: auto;
+.nav a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+/*HEADER*/
+.header {
+    background-image: url("../media/montagueHeader2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    min-height: 54vh;
+    text-align: center;
 }
 
 .header h1 {
-    padding-top: 50px;
-    font-family: 'Aref Ruqaa';
+    padding-top: 140px !important;
+    font-style: italic;
+    width: 100vw;
+    color: #f4f4f4 !important;
+    font-size: 50pt;
+    font-family: "Playfair Display", serif;
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 5px !important;
 }
 
-.header h4 {
-    padding-bottom: 50px;
+.line {
+    margin: auto;
+    width: 480px;
+    height: 2px;
+    border-bottom: 2px !important;
+    border-bottom-color: f4f4f4 !important;
 }
 
-.hline {
-    width: 100%;
-    margin: 20px 0px 20px 0px;
-    height: 5px;
-    background: #111;
+.header p {
+    width: 350px;
+    margin: auto !important;
+    color: #f4f4f4 !important;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 14pt;
+    padding-top: 20px !important;
+    line-height: 1.9em;
 }
 
-.topicHeader {
-    font-size: 32pt;
+/*ABSTRACT*/
+.abstract {
+    padding: 50px 50px 75px 50px !important;
 }
 
+.abstractContent {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.abstractContentNode {
+    padding: 0px 25px !important;
+}
+
+.abstract p {
+    max-width: 430px;
+    float: left;
+    clear: left;
+    padding-top: 25px !important;
+}
+
+.abstract img {
+    float: left;
+    padding-left: 50px !important;
+}
+
+/*GAME*/
+.game {
+    padding: 50px 50px 75px 50px !important;
+    position: relative;
+    box-shadow: 0px 10px 20px -3px rgba(0,0,0,0.26);
+}
+
+.game h4 {
+    font-size: 72pt;
+    color: #DDD;
+}
+
+.gameLists {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.list {
+    min-width: 400px;
+    max-width: 400px;
+    padding: 50px !important;
+}
+
+.list p {
+    padding-left: 15px !important;
+}
+
+.orderedFlexList {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.pb40 {
+    padding-bottom: 60px !important;
+}
+
+/*CARDS*/
 .cards {
-    margin-top: 50px;
+    z-index: -1;
+    background-color: #DDDDDE !important;
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+}
+
+.cards h2 {
+    margin-top: -25px !important;
+    padding-left: 50px !important;
+}
+
+.cards h3 {
+    padding-left: 50px !important;
+    padding-bottom: 0px !important;
+}
+
+.cards:nth-child(n) div, .cards:nth-child(n) p, .cards:nth-child(n) h4, .cards:nth-child(n) h2, .cards:nth-child(n) h3{
+    background-color: #DDDDDE;
+}
+
+.slickCards {
+    margin: auto !important;
+    padding-top: 25px !important;
+    width: 735px;
+}
+
+.slickImage {
+    padding-right: 20px !important;
+    max-width: 371px;
+}
+
+.slickImage img {
+    width: 351px; /*540*/
+    height: 507px; /*780*/
+    /*box-shadow: 8px 8px 7px #777;*/
+    box-shadow: 2px 2px 20px -3px rgba(0,0,0,0.84);
+}
+
+.secondImage {
+    margin-right: 0px !important;
+}
+
+.descriptionBox {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    max-width: 351px;
+}
+
+.descriptionBox p {
+    font-size: 12pt !important;
+    line-height: 18pt;
+    color: rgba(0, 0, 0, .9) !important;
+    padding: 0px 0px 0px 1px !important;
+    margin-bottom: 5px !important;
+}
+
+.descriptionBox h4 {
+    font-size: 12pt !important;
+    color: rgba(0, 0, 0, .9) !important;
+    padding: 10px 0px !important;
+    text-transform: uppercase;
+}
+
+/*JOURNAL*/
+.journal {
+    padding: 50px 50px 75px 50px !important;
+    position: relative;
+    /*box-shadow: 0px -3px 9px #555;*/
+    box-shadow: 0px -10px 20px -3px rgba(0,0,0,0.26);
+}
+
+.excerpt {
+    padding: 50px 0px !important;
+    max-width: 800px;
+    margin: auto !important;
+}
+
+.excerpt p {
+    font-size: 14pt;
+    font-family: "Space Mono" !important;
+    text-indent: 2em;
+}
+
+.redacted {
+    background-color: #111;
+}
+
+/*NARRATIVE*/
+.narrative:nth-child(n) div, .narrative:nth-child(n) p, .narrative:nth-child(n) img, .narrative:nth-child(n) h3, .narrative:nth-child(n) h2 {
+    background-color: #444;
+}
+
+.narrative {
+    background-color: #444;
+    padding: 50px 50px 75px 50px !important;
+}
+
+.narrative h2 {
+    color: #BBB;
+}
+
+.narrative h3 {
+    color: #999;
+}
+
+.narrative p {
+    color: #777;
+}
+
+.narrativeBlocks {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.narrativeBlock {
+    max-width: 360px;
+    padding: 0px 20px !important;
+}
+
+.narrativeBlock img {
+    padding: 50px 0px 30px 0px !important;
+}
+
+/*BACK*/
+.back {
+    padding: 25px 0px !important;
+    width: 100%;
+    text-align: center;
+}
+
+.back a {
+    color: #555;
+    text-decoration: none;
+}
+
+.back a:hover {
+    text-decoration: underline;
 }

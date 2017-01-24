@@ -12,6 +12,22 @@ html {
     border-width: 0px;
 }
 
+hr {
+    width: 480px;
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 8px 20px !important;
+    height: 0;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
 #headerCanvas {
     position: absolute;
 }
@@ -22,11 +38,15 @@ body {
 }
 
 a {
+    text-decoration: none;
+}
+
+.contactInfo a {
     color: #242424;
     text-decoration: none;
 }
 
-a:hover {
+.contactInfo a:hover {
     text-decoration: underline;
 }
 
@@ -35,26 +55,30 @@ a:hover {
 }
 
 .flexContainer {
-    padding: 25px !important;
     margin: auto !important;
     max-width: 1300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .flexItem {
-    margin: 25px !important;
+    margin: 50px auto !important;
     min-width: 400px;
+    max-width: 1000px;
     min-height: 400px;
-    background-image: url("../media/BoopThumb.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    flex-grow: 1;
-    flex-basis: auto;
-    height: 200px;
+}
+
+.boop {
+    background-image: url("../media/BoopThumb.jpg");
+}
+
+.probs99 {
+    background-image: url("../media/99ProblemsThumb.png");
+}
+
+.montague {
+    background-image: url("../media/MontagueThumb.jpg");
 }
 
 .contactInfo {
@@ -79,6 +103,29 @@ a:hover {
     transform: rotate(45deg);
 }
 
+.projectContent {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    width: auto;
+    min-height: 400px;
+    opacity: 0;;
+    transition: opacity 0.2s;
+}
+
+.projectContent:hover {
+    opacity: 1;
+}
+
+.projectTitle {
+    padding-top: 311px !important;
+    padding-left: 15px !important;
+}
+
+.projectDescription {
+    padding-left: 15px !important;
+    padding-bottom: 15px !important;
+}
+
 @media (max-width: 1207px) {
     .contactInfo {
         width: 200px;
@@ -98,5 +145,11 @@ a:hover {
     .diamond {
         height: 20px;
         width: 20px;
+    }
+}
+
+@media (max-width: 949px) {
+    .flexItem {
+        max-width: 2000px;
     }
 }

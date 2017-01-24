@@ -24,24 +24,24 @@ window.onload = function() {
 
     //Draw the canvas every time the mouse is moved
     canvas.addEventListener('mousemove', function(event) {
-        draw();
+        draw(event);
     }, false);
     //Change the color of the canvas on click, and then call draw once
-    canvas.addEventListener('click', function() {
+    canvas.addEventListener('click', function(event) {
         background.newFillColor();
-        draw();
+        draw(event);
     });
     //If the window is resized, draw the screen again in a newly centered position
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function(event) {
         resize.resizeWidth();
-        draw();
+        draw(event);
     });
 
 
     draw();
 };
 
-function draw() {
+function draw(event) {
     clearScreen();
     background.draw(event);
 
@@ -78,10 +78,34 @@ function clearScreen() {
 }
 
 function changeColors(fillColor) {
+    changeColoredDiamonds(fillColor);
+    changeColoredLines(fillColor);
+    changeFontColor(fillColor);
+}
+
+function changeColoredDiamonds(fillColor) {
     var coloredList = document.querySelectorAll(".colored");
 
     for (var i = 0; i < coloredList.length; i++) {
         coloredList[i].style.backgroundColor = proColor.colorFromRange(fillColor);
+    }
+}
+
+function changeColoredLines(fillColor) {
+    var coloredList = document.querySelectorAll(".coloredLine");
+
+    for (var i = 0; i < coloredList.length; i++) {
+        var color = proColor.colorFromRange(fillColor);
+        coloredList[i].style.borderTopColor = color;
+        coloredList[i].style.borderBottomColor = color;
+    }
+}
+
+function changeFontColor(fillColor) {
+    var coloredList = document.querySelectorAll(".coloredFont");
+
+    for (var i = 0; i < coloredList.length; i++) {
+        coloredList[i].style.color = proColor.colorFromRange(fillColor);
     }
 }
 
