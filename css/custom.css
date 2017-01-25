@@ -126,6 +126,14 @@ a {
     padding-bottom: 15px !important;
 }
 
+.footer {
+    clear: both;
+    font-size: 10pt;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px !important;
+}
+
 @media (max-width: 1207px) {
     .contactInfo {
         width: 200px;
