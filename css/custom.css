@@ -28,6 +28,39 @@ hr {
     border-bottom: 2px solid;
 }
 
+/*Thanks to hover.css for this transition*/
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  height: 4px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
 #headerCanvas {
     position: absolute;
 }
@@ -39,6 +72,17 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.moreworkParent {
+    text-align: center;
+}
+
+.morework {
+    margin-top: -200px !important;
+    color: #242424;
+    font-weight: bold;
+    font-size: 18pt;
 }
 
 .contactInfo a {

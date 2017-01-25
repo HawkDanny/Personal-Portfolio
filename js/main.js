@@ -26,17 +26,18 @@ window.onload = function() {
     canvas.addEventListener('mousemove', function(event) {
         draw(event);
     }, false);
+
     //Change the color of the canvas on click, and then call draw once
     canvas.addEventListener('click', function(event) {
         background.newFillColor();
         draw(event);
     });
+
     //If the window is resized, draw the screen again in a newly centered position
     window.addEventListener('resize', function(event) {
         resize.resizeWidth();
         draw(event);
     });
-
 
     draw();
 };
