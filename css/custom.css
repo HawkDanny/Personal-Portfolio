@@ -56,13 +56,9 @@ a {
 
 .flexContainer {
     margin: auto !important;
-    max-width: 1300px;
 }
 
 .flexItem {
-    margin: 50px auto !important;
-    min-width: 400px;
-    max-width: 1000px;
     min-height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -83,6 +79,7 @@ a {
 
 .contactInfo {
     margin: auto !important;
+    margin-top: 50px !important;
     text-align: center;
     width: 1207px;
 }
