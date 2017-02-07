@@ -70,7 +70,7 @@ function draw(event) {
 
         ctx.font = "bold 16pt Open Sans";
         ctx.textBaseline = "top";
-        ctx.fillText("Gameplay Programming", canvas.width / 2, canvas.height / 2);
+        ctx.fillText("Interactive Programming", canvas.width / 2, canvas.height / 2);
     }
 }
 
