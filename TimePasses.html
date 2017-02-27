@@ -186,7 +186,7 @@ Your grandson
 [[//Mail card?//-&gt;Mail Card]]</tw-passagedata><tw-passagedata pid="46" name="Birthday Message" tags="" position="3997,362">(if: $alive is true)[//Your grandfather is turning (print: $age + (count: (history:), &quot;Birthday Message&quot;)) this week.//(if: $age + (count: (history:), &quot;Birthday Message&quot;) is 79)[(set: $alive to false)]
 
 (if: $cardsWritten is 0)[[[Write him a card.-&gt;write]]](else-if: $cardsWritten is 1)[[[Write him a card.-&gt;rewrite1]]](else-if: $cardsWritten is 2)[[[Write him a card.-&gt;rewrite2]]](else-if: $cardsWritten is 3)[[[Write him a card.-&gt;rewrite3]]](else-if: $cardsWritten is 4)[[[Write him a card.-&gt;rewrite4]]](else-if: $cardsWritten is 5)[[[Write him a card.-&gt;rewrite5]]]
-[[Don&#x27;t write him a card.-&gt;Time Passes]]](else:)[//Your grandfather would have turned (print: $age + (count: (history:), &quot;Birthday Message&quot;)) this [[week-&gt;Died2]].//]</tw-passagedata><tw-passagedata pid="47" name="Intro" tags="" position="4008,106">&quot;Write Him a Card&quot;
+[[Don&#x27;t write him a card.-&gt;Time Passes]]](else:)[//Your grandfather would have turned (print: $age + (count: (history:), &quot;Birthday Message&quot;)) this [[week-&gt;Died2]].//]</tw-passagedata><tw-passagedata pid="47" name="Intro" tags="" position="4008,106">&quot;Time Passes&quot;
 
 A game by Danny Hawk.
 
