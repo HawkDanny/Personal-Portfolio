@@ -11,9 +11,18 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Time Passes" startnode="47" creator="Twine" creator-version="2.1.0" ifid="2286A413-4DE2-431D-BDAB-D1ADB94A28E9" format="Harlowe" format-version="1.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+<tw-storydata name="Time Passes" startnode="47" creator="Twine" creator-version="2.1.0" ifid="2286A413-4DE2-431D-BDAB-D1ADB94A28E9" format="Harlowe" format-version="1.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar{
+    visibility: hidden;
+  }
+  .enchantment-link,tw-link {
+    color: #aaa !important;
+  }
+  .enchantment-link:hover,tw-link:hover {
+    color: #888 !important;
+  }
+  .enchantment-link:active,tw-link:active {
+    color: #aaa !important;
+  }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 </script><tw-passagedata pid="1" name="Start" tags="" position="95,222">[[70]]</tw-passagedata><tw-passagedata pid="2" name="70" tags="" position="95,372">//There&#x27;s optimism in the air. Happiness is kinetic as people feel summer succeeding spring.// 
 
@@ -256,9 +265,7 @@ Your grandson
 [[//Mail card?//-&gt;Mail Card]]
 
 (set: $cardsWritten to 6)</tw-passagedata><tw-passagedata pid="53" name="Died" tags="" position="3896.3333333333335,519.3333333333334">//Your grandfather would have turned (print: $age + (count: (history:), &quot;Birthday Message&quot;)) this [[week-&gt;Died2]].//</tw-passagedata><tw-passagedata pid="54" name="Died2" tags="" position="4002,732">(if: $cardsWritten is 6)[[[//Time Passes//-&gt;End]]](else:)[//Time Passes.//]</tw-passagedata><tw-passagedata pid="55" name="End" tags="" position="4007,943">//As you&#x27;re helping your grandmother move into her new apartment, she brings you a shoebox full of letters, and a CD of songs.//
-(if: $playlistA)[Play?(click: &quot;Play?&quot;)[(goto-url: https://open.spotify.com/user/125736604/playlist/52Iwubg70eNj1341ac0ATf)]](if: $playlistA is false)[Play?(click: &quot;Play?&quot;)[(goto-url: https://open.spotify.com/user/125736604/playlist/2EZTVzXDECsi1yw4vaKjMd)]]
-
-</tw-passagedata><tw-passagedata pid="56" name="Mail Card" tags="" position="5268.666666666666,1260">[[*Fold card.*-&gt;Fold card.]]</tw-passagedata><tw-passagedata pid="57" name="Fold card." tags="" position="5025.333333333333,1270">[[*Lick Envelope.*-&gt;Lick Envelope.]]</tw-passagedata><tw-passagedata pid="58" name="Lick Envelope." tags="" position="4770.333333333333,1266.6666666666667">[[*Stamp and address.*-&gt;Stamp and address.]]</tw-passagedata><tw-passagedata pid="59" name="Stamp and address." tags="" position="4547,1273.3333333333335">[[*Send card.*-&gt;Time Passes]]</tw-passagedata><tw-passagedata pid="60" name="Time Passes" tags="" position="4313.666666666667,1268.3333333333335">(if: $cardsWritten is 0)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 1)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 2)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 3)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 4)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 5)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 6)[[[//Time Passes.//-&gt;Died]]]</tw-passagedata></tw-storydata>
+(if: $playlistA)[(link: &quot;Play?&quot;)[(goto-url: &quot;https://open.spotify.com/user/125736604/playlist/52Iwubg70eNj1341ac0ATf&quot;)]](if: $playlistA is false)[(link: &quot;Play?&quot;)[(goto-url: &quot;https://open.spotify.com/user/125736604/playlist/2EZTVzXDECsi1yw4vaKjMd&quot;)]]</tw-passagedata><tw-passagedata pid="56" name="Mail Card" tags="" position="5268.666666666666,1260">[[*Fold card.*-&gt;Fold card.]]</tw-passagedata><tw-passagedata pid="57" name="Fold card." tags="" position="5025.333333333333,1270">[[*Lick Envelope.*-&gt;Lick Envelope.]]</tw-passagedata><tw-passagedata pid="58" name="Lick Envelope." tags="" position="4770.333333333333,1266.6666666666667">[[*Stamp and address.*-&gt;Stamp and address.]]</tw-passagedata><tw-passagedata pid="59" name="Stamp and address." tags="" position="4547,1273.3333333333335">[[*Send card.*-&gt;Time Passes]]</tw-passagedata><tw-passagedata pid="60" name="Time Passes" tags="" position="4313.666666666667,1268.3333333333335">(if: $cardsWritten is 0)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 1)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 2)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 3)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 4)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 5)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 6)[[[//Time Passes.//-&gt;Died]]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,o=!1,i=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){o=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(o)throw i}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
