@@ -158,20 +158,24 @@ And we all know you&#x27;ll never do that. Time to get some cake?
 
 (print: $_d) (print: $_e) (set: $band to &quot;I&#x27;m a huge fan of big band, and I would like to wager that this is about as big as they come. There&#x27;s just something really affecting about how powerful the sound feels of a complete band.&quot;)(print: $band)
 (link:&quot;My guess is that it&#x27;s because when you have so many people all on the same page, you&#x27;re going to get something special.&quot;)[(set: $_f to &quot;My guess is that it&#x27;s because when you have so many people all on the same page, you&#x27;re going to get something special. And that something is going to as raw as it comes, the more band members there are.&quot;)(goto:&quot;writeF&quot;)]
-(link:&quot;It&#x27;s probably because when you stack up all of the talent in the band, you&#x27;re bound to end up with the highest execution of a piece possible.&quot;)[(set: $_f to &quot;It&#x27;s probably because when you stack up all of the talent in the band, you&#x27;re bound to end up with the highest execution of a piece possible. With so much individual emotion being put through instruments, and then channeled all as one, the result has to be ten times the piece that it would be with less band members.&quot;)(goto:&quot;writeF&quot;)]</tw-passagedata><tw-passagedata pid="43" name="writeF" tags="" position="4567,863">(print: $_a)
+(link:&quot;It&#x27;s probably because when you stack up all of the talent in the band, you&#x27;re bound to end up with the highest execution of a piece possible.&quot;)[(set: $_f to &quot;It&#x27;s probably because when you stack up all of the talent in the band, you&#x27;re bound to end up with the highest execution of a piece possible. With so much individual emotion being put through instruments, and then channeled all as one, the result has to be ten times the piece that it would be with less band members.&quot;)(goto:&quot;writeF&quot;)]
+
+(set: $playlistA to true)</tw-passagedata><tw-passagedata pid="43" name="writeF" tags="" position="4567,863">(print: $_a)
 
 (print: $_b) (print: $_c)
 
 (print: $_d) (print: $_e) (print: $band) (print: $_f)
 
 (link:&quot;I hope your birthday is great!&quot;)[(set: $_g to &quot;I hope your birthday is great!&quot;)(goto:&quot;writeG&quot;)]
-(link:&quot;I hope your birthday is wonderful!&quot;)[(set: $_g to &quot;I hope your birthday is wonderful!&quot;)(goto:&quot;writeG&quot;)]</tw-passagedata><tw-passagedata pid="44" name="writeE2" tags="" position="4645,732">(print: $_a)
+(link:&quot;I hope your birthday is wonderful!&quot;)[(set: $_g to &quot;I hope your birthday is wonderful!&quot;)(goto:&quot;writeG&quot;)]</tw-passagedata><tw-passagedata pid="44" name="writeE2" tags="" position="4645,737">(print: $_a)
 
 (print: $_b) (print: $_c)
 
 (print: $_d) (print: $_e) (set: $band to &quot;Just wow. I&#x27;ve never heard such a smooth saxophone fit so well into such a light song. It really sounds like the saxophonist is barely putting effort in, &quot;)(print: $band) 
 (link:&quot;which probably means he&#x27;s putting in a ton of effort.&quot;)[(set: $_f to &quot;which probably means he&#x27;s putting in a ton of effort. Even more effort than a big band saxophonist!&quot;)(goto:&quot;writeF&quot;)]
-(link:&quot;which is probably just a testament to his sheer talent and control.&quot;)[(set: $_f to &quot;which is probably just a testament to his sheer talent and control.&quot;)(goto:&quot;writeF&quot;)]</tw-passagedata><tw-passagedata pid="45" name="writeG" tags="" position="4566,986">(print: $_a)
+(link:&quot;which is probably just a testament to his sheer talent and control.&quot;)[(set: $_f to &quot;which is probably just a testament to his sheer talent and control.&quot;)(goto:&quot;writeF&quot;)]
+
+(set: $playlistA to false)</tw-passagedata><tw-passagedata pid="45" name="writeG" tags="" position="4566,986">(print: $_a)
 
 (print: $_b) (print: $_c)
 
@@ -194,7 +198,8 @@ A game by Danny Hawk.
 
 (set: $cardsWritten to 0)
 (set: $age to 72)
-(set: $alive to true)</tw-passagedata><tw-passagedata pid="48" name="rewrite1" tags="" position="5054,101">(link:$_a)[(set: $_a to &quot;Hey Grandpa!&quot;)(print: $_a)]
+(set: $alive to true)
+(set: $playlistA to true)</tw-passagedata><tw-passagedata pid="48" name="rewrite1" tags="" position="5054,101">(link:$_a)[(set: $_a to &quot;Hey Grandpa!&quot;)(print: $_a)]
 
 (link:$_b)[(set: $_b to &quot;How are you?&quot;)(print: $_b)] (link:$_c)[(set: $_c to &quot;Have you been getting out to play tennis recently? I&#x27;ve been playing some raquetball recently, actually. It&#x27;s not quite the same, but my tennis skills still transfer!&quot;)(print: $_c)]
 
@@ -264,10 +269,10 @@ Your grandson
 
 [[//Mail card?//-&gt;Mail Card]]
 
-(set: $cardsWritten to 6)</tw-passagedata><tw-passagedata pid="53" name="Died" tags="" position="3898,531">//Your grandfather would have turned (print: $age + (count: (history:), &quot;Birthday Message&quot;)) this [[week-&gt;Died2]].//</tw-passagedata><tw-passagedata pid="54" name="Died2" tags="" position="4002,732">//Do you wish you could write him a card?//
+(set: $cardsWritten to 6)</tw-passagedata><tw-passagedata pid="53" name="Died" tags="" position="3896.3333333333335,519.3333333333334">//Your grandfather would have turned (print: $age + (count: (history:), &quot;Birthday Message&quot;)) this [[week-&gt;Died2]].//</tw-passagedata><tw-passagedata pid="54" name="Died2" tags="" position="4002,732">(if: $cardsWritten is 6)[[[//Time Passes//-&gt;End]]](else:)[//Time Passes.//]</tw-passagedata><tw-passagedata pid="55" name="End" tags="" position="4007,943">//As you&#x27;re helping your grandmother move into her new apartment, she brings you a shoebox full of letters, and a CD of songs.//
+(if: $playlistA)[[[Play?-&gt;https://open.spotify.com/user/125736604/playlist/52Iwubg70eNj1341ac0ATf]]](if: $playlistA is false)[[[Play?-&gt;https://open.spotify.com/user/125736604/playlist/2EZTVzXDECsi1yw4vaKjMd]]]
 
-[[Yes.-&gt;End]]
-[[No.-&gt;End]]</tw-passagedata><tw-passagedata pid="55" name="End" tags="" position="4007,943">If you have love to give, I&#x27;m sure there&#x27;s someone who&#x27;d love to be given it.</tw-passagedata><tw-passagedata pid="56" name="Mail Card" tags="" position="5268.666666666666,1260">[[*Fold card.*-&gt;Fold card.]]</tw-passagedata><tw-passagedata pid="57" name="Fold card." tags="" position="5025.333333333333,1270">[[*Lick Envelope.*-&gt;Lick Envelope.]]</tw-passagedata><tw-passagedata pid="58" name="Lick Envelope." tags="" position="4770.333333333333,1266.6666666666667">[[*Stamp and address.*-&gt;Stamp and address.]]</tw-passagedata><tw-passagedata pid="59" name="Stamp and address." tags="" position="4547,1273.3333333333335">[[*Send card.*-&gt;Time Passes]]</tw-passagedata><tw-passagedata pid="60" name="Time Passes" tags="" position="4313.666666666667,1268.3333333333335">(if: $cardsWritten is 0)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 1)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 2)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 3)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 4)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 5)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 6)[[[//Time Passes.//-&gt;Died]]]</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="56" name="Mail Card" tags="" position="5268.666666666666,1260">[[*Fold card.*-&gt;Fold card.]]</tw-passagedata><tw-passagedata pid="57" name="Fold card." tags="" position="5025.333333333333,1270">[[*Lick Envelope.*-&gt;Lick Envelope.]]</tw-passagedata><tw-passagedata pid="58" name="Lick Envelope." tags="" position="4770.333333333333,1266.6666666666667">[[*Stamp and address.*-&gt;Stamp and address.]]</tw-passagedata><tw-passagedata pid="59" name="Stamp and address." tags="" position="4547,1273.3333333333335">[[*Send card.*-&gt;Time Passes]]</tw-passagedata><tw-passagedata pid="60" name="Time Passes" tags="" position="4313.666666666667,1268.3333333333335">(if: $cardsWritten is 0)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 1)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 2)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 3)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 4)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 5)[[[//Time Passes.//-&gt;Birthday Message]]](if: $cardsWritten is 6)[[[//Time Passes.//-&gt;Died]]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,o=!1,i=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){o=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(o)throw i}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
