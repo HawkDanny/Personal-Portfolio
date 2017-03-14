@@ -161,13 +161,17 @@ app.Main = {
 
         //Only draws to the screen what is pertinent to the current game state
         if (this.currentGS == this.GAMESTATE.TITLESCREEN) {
-            this.ctx.drawImage(this.titleImage, 144, 86);
+            this.ctx.drawImage(this.titleImage, (this.canvas.width / 2) - 576, (this.canvas.height / 3) - 159, 1152, 317);
 
             this.ctx.save();
+            this.ctx.textAlign = "left";
+            this.ctx.textBaseline = "middle";
+            this.ctx.font = "128pt Fira Sans";
+            this.ctx.fillStyle = "black";
+            this.ctx.fillText("BOOP", 0, this.canvas.height - 70);
             this.ctx.textAlign = "right";
             this.ctx.textBaseline = "middle";
             this.ctx.font = "32pt Fira Sans";
-            this.ctx.fillStyle = "black";
             this.ctx.fillText("PRESS SPACE TO BEGIN", this.canvas.width - 10, this.canvas.height - 50);
             this.ctx.fillStyle = "#444444";
             this.ctx.font = "16pt Fira Sans";
