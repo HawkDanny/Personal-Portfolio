@@ -27,8 +27,9 @@ app.Main = {
     //game state information
     GAMESTATE: Object.freeze({
         TITLESCREEN: 0,
-        GAME: 1,
-        GAMEOVERSCREEN: 2
+        HOWTOPLAY: 1,
+        GAME: 2,
+        GAMEOVERSCREEN: 3
     }),
     currentGS: undefined, //the current game state of the game
     paused: false,
@@ -103,6 +104,9 @@ app.Main = {
         //Only execute calculations pertinent to the current state of the game
         if (this.currentGS == this.GAMESTATE.TITLESCREEN) {
             this.updateControls();
+        } else if (this.currentGS == this.GAMESTATE.HOWTOPLAY) {
+            console.log("hit");
+            this.updateControls();
         } else if (this.currentGS == this.GAMESTATE.GAME) {
             if (this.paused) {
                 //nothing to calculate currently
@@ -161,22 +165,39 @@ app.Main = {
 
         //Only draws to the screen what is pertinent to the current game state
         if (this.currentGS == this.GAMESTATE.TITLESCREEN) {
-            this.ctx.drawImage(this.titleImage, (this.canvas.width / 2) - 576, (this.canvas.height / 3) - 159, 1152, 317);
+            var centerX = this.canvas.width / 2;
+            var centerY = this.canvas.height / 2;
 
             this.ctx.save();
+
+            //BOOP
             this.ctx.textAlign = "left";
             this.ctx.textBaseline = "middle";
             this.ctx.font = "128pt Fira Sans";
-            this.ctx.fillStyle = "black";
-            this.ctx.fillText("BOOP", 0, this.canvas.height - 70);
-            this.ctx.textAlign = "right";
-            this.ctx.textBaseline = "middle";
-            this.ctx.font = "32pt Fira Sans";
-            this.ctx.fillText("PRESS SPACE TO BEGIN", this.canvas.width - 10, this.canvas.height - 50);
+            this.ctx.fillStyle = "#222222";
+            this.ctx.fillText("BOOP", centerX - 276, centerY - 10);
+
+            //A GAME BY DANNY HAWK
+            this.ctx.fillStyle = "#777777";
+            this.ctx.font = "24pt Fira Sans";
+            this.ctx.fillText("A GAME BY DANNY HAWK", centerX - 261, centerY + 80);
+
+            //PRESS SPACE
+            this.ctx.textBaseline = "top";
+            this.ctx.font = "36pt Fira Sans";
             this.ctx.fillStyle = "#444444";
-            this.ctx.font = "16pt Fira Sans";
-            this.ctx.fillText("A GAME BY DANNY HAWK", this.canvas.width - 10, this.canvas.height - 20);
+            this.ctx.fillText("PRESS  SPACE", centerX - 265, centerY + 101);
+
             this.ctx.restore();
+
+        } else if (this.currentGS == this.GAMESTATE.HOWTOPLAY) {
+            this.ctx.drawImage(this.titleImage, (this.canvas.width / 2) - 576, (this.canvas.height / 2) - 159, 1152, 317);
+
+            this.ctx.textAlign = "left";
+            this.ctx.textBaseline = "top";
+            this.ctx.font = "36pt Fira Sans";
+            this.ctx.fillStyle = "#444444";
+            this.ctx.fillText("PRESS  SPACE", (this.canvas.width / 2) - 265, this.canvas.height / 2 + 101);
         } else if (this.currentGS == this.GAMESTATE.GAME) {
             if (this.paused) {
                 this.ctx.save();
@@ -454,9 +475,11 @@ app.Main = {
     //changes the game state based on the current game state
     changeGameState() {
         if (this.currentGS == this.GAMESTATE.TITLESCREEN) {
+            this.currentGS = this.GAMESTATE.HOWTOPLAY;
+            console.log(this.currentGS);
+        } else if (this.currentGS == this.GAMESTATE.HOWTOPLAY) {
             this.currentGS = this.GAMESTATE.GAME;
-        }
-        if (this.currentGS == this.GAMESTATE.GAMEOVERSCREEN) {
+        } else if (this.currentGS == this.GAMESTATE.GAMEOVERSCREEN) {
             this.resetGame();
             this.currentGS = this.GAMESTATE.TITLESCREEN;
         }

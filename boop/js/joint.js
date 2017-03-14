@@ -51,7 +51,7 @@ app.Joint = function(){
         this.canvas = canvas;
         this.position = position || new Victor(0, 0);
         this.inputDirection = new Victor(0, 0);
-        this.bumpMag = 20;
+        this.bumpMag = 40;
 
         this.lastTime = 0;
 
