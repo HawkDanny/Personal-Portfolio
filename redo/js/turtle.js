@@ -9,6 +9,8 @@ const Turtle = {
             ctx,
             weight: 1,
             color: "red",
+            startX: startX,
+            startY: startY,
             position: vec2(startX, startY),
             heading: vec2(1, 0),
             pen: 1,
@@ -45,7 +47,7 @@ const Turtle = {
 
     move(distance) {
 
-        //Why are we checkign if the pen exists?
+        //Why are we checking if the pen exists?
         if (this.pen)
             this.ctx.beginPath();
 
@@ -60,6 +62,10 @@ const Turtle = {
         } else {
             this.ctx.moveTo(this.position.x, this.position.y);
         }
+    },
+
+    reset() {
+        this.position = vec2(this.startX, this.startY);
     }
 };
 

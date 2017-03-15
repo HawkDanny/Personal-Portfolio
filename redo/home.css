@@ -1,0 +1,42 @@
+:root {
+    --primary: #2C928D;    
+    --secondary: #F1F1F1;   
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.frontCanvas {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+}
+
+.backCanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.halfDivider {
+    height: 100vh;
+    width: 40%;
+    float: right;
+}
+
+article {
+    min-height: 100vh;
+    width: 60%;
+    float: right;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+p {
+    padding-top: 88vh !important;
+    padding-left: 20px !important;
+    font-size: 48pt;
+    font-family: 'Open Sans', sans-serif;
+}
