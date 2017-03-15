@@ -105,7 +105,6 @@ app.Main = {
         if (this.currentGS == this.GAMESTATE.TITLESCREEN) {
             this.updateControls();
         } else if (this.currentGS == this.GAMESTATE.HOWTOPLAY) {
-            console.log("hit");
             this.updateControls();
         } else if (this.currentGS == this.GAMESTATE.GAME) {
             if (this.paused) {
@@ -252,15 +251,6 @@ app.Main = {
             this.ctx.font = "16pt Fira Sans";
             this.ctx.fillText("Press Space to Restart the Game", this.canvas.width / 2, this.canvas.height / 2 + 95);
             this.ctx.restore();
-
-            this.timer1.reset(30);
-            this.timer2.reset(30);
-            this.joints[0].velocity = new Victor(0, 0);
-            this.joints[1].velocity = new Victor(0, 0);
-            this.joints[2].velocity = new Victor(0, 0);
-            this.joints[0].position = new Victor(this.canvas.width / 2, this.canvas.height / 2);
-            this.joints[1].position = new Victor((this.canvas.width / 4), this.canvas.height / 2);
-            this.joints[2].position = new Victor((this.canvas.width / 4) * 3, this.canvas.height / 2);
         }
     },
 
@@ -476,7 +466,6 @@ app.Main = {
     changeGameState() {
         if (this.currentGS == this.GAMESTATE.TITLESCREEN) {
             this.currentGS = this.GAMESTATE.HOWTOPLAY;
-            console.log(this.currentGS);
         } else if (this.currentGS == this.GAMESTATE.HOWTOPLAY) {
             this.currentGS = this.GAMESTATE.GAME;
         } else if (this.currentGS == this.GAMESTATE.GAMEOVERSCREEN) {
@@ -487,11 +476,20 @@ app.Main = {
 
     //resets values to their starting values
     resetGame: function() {
-        this.timer1.resetColor();
-        this.timer2.resetColor();
+        //this.timer1.resetColor();
+        //this.timer2.resetColor();
         this.trail1.clear();
         this.trail2.clear();
         this.clearJoints();
         this.populateJoints();
+
+        this.timer1.reset(30);
+        this.timer2.reset(30);
+        this.joints[0].velocity = new Victor(0, 0);
+        this.joints[1].velocity = new Victor(0, 0);
+        this.joints[2].velocity = new Victor(0, 0);
+        this.joints[0].position = new Victor(this.canvas.width / 2, this.canvas.height / 2);
+        this.joints[1].position = new Victor((this.canvas.width / 4), this.canvas.height / 2);
+        this.joints[2].position = new Victor((this.canvas.width / 4) * 3, this.canvas.height / 2);
     }
 };

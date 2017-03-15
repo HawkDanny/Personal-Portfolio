@@ -14,6 +14,10 @@ window.onload = function() {
     app.Sound.init();
     app.Main.sound = app.Sound;
     app.Main.init();
+
+    window.onmousemove = function(e) {
+    app.Main.setMousePos(e);
+}
 }
 
 window.onblur = function() {
@@ -26,8 +30,4 @@ window.onfocus = function() {
 
 window.onresize = function() {
     app.Main.resizeCanvas();
-}
-
-window.onmousemove = function(e) {
-    app.Main.setMousePos(e);
 }
