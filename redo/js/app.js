@@ -33,10 +33,10 @@ window.onload = function() {
     system.runCycles(5);
 
     //Create the turtle
-    myTurtle = turtle.create(ctx, 200, canvas.height);
-    theta = (Math.PI * 2) / 13.5;
+    myTurtle = turtle.create(ctx, 100, canvas.height);
+    theta = (Math.PI * 2) / 19;
 
-    myTurtle2 = turtle.create(ctx2, 200, canvas2.height);
+    myTurtle2 = turtle.create(ctx2, 100, canvas2.height);
 
     //Rotate the turtle into position
     myTurtle.rotate(-Math.PI / 2);
@@ -62,6 +62,7 @@ function drawTree(cnv, context, turtle, fill) {
 
     //Do some canvas styling
     context.fillStyle = primary;
+    context.lineWidth = 2;
     
     if (fill) {
         context.strokeStyle = secondary;
@@ -80,7 +81,7 @@ function drawTree(cnv, context, turtle, fill) {
 
         if (letter == "F") { //Move forward drawing line
             turtle.penDown();
-            turtle.move(6);
+            turtle.move(12);
             turtle.penUp();
         } else if (letter == "+") { //Turn right by theta degrees
             turtle.rotate(-theta);
@@ -163,7 +164,7 @@ const Turtle = {
         const turtle = Object.create(this);
         Object.assign(turtle, {
             ctx,
-            weight: 1,
+            weight: 3,
             color: "red",
             startX: startX,
             startY: startY,
@@ -212,7 +213,6 @@ const Turtle = {
         this.position.y += (this.heading.y * distance);
         if (this.pen) {
             this.ctx.lineTo(this.position.x, this.position.y);
-            this.ctx.lineWidth = this.weight;
             this.ctx.stroke();
             this.ctx.closePath();
         } else {

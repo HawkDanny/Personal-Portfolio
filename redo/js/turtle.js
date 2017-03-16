@@ -7,7 +7,7 @@ const Turtle = {
         const turtle = Object.create(this);
         Object.assign(turtle, {
             ctx,
-            weight: 1,
+            weight: 3,
             color: "red",
             startX: startX,
             startY: startY,
@@ -56,7 +56,6 @@ const Turtle = {
         this.position.y += (this.heading.y * distance);
         if (this.pen) {
             this.ctx.lineTo(this.position.x, this.position.y);
-            this.ctx.lineWidth = this.weight;
             this.ctx.stroke();
             this.ctx.closePath();
         } else {

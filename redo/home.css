@@ -1,6 +1,7 @@
 :root {
     --primary: #2C928D;    
-    --secondary: #F1F1F1;   
+    --secondary: #F1F1F1;
+    --accent: #BBB;
 }
 
 * {
@@ -8,16 +9,32 @@
     margin: 0px;
 }
 
+body {
+    background-color: var(--secondary);
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 3px dotted var(--primary);
+    color: inherit;
+}
+
+a:hover {
+    border-bottom: 3px solid var(--primary);
+}
+
 .frontCanvas {
     width: 40%;
     height: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 .backCanvas {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
+    z-index: -10;
 }
 
 .halfDivider {
@@ -26,17 +43,127 @@
     float: right;
 }
 
-article {
+nav {
+    color: var(--primary);
+    position: fixed;
+    right: 0px;
+    margin-right: 20px;
+    margin-top: 15px;
+    font-size: 14pt;
+}
+
+nav a {
+    border: none;
+    margin-left: 15px;
+}
+
+.content {
     min-height: 100vh;
     width: 60%;
     float: right;
-    background-color: var(--secondary);
     color: var(--primary);
+    font-size: 16pt;
+    z-index: 3 !important;
 }
 
-p {
-    padding-top: 88vh !important;
-    padding-left: 20px !important;
+article {
+    width: 530px;
+    margin: auto;
+}
+
+.title {
+    margin-left: -3px;
+}
+
+.name {
+    margin-top: 30vh !important;
     font-size: 48pt;
-    font-family: 'Open Sans', sans-serif;
+}
+
+.creativeDeveloper {
+    margin-top: -20px;
+    font-size: 24pt;
+    font-weight: 400;
+}
+
+.gameInteractive {
+    margin-top: -10px;
+    font-size: 25pt;
+    font-weight: 300;
+}
+
+.spacer {
+    min-height: 400px;
+    border-left: 3px dotted var(--primary);
+}
+
+.double {
+    min-height: 600px;
+}
+
+/*PROJECTS*/
+
+.project {
+    margin-left: 3px;
+    height: 46px;
+}
+
+.p_year {
+    float: left;
+    margin-left: -59px;
+    margin-top: 30px;
+}
+
+.p_title {
+    margin-top: -43px;
+    font-size: 24pt;
+}
+
+.p_body {
+    margin-top: 5px;
+    margin-left: 11px;
+}
+
+.p_resources {
+    font-weight: 300;
+    font-size: 12pt;
+}
+
+.p_description {
+    padding-top: 5px;
+    font-weight: 400;
+}
+
+/*SOCIAL*/
+
+.social {
+    margin-top: -43px;
+    margin-bottom: 50vh;
+    padding-left: 15px;
+    border-bottom: 3px dotted var(--primary);
+}
+
+.social a {
+    padding-right: 10px;
+    border: none;
+}
+
+.social a:hover {
+    border: none;
+}
+
+#github:hover {
+    color: #111111;
+}
+
+#twitch:hover {
+    color: #6441A4;
+}
+
+#linkedin:hover {
+    color: #007bb6;
+}
+
+#twitter:hover {
+    color: #00aced;
 }
