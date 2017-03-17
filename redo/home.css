@@ -16,12 +16,10 @@ body {
 
 a {
     text-decoration: none;
-    border-bottom: 3px dotted var(--primary);
-    color: inherit;
 }
 
-a:hover {
-    border-bottom: 3px solid var(--primary);
+a:visited {
+    color: var(--primary);
 }
 
 .frontCanvas {
@@ -49,7 +47,8 @@ nav {
     right: 0px;
     margin-right: 20px;
     margin-top: 15px;
-    font-size: 14pt;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 nav a {
@@ -78,18 +77,13 @@ article {
 .name {
     margin-top: 30vh !important;
     font-size: 48pt;
+    letter-spacing: -3px;
 }
 
 .creativeDeveloper {
     margin-top: -20px;
-    font-size: 24pt;
+    font-size: 16pt;
     font-weight: 400;
-}
-
-.gameInteractive {
-    margin-top: -10px;
-    font-size: 25pt;
-    font-weight: 300;
 }
 
 .spacer {
@@ -105,33 +99,76 @@ article {
 
 .project {
     margin-left: 3px;
-    height: 46px;
 }
 
 .p_year {
     float: left;
     margin-left: -59px;
-    margin-top: 30px;
+    margin-top: -14px;
+}
+
+.p_above {
+    border-top: 3px dotted var(--primary);
+    transition: 0.5s;
+}
+
+.p_above:hover {
+    width: 100%;
 }
 
 .p_title {
-    margin-top: -43px;
-    font-size: 24pt;
+    padding-left: 13px;
 }
 
-.p_body {
-    margin-top: 5px;
-    margin-left: 11px;
+#boop {
+    margin-top: -70px;
+    width: 213px;
+}
+
+#problems {
+    margin-top: -70px;
+    width: 400px;
+}
+
+#montague {
+    margin-top: -102px;
+    width: 271px;
+}
+
+.boopOverride {
+    width: 224px;
+}
+
+.problemsOverride {
+    width: 242px;
+}
+
+.montagueOverride {
+    width: 287px;
+}
+
+.p_projectName {
+    line-height: 0.9em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 26pt;
 }
 
 .p_resources {
+    padding-left: 2px;
+    font-size: 14pt;
     font-weight: 300;
-    font-size: 12pt;
+}
+
+.p_body {
+    height: 0px;
+    padding-left: 13px;
 }
 
 .p_description {
-    padding-top: 5px;
     font-weight: 400;
+    padding-top: 13px;
+    font-size: 16px;
 }
 
 /*SOCIAL*/

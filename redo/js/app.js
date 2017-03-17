@@ -2,6 +2,9 @@
 const system = require("./system.js");
 const turtle = require("./turtle.js");
 
+let axiom = "F";
+let rules = ["F->FF-[-FF+F]+[+F-F]"];
+
 let primary = "#2C928D";
 let secondary = "#F1F1F1";
 
@@ -29,7 +32,7 @@ window.onload = function() {
     ctx2 = canvas2.getContext("2d");
 
     //Create and run the L System
-    system.createSystem("F", ["F->FF-[-FF+F]+[+F-F]"]);
+    system.createSystem(axiom, rules);
     system.runCycles(5);
 
     //Create the turtle
