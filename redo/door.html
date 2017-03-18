@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/gif" href="./media/favicon.gif"/>
+    <!--W3-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+    <style>
+    body {
+        background-color: #FAFAFA;
+        color: #333333;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    article {
+        width: 700px;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .images {
+        width: 367px;
+        height: 490px;
+        margin: auto;
+    }
+    </style>
+
+    <script>
+        var slideIndex;
+
+        window.onload = function() {
+            slideIndex = 1;
+            showDivs(slideIndex);
+        }
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            if (n > x.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = x.length} ;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+            }
+            x[slideIndex-1].style.display = "block"; 
+    }
+    </script>
+
+    <title>These Doors Turned Out Great</title>
+</head>
+<body>
+    <article>
+        <h1>"I really appreciate this."</h1>
+        <p>I'm an RA at RIT, and one of the events I threw for my floor was a "Door Painting Gala". Everyone had the opportunity to paint their doors, and afterward we all went up and down the hall like it was an art gala, talking about everyone's work. To make it feel authentic, I dressed up, put on some lounge style jazz music, and carried a platter of cheese cubes and toothpicks around. I loved the idea and I wanted to make it as hilariously over-produced as possible. Afterward though, a resident came up to me and said how uch he really appreciated it, and I grinned from ear to ear for maybe a day.</p>
+
+        <div class="w3-display-container images">
+            <img class="slide" src="media/door/1.JPG" width="367" height="490">
+            <img class="slide" src="media/door/2.JPG" width="367" height="490">
+            <img class="slide" src="media/door/3.JPG" width="367" height="490">
+            <img class="slide" src="media/door/4.JPG" width="367" height="490">
+            <img class="slide" src="media/door/5.JPG" width="367" height="490">
+            <img class="slide" src="media/door/6.JPG" width="367" height="490">
+            <img class="slide" src="media/door/7.JPG" width="367" height="490">
+            <img class="slide" src="media/door/8.JPG" width="367" height="490">
+            <img class="slide" src="media/door/9.JPG" width="367" height="490">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+
+    </article>
+</body>
+</html>

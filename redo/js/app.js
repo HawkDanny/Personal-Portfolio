@@ -20,6 +20,38 @@ let ctx2;
 let myTurtle2;
 
 window.onload = function() {
+    //For about page
+    let counter = 0;
+        
+    let moment = document.querySelector(".moment");
+    if (moment) {
+        moment.onclick = function() {
+            switch (counter) {
+                case 0:
+                    moment.innerHTML = "\"oh, wow\"";
+                    break;
+                case 1:
+                    moment.innerHTML = "\"you're kidding me\"";
+                    break;
+                case 2:
+                    moment.innerHTML = "\"that was cool\"";
+                    moment.style.fontWeight = 300;
+                    moment.id = "noMoreHelp";
+                    break;
+                case 3:
+                    moment.innerHTML=  "\"stop clicking this\""
+                    break;
+                case 4:
+                    moment.innerHTML=  "\"seriously\""
+                    break;
+                case 5:
+                    moment.innerHTML=  "\"that means you <a style='font-weight: 600' href='http://lukaschulz.com'>Luka</a>\""
+                    break;
+            }
+            ++counter;
+        }
+    }
+
     //Grab canvas information
     canvas = document.querySelector(".frontCanvas");
     canvas.height = window.innerHeight;
