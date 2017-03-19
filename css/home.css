@@ -259,3 +259,27 @@ article {
 .proud li a:hover {
     border-bottom: 3px dotted var(--primary);
 }
+
+@media (max-width: 1130px) {
+    .frontCanvas {
+        display: none;
+    }
+
+    .backCanvas {
+        display: none;
+    }
+
+    .halfDivider {
+        display: none;
+    }
+
+    .content {
+        float: none;
+        margin: auto;
+    }
+
+    nav {
+        position: relative;
+        margin-right: 0px;
+    }
+}
