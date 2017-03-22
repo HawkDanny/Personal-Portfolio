@@ -2,28 +2,28 @@
 const system = require("./system.js");
 const turtle = require("./turtle.js");
 
-let axiom = "F";
-let rules = ["F->FF-[-FF+F]+[+F-F]"];
+var axiom = "F";
+var rules = ["F->FF-[-FF+F]+[+F-F]"];
 
-let primary = "#2C928D";
-let secondary = "#F1F1F1";
+var primary = "#2C928D";
+var secondary = "#F1F1F1";
 
-let canvas;
-let ctx;
+var canvas;
+var ctx;
 
-let myTurtle;
-let theta;
+var myTurtle;
+var theta;
 
 //Create a second set of variables to draw the background tree
-let canvas2;
-let ctx2;
-let myTurtle2;
+var canvas2;
+var ctx2;
+var myTurtle2;
 
 window.onload = function() {
     //For about page
-    let counter = 0;
+    var counter = 0;
         
-    let moment = document.querySelector(".moment");
+    var moment = document.querySelector(".moment");
     if (moment) {
         moment.onclick = function() {
             switch (counter) {
@@ -111,8 +111,8 @@ function drawTree(cnv, context, turtle, fill) {
     turtle.reset();
 
     //Loop through the axiom's letters and operate the turtle accordingly
-    for (let i = 0; i < system.axiom.length; i++) {
-        let letter = system.axiom.substring(i, i+1);
+    for (var i = 0; i < system.axiom.length; i++) {
+        var letter = system.axiom.substring(i, i+1);
 
         if (letter == "F") { //Move forward drawing line
             turtle.penDown();
@@ -144,8 +144,8 @@ module.exports = {
 
     parseRules: function(rules) {
         //Loop through the rules provided, and parse them into objects, that are added to ruleset
-        for (let i = 0; i < rules.length; i++) {
-            let arrowIndex = rules[i].indexOf("->");
+        for (var i = 0; i < rules.length; i++) {
+            var arrowIndex = rules[i].indexOf("->");
 
             //Use substring to slice up each rule into a target and a rule
             this.ruleset.push({
@@ -157,20 +157,20 @@ module.exports = {
 
     //The function that should be called by the main method
     runCycles: function(numCycles) {
-        for (let i = 0; i < numCycles; i++)
+        for (var i = 0; i < numCycles; i++)
             this.cycle();
     },
 
     //Runs one iteration of the ruleset
     cycle: function() {
-        let temp = this.axiom;
+        var temp = this.axiom;
         
-        let newString = "";
+        var newString = "";
         //Loop through each letter of the current axiom
-        for (let i = 0; i < temp.length; i++) {
-            let letter = temp.substring(i, i + 1);
+        for (var i = 0; i < temp.length; i++) {
+            var letter = temp.substring(i, i + 1);
 
-            for (let j = 0; j < this.ruleset.length; j++) {
+            for (var j = 0; j < this.ruleset.length; j++) {
                 //Check if the letter is the same as any rule's target.
                 //If it is, brea out of the loop
                 if (letter == this.ruleset[j].target) {

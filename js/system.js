@@ -12,8 +12,8 @@ module.exports = {
 
     parseRules: function(rules) {
         //Loop through the rules provided, and parse them into objects, that are added to ruleset
-        for (let i = 0; i < rules.length; i++) {
-            let arrowIndex = rules[i].indexOf("->");
+        for (var i = 0; i < rules.length; i++) {
+            var arrowIndex = rules[i].indexOf("->");
 
             //Use substring to slice up each rule into a target and a rule
             this.ruleset.push({
@@ -25,20 +25,20 @@ module.exports = {
 
     //The function that should be called by the main method
     runCycles: function(numCycles) {
-        for (let i = 0; i < numCycles; i++)
+        for (var i = 0; i < numCycles; i++)
             this.cycle();
     },
 
     //Runs one iteration of the ruleset
     cycle: function() {
-        let temp = this.axiom;
+        var temp = this.axiom;
         
-        let newString = "";
+        var newString = "";
         //Loop through each letter of the current axiom
-        for (let i = 0; i < temp.length; i++) {
-            let letter = temp.substring(i, i + 1);
+        for (var i = 0; i < temp.length; i++) {
+            var letter = temp.substring(i, i + 1);
 
-            for (let j = 0; j < this.ruleset.length; j++) {
+            for (var j = 0; j < this.ruleset.length; j++) {
                 //Check if the letter is the same as any rule's target.
                 //If it is, brea out of the loop
                 if (letter == this.ruleset[j].target) {

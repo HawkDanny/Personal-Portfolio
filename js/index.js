@@ -1,28 +1,28 @@
 const system = require("./system.js");
 const turtle = require("./turtle.js");
 
-let axiom = "F";
-let rules = ["F->FF-[-FF+F]+[+F-F]"];
+var axiom = "F";
+var rules = ["F->FF-[-FF+F]+[+F-F]"];
 
-let primary = "#2C928D";
-let secondary = "#F1F1F1";
+var primary = "#2C928D";
+var secondary = "#F1F1F1";
 
-let canvas;
-let ctx;
+var canvas;
+var ctx;
 
-let myTurtle;
-let theta;
+var myTurtle;
+var theta;
 
 //Create a second set of variables to draw the background tree
-let canvas2;
-let ctx2;
-let myTurtle2;
+var canvas2;
+var ctx2;
+var myTurtle2;
 
 window.onload = function() {
     //For about page
-    let counter = 0;
+    var counter = 0;
         
-    let moment = document.querySelector(".moment");
+    var moment = document.querySelector(".moment");
     if (moment) {
         moment.onclick = function() {
             switch (counter) {
@@ -110,8 +110,8 @@ function drawTree(cnv, context, turtle, fill) {
     turtle.reset();
 
     //Loop through the axiom's letters and operate the turtle accordingly
-    for (let i = 0; i < system.axiom.length; i++) {
-        let letter = system.axiom.substring(i, i+1);
+    for (var i = 0; i < system.axiom.length; i++) {
+        var letter = system.axiom.substring(i, i+1);
 
         if (letter == "F") { //Move forward drawing line
             turtle.penDown();
