@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <link rel="stylesheet" type="text/css" href="tree.css">
+    <script src="main.js"></script>
+    <script src="proceduralTree.js"></script>
+    <script src="proceduralColor.js"></script>
+    <script src="resize.js"></script>
+    <script src="audioManager.js"></script>
+
+    <title>Trees</title>
+</head>
+<body>
+    <article>
+        <canvas id="drawCanvas">Your browser doesn't support canvas</canvas>
+        <canvas id="topCanvas">Your browser doesn't support canvas</canvas>
+
+        <div class="controls">
+            <audio controls loop></audio>
+            <label>Track: 
+                <select id="trackSelect" >
+                    <option value="media/TheOrientation.mp3">The Orientation</option>
+                    <option value="media/DisarmYou.mp3">Disarm You</option>
+                    <option value="media/ItsYourWorld.mp3">It's Your World</option>
+                    <option value="media/MyFunnyValentine.mp3">My Funny Valentine</option>
+                </select>
+            </label>
+            <p id="status">???</p>
+            <form>
+                <input id="lowTreeBrush" type="radio" name="treeBrush" checked> Low Tree Brush <br>
+                <input id="medTreeBrush" type="radio" name="treeBrush"> Medium Tree Brush <br>
+                <input id="highTreeBrush" type="radio" name="treeBrush"> High Tree Brush <br>
+                Tree Growth Speed <br>
+                <input id="growthSpeedSlider" type="range" value="100"> <br>
+                Maximum Branch Angle <br>
+                <input id="branchAngleSlider" type="range" value="100"> <br>
+                <input id="frequencyDataType" type="radio" name="audioDataType" checked> Frequency <br>
+                <input id="waveformDataType" type="radio" name="audioDataType"> Waveform <br>
+            </form>
+        </div>
+    </article>
+</body>
+</html>

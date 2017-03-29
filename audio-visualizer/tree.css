@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'fira_sansregular';
+    src: url('fonts/firasans-regular-webfont.woff2') format('woff2'),
+         url('fonts/firasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #EEE;
+    font-family: "fira_sansregular";
+}
+
+audio {
+    background: #EEE;
+}
+
+#drawCanvas {
+    position: absolute;
+    z-index: 0;
+    background: #EEE;
+}
+
+#topCanvas {
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0);
+}
+
+.controls {
+    padding-top: 100vh;
+}
