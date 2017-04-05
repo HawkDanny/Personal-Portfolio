@@ -129,6 +129,11 @@ article {
     padding-left: 13px;
 }
 
+#puppy {
+    margin-top: -134px;
+    width: 250px;
+}
+
 #boop {
     margin-top: -70px;
     width: 230px;
@@ -142,6 +147,10 @@ article {
 #montague {
     margin-top: -102px;
     width: 271px;
+}
+
+.puppyOverride {
+    width: 250px;
 }
 
 .boopOverride {
