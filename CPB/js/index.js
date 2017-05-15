@@ -88,7 +88,7 @@ function populateWrittenContent() {
     content[0] = "Hi. ";
     content[1] = "My name is Danny Hawk. ";
     content[2] = "I'm from Rochester NY ";
-    content[3] = "(I've lived there my entire life). ";
+    content[3] = "(I've lived there my entire life)";
     content[4] = "Here are a few things that I like, in no particular order: ";
     content[5] = "rock climbing, ";
     content[6] = "human-computer interaction, ";
