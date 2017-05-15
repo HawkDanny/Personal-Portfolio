@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+canvas {
+    width: 960px;
+    height: 685px;
+}
+
+audio {
+    display: none;
+}
