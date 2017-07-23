@@ -17,14 +17,18 @@ var article;
 var scrollPos;
 
 //Cards
-var card1;
+var characterCard;
+var eventCard;
+var willCard;
 
 function setup() {
     article = document.querySelector("article");
     scrollPos = 0;
 
     //Load images
-    card1 = loadImage("media/CharacterCardFront.jpg");
+    characterCard = loadImage("media/CharacterCardFront.jpg");
+    eventCard = loadImage("media/EventCardFront.jpg");
+    willCard = loadImage("media/WillCardFront.jpg");
 
     //Make a canvas that is half of the window, TODO: Make it resize
     var cnv = createCanvas(window.innerWidth / 2, window.innerHeight);
@@ -84,7 +88,18 @@ function spawnGraph() {
 function spawnCard() {
     var pos = randomSpawn(40);
 
-    objects.push(new Sprite(pos.x, pos.y, 54, 78, card1) );
+    var rand = random(0, 2);
+    switch(rand) {
+        case 0:
+        objects.push(new Sprite(pos.x, pos.y, 108, 156, characterCard) );
+        break;
+        case 1:
+        objects.push(new Sprite(pos.x, pos.y, 108, 156, eventCard) );
+        break;
+        case 2:
+        objects.push(new Sprite(pos.x, pos.y, 108, 156, willCard) );
+        break;
+    }
 }
 
 function boostUpward(force) {
