@@ -63,6 +63,15 @@ function draw() {
     }
 }
 
+function spawnTodo() {
+    var pos = randomSpawn(150);
+
+    objects.push(new Box(pos.x, pos.y, 300, 22, unhex(["8A", "B7", "D1"]) ) );
+    objects.push(new Box(pos.x - 170, pos.y - 6, 17, 3, unhex(["8A", "B7", "D1"]) ) );
+    objects.push(new Box(pos.x - 170, pos.y, 17, 3, unhex(["8A", "B7", "D1"]) ) );
+    objects.push(new Box(pos.x - 170, pos.y + 6, 17, 3, unhex(["8A", "B7", "D1"]) ) );
+}
+
 function spawnBoop() {
     var pos1 = randomSpawn(25);
     var pos2 = randomSpawn(25);
@@ -86,7 +95,7 @@ function spawnGraph() {
 }
 
 function spawnCard() {
-    var pos = randomSpawn(40);
+    var pos = randomSpawn(50);
 
     var rand = random(0, 3);
     if (rand < 1)
@@ -168,6 +177,7 @@ function createBounds() {
 
 //Called at setup to link canvas events to html Elements
 function createHTMLEvents() {
+    document.querySelector("#todo").addEventListener("mouseenter", spawnTodo);
     document.querySelector("#boop").addEventListener("mouseenter", spawnBoop);
     document.querySelector("#graph").addEventListener("mouseenter", spawnGraph);
     document.querySelector("#card").addEventListener("mouseenter", spawnCard);
