@@ -47,7 +47,7 @@ function setup() {
     Engine.run(engine);
 
     //This is so that the user immediately knows what is going on
-    spawnGreeting();
+    //spawnGreeting();
 }
 
 //Called every frame
@@ -65,21 +65,14 @@ function draw() {
         
         scrollPos = article.scrollTop;
     }
-
-    noStroke();
-    fill(unhex("96", "09", "09"));
-    beginShape();
-    vertex(20, 20);
-    vertex(40, 20);
-    vertex(40, 40);
-    vertex(20, 40);
-    endShape(CLOSE);
 }
 
 function spawnGreeting() {
-    var h = Vertices.fromPath("-20, -20, 20, -20, 20, 20, -20, 20"); //Square?
+    var h = Vertices.fromPath("-30, -40, -10, -40, -10, -10, 10, -10, 10, -40, 30, -40, 30, 40, 10, 40, 10, 10, -10, 10, -10, 40, -30, 40"); //w = 60, h = 80
+    var i = Vertices.fromPath("-30, -40, 30, -40, 30, -20, 10, -20, 10, 20, 30, 20, 30, 40, -30, 40, -30, 20, -10, 20, -10, -20, -30, -20"); //w = 60, h = 80
 
-    //objects.push(new Shape(width / 2, 50, h, unhex("96", "09", "09") ) );
+    objects.push(new Shape(width / 2 - 40, 50, h, unhex(["96", "09", "09"]) ) );
+    objects.push(new Shape(width / 2 + 40, 50, i, unhex(["96", "09", "09"]) ) );
 }
 
 function spawnTodo() {
