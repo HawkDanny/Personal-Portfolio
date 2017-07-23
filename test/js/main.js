@@ -95,7 +95,6 @@ function spawnCard() {
         objects.push(new Sprite(pos.x, pos.y, 108, 156, eventCard) );
     else
         objects.push(new Sprite(pos.x, pos.y, 108, 156, willCard) );
-    }
 }
 
 function boostUpward(force) {
