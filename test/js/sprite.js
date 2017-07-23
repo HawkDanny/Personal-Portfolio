@@ -17,7 +17,7 @@ function Sprite(x, y, w, h, path) {
         translate(pos.x, pos.y);
         rotate(angle);
         rectMode(CENTER);
-        image(img, 0, 0, this.w, this.h);
+        image(this.img, 0, 0, this.w, this.h);
         pop();
     }
 
