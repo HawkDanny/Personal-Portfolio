@@ -3,7 +3,8 @@ var Engine = Matter.Engine,
     World = Matter.World,
     Bodies = Matter.Bodies,
     Body = Matter.Body,
-    Composite = Matter.Composite;
+    Composite = Matter.Composite,
+    Vertices = Matter.Vertices;
 
 //Global engine reference
 var engine;
@@ -44,6 +45,9 @@ function setup() {
 
     //Start the simulation that runs at 60 frames per second
     Engine.run(engine);
+
+    //This is so that the user immediately knows what is going on
+    spawnGreeting();
 }
 
 //Called every frame
@@ -61,6 +65,21 @@ function draw() {
         
         scrollPos = article.scrollTop;
     }
+
+    noStroke();
+    fill(unhex("96", "09", "09"));
+    beginShape();
+    vertex(20, 20);
+    vertex(40, 20);
+    vertex(40, 40);
+    vertex(20, 40);
+    endShape(CLOSE);
+}
+
+function spawnGreeting() {
+    var h = Vertices.fromPath("-20, -20, 20, -20, 20, 20, -20, 20"); //Square?
+
+    //objects.push(new Shape(width / 2, 50, h, unhex("96", "09", "09") ) );
 }
 
 function spawnTodo() {
