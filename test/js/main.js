@@ -78,7 +78,7 @@ function spawnGraph() {
 function spawnCard() {
     var pos = randomSpawn(40);
 
-    objects.push(new Sprite(pos.x, pos.y, 54, 78, "../media/CharacterCardFront.jpg") );
+    objects.push(new Sprite(pos.x, pos.y, 54, 78, "media/CharacterCardFront.jpg") );
 }
 
 function boostUpward(force) {
