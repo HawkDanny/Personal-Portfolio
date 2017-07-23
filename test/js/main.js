@@ -88,17 +88,13 @@ function spawnGraph() {
 function spawnCard() {
     var pos = randomSpawn(40);
 
-    var rand = random(0, 2);
-    switch(rand) {
-        case 0:
+    var rand = random(0, 3);
+    if (rand < 1)
         objects.push(new Sprite(pos.x, pos.y, 108, 156, characterCard) );
-        break;
-        case 1:
+    else if (rand < 2)
         objects.push(new Sprite(pos.x, pos.y, 108, 156, eventCard) );
-        break;
-        case 2:
+    else
         objects.push(new Sprite(pos.x, pos.y, 108, 156, willCard) );
-        break;
     }
 }
 
