@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    width: 50vw;
+    width: 60vw;
     color: #EEE4E4;
     font-family: 'Open Sans', sans-serif;
 }
@@ -93,7 +93,7 @@ nav {
 /*Scrolling Content*/
 
 article {
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: #960909;

@@ -1,7 +1,7 @@
 
 
-function Box(x, y, w, h, color) {
-    this.body = Bodies.rectangle(x, y, w, h, {density: 0.02});
+function Box(x, y, w, h, color, density) {
+    this.body = Bodies.rectangle(x, y, w, h, {density: density});
     this.w = w;
     this.h = h;
     World.add(world, this.body);

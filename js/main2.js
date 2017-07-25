@@ -32,7 +32,7 @@ function setup() {
     willCard = loadImage("media/WillCardFront.jpg");
 
     //Make a canvas that is half of the window, TODO: Make it resize
-    var cnv = createCanvas(window.innerWidth / 2, window.innerHeight);
+    var cnv = createCanvas(window.innerWidth * 0.4, window.innerHeight);
     cnv.parent("sketchHolder");
 
     //Create the physics engine
@@ -152,7 +152,7 @@ function randomSpawn(buffer) {
 
 //Resize the canvas and reset the boundaries on window resize
 function windowResized() {
-    resizeCanvas(window.innerWidth / 2, window.innerHeight);
+    resizeCanvas(window.innerWidth / 3, window.innerHeight);
 
     World.remove(world, leftWall);
     World.remove(world, rightWall);
