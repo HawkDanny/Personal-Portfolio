@@ -28,4 +28,8 @@ function Shape(x, y, vertices, color) {
     this.applyForce = function(position, force) {
         Body.applyForce(this.body, position, force);
     }
+
+    this.removeFromWorld = function() {
+        World.remove(world, this.body);
+    }
 }

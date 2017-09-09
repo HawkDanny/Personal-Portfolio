@@ -22,9 +22,15 @@ var characterCard;
 var eventCard;
 var willCard;
 
+//Sidebar
+var isSidebarExpanded;
+
 function setup() {
     article = document.querySelector("article");
     scrollPos = 0;
+
+    //The sidebar does not start out expanded
+    isSidebarExpanded = false;
 
     //Load images
     characterCard = loadImage("media/CharacterCardFront.jpg");
@@ -32,7 +38,7 @@ function setup() {
     willCard = loadImage("media/WillCardFront.jpg");
 
     //Make a canvas that is half of the window, TODO: Make it resize
-    var cnv = createCanvas(window.innerWidth / 2, window.innerHeight);
+    var cnv = createCanvas(window.innerWidth * 0.4, window.innerHeight);
     cnv.parent("sketchHolder");
 
     //Create the physics engine
@@ -57,6 +63,14 @@ function draw() {
 
     for (var i = 0; i < objects.length; i++) {
         objects[i].show();
+
+
+        //If an object manages to get off screen, delete it to keep processing light
+        if (objects[i].isOffScreen()) {
+            objects[i].removeFromWorld();
+            objects.splice(i, 1);
+            --i;
+        }
     }
 
     if (scrollPos !== article.scrollTop) {
@@ -152,7 +166,7 @@ function randomSpawn(buffer) {
 
 //Resize the canvas and reset the boundaries on window resize
 function windowResized() {
-    resizeCanvas(window.innerWidth / 2, window.innerHeight);
+    resizeCanvas(window.innerWidth * 0.4, window.innerHeight);
 
     World.remove(world, leftWall);
     World.remove(world, rightWall);
@@ -186,6 +200,7 @@ function createBounds() {
 
     World.add(world, [floor, ceiling, leftWall, rightWall]);
 }
+
 
 //Called at setup to link canvas events to html Elements
 function createHTMLEvents() {

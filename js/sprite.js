@@ -24,4 +24,17 @@ function Sprite(x, y, w, h, img) {
     this.applyForce = function(position, force) {
         Body.applyForce(this.body, position, force);
     }
+
+    this.isOffScreen = function() {
+        var pos = this.body.position;
+
+        return (pos.x + this.w/2 < 0 ||
+                pos.y + this.h/2 < 0 ||
+                pos.x - this.w/2 > width ||
+                pos.y - this.h/2 > height);
+    }
+
+    this.removeFromWorld = function() {
+        World.remove(world, this.body);
+    }
 }

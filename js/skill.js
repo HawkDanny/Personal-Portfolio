@@ -1,8 +1,11 @@
 
 
-function Circle(x, y, radius, color) {
-    this.body = Bodies.circle(x, y, radius);
+function Skill(x, y, radius, color, label) {
+    this.body = Bodies.circle(x, y, radius, {
+        frictionAir: 0.05   
+    });
     this.radius = radius;
+    this.label = label;
     World.add(world, this.body);
 
     //Called every frame
@@ -16,6 +19,19 @@ function Circle(x, y, radius, color) {
         translate(pos.x, pos.y);
         rotate(angle);
         ellipse(0, 0, this.radius * 2);
+        pop();
+    }
+
+    //Called every frame, after the initial draw call
+    this.showText = function() {
+        fill(unhex(["26", "21", "21"]));
+        textSize(radius / 2);
+        
+        var pos = this.body.position;
+
+        push();
+        translate(pos.x, pos.y);
+        text(label, radius + 5, textSize() / 4);
         pop();
     }
 

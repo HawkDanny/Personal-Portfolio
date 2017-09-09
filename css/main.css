@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-    width: 50vw;
+    width: 60vw;
     color: #EEE4E4;
     font-family: 'Open Sans', sans-serif;
 }
@@ -60,40 +60,10 @@ nav {
 
 
 
-
-/*Sidebar*/
-
-
-.sidebar {
-    max-width: 40px;
-    left: 100%;
-    margin-left: -50px;
-    margin-top: 15px;
-    position: fixed;
-    text-align: center;
-}
-
-    #i_hand {
-        -ms-transform: rotate(-90deg) scale(0.75); /* IE 9 */
-        -webkit-transform: rotate(-90deg) scale(0.75); /* Chrome, Safari, Opera */
-        transform: rotate(-90deg) scale(0.75);
-
-        transition: transform 0.2s;
-    }
-
-    #i_hand:hover {
-        cursor: pointer;
-        -ms-transform: rotate(-90deg) scale(1); /* IE 9 */
-        -webkit-transform: rotate(-90deg) scale(1); /* Chrome, Safari, Opera */
-        transform: rotate(-90deg) scale(1);
-    }
-
-
-
 /*Scrolling Content*/
 
 article {
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: #960909;
@@ -163,6 +133,22 @@ article {
         padding-top: 5px;
     }
 
+/*.misc*/
+
+    .misc h3:hover {
+        text-decoration: none;
+    }
+
+    .misc ul {
+        list-style: none;
+        padding-top: 5px;
+        padding-left: 6px;
+    }
+
+    .misc ul li {
+        padding-top: 3px;
+    }
+
 .social {
     margin-top: -37px;
     margin-left: 15px;
@@ -214,4 +200,24 @@ article {
 
 #sketchHolder {
     width: 50vw;
+}
+
+
+
+
+
+/*About Me Page*/
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.me {
+    width: 310px;
+}
+
+.me p {
+    padding-bottom: 25px;
 }
