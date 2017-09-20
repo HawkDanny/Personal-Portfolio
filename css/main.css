@@ -21,6 +21,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.ca {
+    width: 40vw;
+}
+
 h1, h2 {
     padding: 0px;
     margin: 0px;
@@ -198,9 +202,11 @@ article {
 
 /*Sketch Styling*/
 
-#sketchHolder {
-    width: 50vw;
+.sha {
+    width: 60vw;
 }
+
+
 
 
 
@@ -212,6 +218,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40vw;
 }
 
 .me {

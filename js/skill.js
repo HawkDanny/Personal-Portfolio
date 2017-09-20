@@ -25,13 +25,15 @@ function Skill(x, y, radius, color, label) {
     //Called every frame, after the initial draw call
     this.showText = function() {
         fill(unhex(["26", "21", "21"]));
-        textSize(radius / 2);
+        textSize(map(radius, 20, 60, 9, 18));
         
         var pos = this.body.position;
+        var angle = this.body.angle;
 
         push();
         translate(pos.x, pos.y);
-        text(label, radius + 5, textSize() / 4);
+        rotate(angle);
+        text(label, textWidth(label) / -2, textSize() / 4);
         pop();
     }
 
@@ -46,6 +48,10 @@ function Skill(x, y, radius, color, label) {
                 pos.y + this.radius < 0 ||
                 pos.x - this.radius > width ||
                 pos.y - this.radius > height);
+    }
+
+    this.translate = function(x, y) {
+        Body.translate(this.body, {x: x, y: y});
     }
 
     this.removeFromWorld = function() {
