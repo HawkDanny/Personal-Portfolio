@@ -120,6 +120,20 @@ function spawnGraph() {
     objects.push(new Box(centerPos.x + 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
 }
 
+function spawnDogs() {
+    var centerPos = randomSpawn(40);
+
+    var randHeight = random(20, 100);
+    objects.push(new Box(centerPos.x - 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["E3", "04", "4A"]), 0.02 ) ); //#E3044A
+    randHeight = random(20, 100);
+    objects.push(new Box(centerPos.x - 15, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
+
+    randHeight = random(20, 100);
+    objects.push(new Box(centerPos.x + 15, centerPos.y - randHeight / 2, 15, randHeight, unhex(["E3", "04", "4A"]), 0.02 ) ); //#E3044A
+    randHeight = random(20, 100);
+    objects.push(new Box(centerPos.x + 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
+}
+
 function spawnCard() {
     var pos = randomSpawn(50);
 
@@ -206,6 +220,6 @@ function createBounds() {
 function createHTMLEvents() {
     document.querySelector("#todo").addEventListener("mouseenter", spawnTodo);
     document.querySelector("#boop").addEventListener("mouseenter", spawnBoop);
-    document.querySelector("#graph").addEventListener("mouseenter", spawnGraph);
+    document.querySelector("#dogseyes").addEventListener("mouseenter", spawnDogs);
     document.querySelector("#card").addEventListener("mouseenter", spawnCard);
 }
