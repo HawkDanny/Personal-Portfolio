@@ -58,7 +58,7 @@ function setup() {
 
 //Called every frame
 function draw() {
-    background(unhex(["EE", "E4", "E4"]));
+    background(unhex(["EE", "EE", "EE"]));
     noStroke();
 
     for (var i = 0; i < objects.length; i++) {
@@ -92,18 +92,18 @@ function spawnGreeting() {
 function spawnTodo() {
     var pos = randomSpawn(150);
 
-    objects.push(new Box(pos.x, pos.y, 300, 22, unhex(["8A", "B7", "D1"]), 0.001 ) );
-    objects.push(new Box(pos.x - 170, pos.y - 6, 17, 3, unhex(["8A", "B7", "D1"]), 0.05 ) );
-    objects.push(new Box(pos.x - 170, pos.y, 17, 3, unhex(["8A", "B7", "D1"]), 0.05 ) );
-    objects.push(new Box(pos.x - 170, pos.y + 6, 17, 3, unhex(["8A", "B7", "D1"]), 0.05 ) );
+    objects.push(new Box(pos.x, pos.y, 300, 22, unhex(["23", "23", "23"]), 0.001 ) );
+    objects.push(new Box(pos.x - 170, pos.y - 6, 17, 3, unhex(["23", "23", "23"]), 0.05 ) );
+    objects.push(new Box(pos.x - 170, pos.y, 17, 3, unhex(["23", "23", "23"]), 0.05 ) );
+    objects.push(new Box(pos.x - 170, pos.y + 6, 17, 3, unhex(["23", "23", "23"]), 0.05 ) );
 }
 
 function spawnBoop() {
     var pos1 = randomSpawn(25);
     var pos2 = randomSpawn(25);
 
-    objects.push(new Circle(pos1.x, pos1.y, 50, unhex(["D0", "59", "38"]))); //#D05938
-    objects.push(new Circle(pos2.x, pos2.y, 50, unhex(["95", "D1", "C5"]))); //#95D1C5
+    objects.push(new Circle(pos1.x, pos1.y, 50, unhex(["D0", "D0", "D0"]))); //#D05938 //D0D0D0
+    objects.push(new Circle(pos2.x, pos2.y, 50, unhex(["91", "91", "91"]))); //#95D1C5 //D1D1D1
 }
 
 function spawnGraph() {
@@ -121,17 +121,19 @@ function spawnGraph() {
 }
 
 function spawnDogs() {
-    var centerPos = randomSpawn(40);
+    var centerPos = randomSpawn(70);
 
-    var randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x - 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["E3", "04", "4A"]), 0.02 ) ); //#E3044A
-    randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x - 15, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
-
-    randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x + 15, centerPos.y - randHeight / 2, 15, randHeight, unhex(["E3", "04", "4A"]), 0.02 ) ); //#E3044A
-    randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x + 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
+    //This was tedious
+    objects.push(new Letter(centerPos.x - 68.1, centerPos.y, unhex(["21", "21", "21"]), "M", 20, 0.02) );
+    objects.push(new Letter(centerPos.x - 54.8, centerPos.y, unhex(["21", "21", "21"]), "Y", 20, 0.02) );
+    objects.push(new Letter(centerPos.x - 34.9, centerPos.y, unhex(["21", "21", "21"]), "D", 20, 0.02) );
+    objects.push(new Letter(centerPos.x - 19.4, centerPos.y, unhex(["21", "21", "21"]), "O", 20, 0.02) );
+    objects.push(new Letter(centerPos.x - 3.9, centerPos.y, unhex(["21", "21", "21"]), "G", 20, 0.02) );
+    objects.push(new Letter(centerPos.x + 9.4, centerPos.y, unhex(["21", "21", "21"]), "S", 20, 0.02) );
+    objects.push(new Letter(centerPos.x + 28.2, centerPos.y, unhex(["21", "21", "21"]), "E", 20, 0.02) );
+    objects.push(new Letter(centerPos.x + 41.5, centerPos.y, unhex(["21", "21", "21"]), "Y", 20, 0.02) );
+    objects.push(new Letter(centerPos.x + 54.8, centerPos.y, unhex(["21", "21", "21"]), "E", 20, 0.02) );
+    objects.push(new Letter(centerPos.x + 68.1, centerPos.y, unhex(["21", "21", "21"]), "S", 20, 0.02) );
 }
 
 function spawnCard() {
