@@ -60,8 +60,7 @@ function setup() {
 
 //Called every frame
 function draw() {
-    background(unhex(["EE", "E4", "E4"]));
-    stroke(unhex(["00", "00", "00"]));
+    background(unhex(["EE", "EE", "EE"]));
 
     //Draw lines
     for (var i = 0; i < connections.length; i++) {
@@ -111,11 +110,11 @@ function setupSkills() {
     var skill3 = 40;
     var skill4 = 50;
     var skill5 = 60;
-    var interest1 = unhex(["A0", "A1", "B0"]);
-    var interest2 = unhex(["89", "8B", "B0"]);
-    var interest3 = unhex(["68", "6C", "B0"]);
-    var interest4 = unhex(["4C", "51", "B0"]);
-    var interest5 = unhex(["2C", "33", "B0"]);
+    var interest1 = unhex(["C4", "CE", "D1"]); //C4CED1
+    var interest2 = unhex(["A7", "C8", "D1"]); //A7C8D1
+    var interest3 = unhex(["6F", "BC", "D1"]); //6FBCD1
+    var interest4 = unhex(["52", "B6", "D1"]); //52B6D1
+    var interest5 = unhex(["00", "9F", "C9"]); //009FC9
 
     spawnSkill("C#", skill5, interest5); //0
     spawnSkill("C++", skill3, interest3); //1
@@ -149,41 +148,6 @@ function setupSkills() {
 
     var connectorWidth = 250;
     var connectorStrength = 0.00005;
-
-    //c#
-    //connectSkills(objects[0], objects[9], connectorWidth, connectorStrength);
-    //connectSkills(objects[0], objects[14], connectorWidth, connectorStrength);
-    //connectSkills(objects[0], objects[15], connectorWidth, connectorStrength);
-    //connectSkills(objects[0], objects[17], connectorWidth, connectorStrength);
-    //connectSkills(objects[0], objects[18], connectorWidth, connectorStrength);
-
-    //c++
-    //connectSkills(objects[1], objects[7], connectorWidth, connectorStrength);
-    //connectSkills(objects[1], objects[17], connectorWidth, connectorStrength);
-
-    //javaScript
-    //connectSkills(objects[2], objects[5], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[10], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[12], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[15], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[18], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[24], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[25], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[26], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[27], connectorWidth, connectorStrength);
-    //connectSkills(objects[2], objects[28], connectorWidth, connectorStrength);
-
-    //CSS
-    //connectSkills(objects[3], objects[4], connectorWidth, connectorStrength);
-    //connectSkills(objects[3], objects[11], connectorWidth, connectorStrength);
-    //connectSkills(objects[3], objects[18], connectorWidth, connectorStrength);
-
-    //HTML
-    //connectSkills(objects[4], objects[11], connectorWidth, connectorStrength);
-    //connectSkills(objects[4], objects[18], connectorWidth, connectorStrength);
-
-    //Processing
-    //connectSkills(objects[6], objects[8], connectorWidth, connectorStrength);
 }
 
 function spawnSkill(label, size, color) {

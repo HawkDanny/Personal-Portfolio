@@ -26,6 +26,7 @@ function Skill(x, y, radius, color, label) {
     this.showText = function() {
         fill(unhex(["26", "21", "21"]));
         textSize(map(radius, 20, 60, 9, 18));
+        //stroke(unhex(["66", "66", "66"]));
         
         var pos = this.body.position;
         var angle = this.body.angle;
@@ -33,6 +34,7 @@ function Skill(x, y, radius, color, label) {
         push();
         translate(pos.x, pos.y);
         rotate(angle);
+        fill(unhex(["55", "55", "55"])); //the text color
         text(label, textWidth(label) / -2, textSize() / 4);
         pop();
     }

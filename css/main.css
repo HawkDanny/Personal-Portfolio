@@ -61,6 +61,10 @@ nav {
         margin-right: 15px;
     }
 
+    nav a {
+        color: #009FC9;
+    }
+
 
 
 
@@ -129,6 +133,7 @@ article {
         display: block;
         margin-left: -56px;
         margin-bottom: -15px;
+        color: #009FC9;
     }
 
     .project .description {

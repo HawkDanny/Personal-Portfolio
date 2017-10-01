@@ -53,7 +53,7 @@ function setup() {
     Engine.run(engine);
 
     //This is so that the user immediately knows what is going on
-    //spawnGreeting();
+    spawnGreeting();
 }
 
 //Called every frame
@@ -82,11 +82,23 @@ function draw() {
 }
 
 function spawnGreeting() {
-    var h = Vertices.fromPath("-30, -40, -10, -40, -10, -10, 10, -10, 10, -40, 30, -40, 30, 40, 10, 40, 10, 10, -10, 10, -10, 40, -30, 40"); //w = 60, h = 80
-    var i = Vertices.fromPath("-30, -40, 30, -40, 30, -20, 10, -20, 10, 20, 30, 20, 30, 40, -30, 40, -30, 20, -10, 20, -10, -20, -30, -20"); //w = 60, h = 80
+    if (random(0, 1) < 0.5)
+        spawnHey();
+    else
+        spawnHi();
+}
 
-    objects.push(new Shape(width / 2 - 40, 50, h, unhex(["96", "09", "09"]) ) );
-    objects.push(new Shape(width / 2 + 40, 50, i, unhex(["96", "09", "09"]) ) );
+function spawnHey() {
+    objects.push(new Letter(width / 2 - 7.2, 20, unhex(["21", "21", "21"]), "H", 20, 0.02) );
+    objects.push(new Letter(width / 2, 20, unhex(["21", "21", "21"]), "E", 20, 0.02) );
+    objects.push(new Letter(width / 2 + 7.2, 20, unhex(["21", "21", "21"]), "Y", 20, 0.02) );
+}
+
+function spawnHi() {
+    //19.9 width
+    //middle is 9.95
+    objects.push(new Letter(width / 2 - 2.75, 20, unhex(["21", "21", "21"]), "H", 20, 0.02) );
+    objects.push(new Letter(width / 2 + 4.45, 20, unhex(["21", "21", "21"]), "I", 20, 0.02) );
 }
 
 function spawnTodo() {
