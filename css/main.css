@@ -13,12 +13,12 @@
 body {
     display: flex;
     overflow-y: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
     width: 60vw;
     color: #212121;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .ca {
@@ -233,4 +233,76 @@ article {
 
 .me p {
     padding-bottom: 25px;
+}
+
+
+
+
+/*Lit Rocks Styling*/
+
+.rocks {
+    width: 100vw;
+}
+
+.rocks article {
+    margin: auto;
+    padding-top: 100px;
+    margin: auto;
+    overflow-y: visible;
+}
+
+.rocks article h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.rocks article p {
+    width: 500px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.rocks .whyididthis {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.rocks article a {
+    color: #009FC9;
+}
+
+.instagram-media {
+    margin: auto !important;
+    margin-bottom: 50px !important;
+}
+
+.rocks article h3 {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.rocksTakeaways {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.rocksTakeaways a:hover {
+    border-bottom: none;
+}
+
+.takeaway {
+    max-width: 150px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #EEEEEE;
+    border-radius: 10px;
 }
