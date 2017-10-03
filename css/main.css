@@ -281,7 +281,7 @@ article {
     border-style: solid !important;
     border-width: 1px !important;
     border-color: #EEEEEE !important;*/
-    box-shadow: 2px 2px 0px #DDDDDD !important;
+    box-shadow: 2px 2px 1px #DDDDDD !important;
 }
 
 .rocks article h3 {
@@ -311,5 +311,10 @@ article {
     text-align: center;
     background-color: #EEEEEE;
     border-radius: 3px;
-    box-shadow: 2px 2px 0px #DDDDDD;
+    box-shadow: 2px 2px 1px #DDDDDD;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.takeaway:hover {
+    box-shadow: 2px 2px 1px #BBBBBB;
 }
