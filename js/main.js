@@ -160,6 +160,12 @@ function spawnCard() {
         objects.push(new Sprite(pos.x, pos.y, 108, 156, willCard) );
 }
 
+function spawnRock() {
+    var pos = randomSpawn(25);
+
+    objects.push(new Shape(pos.x, pos.y, [Vertices.fromPath('-10 -10 -10 10 10 10 10 -10' )], unhex(["B0", "B0", "B0"]) ) );
+}
+
 function boostUpward(force) {
     for (var i = 0; i < objects.length; i++) {
         objects[i].applyForce(objects[i].body.position, {x: 0, y: force});
@@ -236,4 +242,5 @@ function createHTMLEvents() {
     document.querySelector("#boop").addEventListener("mouseenter", spawnBoop);
     document.querySelector("#dogseyes").addEventListener("mouseenter", spawnDogs);
     document.querySelector("#card").addEventListener("mouseenter", spawnCard);
+    document.querySelector("#rocks").addEventListener("mouseenter", spawnRock);
 }

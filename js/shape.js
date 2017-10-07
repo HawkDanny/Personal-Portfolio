@@ -32,4 +32,13 @@ function Shape(x, y, vertices, color) {
     this.removeFromWorld = function() {
         World.remove(world, this.body);
     }
+
+    this.isOffScreen = function() {
+        var pos = this.body.position;
+
+        return (pos.x < 0 ||
+                pos.y < 0 ||
+                pos.x > width ||
+                pos.y > height);
+    }
 }

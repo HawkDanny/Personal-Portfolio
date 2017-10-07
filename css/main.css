@@ -227,6 +227,10 @@ article {
     width: 40vw;
 }
 
+.about a {
+    color: #00aced;
+}
+
 .me {
     width: 310px;
 }
