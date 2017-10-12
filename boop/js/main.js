@@ -74,7 +74,7 @@ app.Main = {
         this.mousePos = new Victor(0, 0);
 
         //set the movement magnitude
-        this.movementMag = 1;
+        this.movementMag = 0.7;
 
         //retrieve the Images
         this.titleImage = document.querySelector("#title");

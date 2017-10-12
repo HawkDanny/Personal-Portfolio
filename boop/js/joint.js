@@ -51,7 +51,8 @@ app.Joint = function(){
         this.canvas = canvas;
         this.position = position || new Victor(0, 0);
         this.inputDirection = new Victor(0, 0);
-        this.bumpMag = 40;
+        this.bumpMag = 20;
+        this.isSpeedDoubled = false;
 
         this.lastTime = 0;
 
@@ -61,7 +62,7 @@ app.Joint = function(){
 
         this.restitution = restitution;
         this.mass = mass;
-        this.maxSpeed = 50; //pixels per frame
+        this.maxSpeed = 100; //pixels per frame
         this.children = [];
 
         this.drag = 0.05;
@@ -171,12 +172,14 @@ app.Joint = function(){
         this.velocity.y *= usableDrag;
 
         //limit the velocity to maxSpeed
-        if (this.velocity.x > this.maxSpeed) {
+        if (this.velocity.x > this.maxSpeed)
             this.velocity.x = this.maxSpeed;
-        }
-        if (this.velocity.y > this.maxSpeed) {
+        if (this.velocity.y > this.maxSpeed)
             this.velocity.y = this.maxSpeed;
-        }
+        if (this.velocity.x < 0 && this.velocity.x < -this.maxSpeed)
+            this.velocity.x = -this.maxSpeed;
+        if (this.velocity.y < 0 && this.velocity.y < -this.maxSpeed)
+            this.velocity.y = -this.maxSpeed;
 
         var dt = this.calculateDeltaTime();
         //console.log(this.velocity.clone().multiply(new Victor(dt, dt)));
