@@ -22,6 +22,9 @@ var characterCard;
 var eventCard;
 var willCard;
 
+//Instagram
+var rockPic;
+
 //Sidebar
 var isSidebarExpanded;
 
@@ -33,9 +36,10 @@ function setup() {
     isSidebarExpanded = false;
 
     //Load images
-    characterCard = loadImage("media/CharacterCardFront.jpg");
-    eventCard = loadImage("media/EventCardFront.jpg");
-    willCard = loadImage("media/WillCardFront.jpg");
+    characterCard = loadImage("media/character_small.jpg");
+    eventCard = loadImage("media/event_small.jpg");
+    willCard = loadImage("media/will_small.jpg");
+    rockPic = loadImage("media/litrock.jpg");
 
     //Make a canvas that is half of the window, TODO: Make it resize
     var cnv = createCanvas(window.innerWidth * 0.4, window.innerHeight);
@@ -161,9 +165,9 @@ function spawnCard() {
 }
 
 function spawnRock() {
-    var pos = randomSpawn(25);
+    var pos = randomSpawn(50);
 
-    objects.push(new Shape(pos.x, pos.y, [Vertices.fromPath('-10 -10 -10 10 10 10 10 -10' )], unhex(["B0", "B0", "B0"]) ) );
+    objects.push(new Sprite(pos.x, pos.y, 100, 100, litrock) );
 }
 
 function boostUpward(force) {
