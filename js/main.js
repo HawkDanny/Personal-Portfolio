@@ -167,7 +167,7 @@ function spawnCard() {
 function spawnRock() {
     var pos = randomSpawn(50);
 
-    objects.push(new Sprite(pos.x, pos.y, 100, 100, litrock) );
+    objects.push(new Sprite(pos.x, pos.y, 100, 100, rockPic) );
 }
 
 function boostUpward(force) {
