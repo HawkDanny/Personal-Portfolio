@@ -62,7 +62,7 @@ app.Joint = function(){
 
         this.restitution = restitution;
         this.mass = mass;
-        this.maxSpeed = 100; //pixels per frame
+        this.maxSpeed = 50; //pixels per frame
         this.children = [];
 
         this.drag = 0.05;
