@@ -85,14 +85,14 @@ article {
 }
 
     .timeline h1 {
-        font-size: 59px;
+        font-size: 40px;
         letter-spacing: -2px;
         font-weight: 700;
     }
 
     .timeline h2 {
         font-size: 25px;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
         font-weight: 300;
         margin-top: -15px;
     }
@@ -110,7 +110,7 @@ article {
     }
 
     .project h3 {
-        font-size: 40px;
+        font-size: 60px;
         line-height: 1em;
         font-family: 'Open Sans Condensed', sans-serif;
         font-weight: 700;
@@ -130,6 +130,7 @@ article {
     }
 
     .project .year {
+        visibility: hidden;
         display: block;
         margin-left: -56px;
         margin-bottom: -15px;
@@ -141,6 +142,10 @@ article {
         border-width: 6px;
         padding-left: 5px;
         padding-top: 5px;
+    }
+
+    .misc h3 {
+        font-size: 30px;
     }
 
 /*.misc*/
@@ -286,7 +291,7 @@ article {
     margin-bottom: 50px !important;
     margin-left: 25px !important;
     margin-right: 25px !important;
-    max-width: 350px !important;
+    max-width: 700px !important;
     /*
     box-shadow: 0px 0px 0px #FFFFFF !important;
     border-style: solid !important;
