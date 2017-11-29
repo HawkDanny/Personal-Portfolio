@@ -281,6 +281,7 @@ article {
 .rocks .posts {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .rocks article a {
