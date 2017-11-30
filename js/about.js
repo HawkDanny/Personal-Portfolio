@@ -98,11 +98,11 @@ function draw() {
 
 function setupSkills() {
     /**
-     * 1: 20, A0A1B0
-     * 2: 30, 898BB0
-     * 3: 40, 686CB0
-     * 4: 50, 4C51B0
-     * 5: 60, 2C33B0
+     * 1: 20, BFBFBF
+     * 2: 30, BFACB6
+     * 3: 40, BF9BAE
+     * 4: 50, BF82A2
+     * 5: 60, BF6C97
      */
 
     var skill1 = 20;
@@ -110,11 +110,11 @@ function setupSkills() {
     var skill3 = 40;
     var skill4 = 50;
     var skill5 = 60;
-    var interest1 = unhex(["C4", "CE", "D1"]); //C4CED1
-    var interest2 = unhex(["A7", "C8", "D1"]); //A7C8D1
-    var interest3 = unhex(["6F", "BC", "D1"]); //6FBCD1
-    var interest4 = unhex(["52", "B6", "D1"]); //52B6D1
-    var interest5 = unhex(["00", "9F", "C9"]); //009FC9
+    var interest1 = unhex(["BF", "BF", "BF"]); //BFBFBF
+    var interest2 = unhex(["BF", "AC", "B6"]); //BFACB6
+    var interest3 = unhex(["BF", "9B", "AE"]); //BF9BAE
+    var interest4 = unhex(["BF", "82", "A2"]); //BF82A2
+    var interest5 = unhex(["BF", "6C", "97"]); //BF6C97
 
     spawnSkill("C#", skill5, interest5); //0
     spawnSkill("C++", skill3, interest3); //1
