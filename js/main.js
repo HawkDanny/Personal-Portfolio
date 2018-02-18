@@ -50,7 +50,7 @@ function setup() {
 
 //Called every frame
 function draw() {
-    background(unhex(["FF", "FF", "FF"]));
+    background(unhex(["FD", "FD", "FD"]));
     noStroke();
 
     for (var i = 0; i < objects.length; i++) {
