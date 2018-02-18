@@ -1,0 +1,39 @@
+body {
+    font-family: 'Open Sans', sans-serif; 
+    color: #333333;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: #666666;
+}
+    a:active {
+        color: #333333;
+    }
+    a:hover {
+        color: #333333;
+    }
+
+.header {
+    margin: auto;
+    width: fit-content;
+}
+
+h1 {
+    font-size: 200px;
+    line-height: 0em;
+    margin-left: -18px;
+}
+
+h4 {
+    margin-top: -30px;
+    font-size: 17px;
+    color: #666666;
+}
+
+article {
+    margin: auto;
+    margin-top: 200px;
+    max-width: 600px;
+}

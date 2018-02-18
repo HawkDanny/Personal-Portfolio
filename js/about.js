@@ -33,7 +33,7 @@ function setup() {
     scrollPos = 0;
 
     //Make a canvas that is half of the window, TODO: Make it resize
-    var cnv = createCanvas(window.innerWidth * 0.6, window.innerHeight);
+    var cnv = createCanvas(window.innerWidth, window.innerHeight);
     cnv.parent("sketchHolder");
 
     //Create the physics engine
@@ -60,7 +60,7 @@ function setup() {
 
 //Called every frame
 function draw() {
-    background(unhex(["EE", "EE", "EE"]));
+    background(unhex(["22", "22", "22"]));
 
     //Draw lines
     for (var i = 0; i < connections.length; i++) {
@@ -98,11 +98,11 @@ function draw() {
 
 function setupSkills() {
     /**
-     * 1: 20, BFBFBF
-     * 2: 30, BFACB6
-     * 3: 40, BF9BAE
-     * 4: 50, BF82A2
-     * 5: 60, BF6C97
+     * 1: 20, ffe6f7
+     * 2: 30, ff99dd
+     * 3: 40, ff33bb
+     * 4: 50, cc0088
+     * 5: 60, 660044
      */
 
     var skill1 = 20;
@@ -110,11 +110,11 @@ function setupSkills() {
     var skill3 = 40;
     var skill4 = 50;
     var skill5 = 60;
-    var interest1 = unhex(["BF", "BF", "BF"]); //BFBFBF
-    var interest2 = unhex(["BF", "AC", "B6"]); //BFACB6
-    var interest3 = unhex(["BF", "9B", "AE"]); //BF9BAE
-    var interest4 = unhex(["BF", "82", "A2"]); //BF82A2
-    var interest5 = unhex(["BF", "6C", "97"]); //BF6C97
+    var interest1 = unhex(["FF", "E6", "F7"]); //D696B7
+    var interest2 = unhex(["FF", "99", "DD"]); //BF6C97
+    var interest3 = unhex(["FF", "33", "BB"]); //CC4A8D
+    var interest4 = unhex(["CC", "00", "88"]); //D62E85
+    var interest5 = unhex(["66", "00", "44"]); //CC0D70
 
     spawnSkill("C#", skill5, interest5); //0
     spawnSkill("C++", skill3, interest3); //1
@@ -189,7 +189,7 @@ function randomSpawn(buffer) {
 
 //Resize the canvas and reset the boundaries on window resize
 function windowResized() {
-    resizeCanvas(window.innerWidth * 0.6, window.innerHeight);
+    resizeCanvas(window.innerWidth, window.innerHeight);
 
     World.remove(world, leftWall);
     World.remove(world, rightWall);

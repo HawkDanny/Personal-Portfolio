@@ -10,38 +10,14 @@
     margin: 0px;
 }
 
-body {
-    display: flex;
-    overflow-y: hidden;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.container {
-    width: 60vw;
-    color: #212121;
-}
-
-.ca {
-    width: 40vw;
-}
-
 h1, h2 {
     padding: 0px;
     margin: 0px;
 }
 
 a {
-    color: #212121;
     text-decoration: none;
 }
-
-    a:hover {
-        border-bottom: dotted;
-    }
-
-
-
-    
 
 /*Navigation*/
 
@@ -62,202 +38,149 @@ nav {
     }
 
     nav a {
-        color: #Bf6C97;
+        background-color: black;
+        padding: 4px 6px 4px 6px;
+        color: white;
+    }
+
+    nav a:hover {
+        background-color: rgba(0, 0, 0, 0.0);
+        color: black;
     }
 
 
 
+/*Basic website blockings*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
-/*Scrolling Content*/
+#sketch {
+    position: fixed;
+}
 
-article {
-    width: 60vw;
+.container {
+    position: fixed;
+    width: 100vw;
+}
+
+.content {
     height: 100vh;
     overflow-y: scroll;
-    background-color: #264633;
-    background-color: #FFFFFF;
 }
 
-.timeline {
-    width: 400px; /*The width of "DANNY HAWK"*/
+article {
+    padding-top: 200px;
+    padding-bottom: 200px;
     margin: auto;
-    padding-top: 30vh;
+    width: 500px;
 }
 
-    .timeline h1 {
-        font-size: 40px;
-        letter-spacing: -2px;
-        font-weight: 700;
-    }
 
-    .timeline h2 {
-        font-size: 25px;
-        letter-spacing: -1px;
-        font-weight: 300;
-        margin-top: -15px;
-    }
+
+.name {
+    font-size: 70px;
+    text-align: center;
+}
+
+.objective {
+    font-size: 9px;
+    margin-top: -18px;
+    padding-left: 34px;
+}
+
+
+
+/*PROJECTS*/
 
 .project {
-    margin-bottom: 6px; /*Makes the line look continuous*/
-    height: 200px;
-
-    border-left: dotted;
-    border-width: 6px;
+    margin-top: 100px;
+    background-color: black;
+    padding: 10px 14px 10px 14px;
+    color: white;
 }
 
-    .project .content {
-        margin-left: 6px;
+    .project:hover {
+        cursor: pointer;
     }
 
     .project h3 {
-        font-size: 60px;
-        line-height: 1em;
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-weight: 700;
-        padding-left: 5px;
+        float: left;
+        font-size: 22px;
+        font-weight: 400;
+        font-style: italic;
+    }
+    
+    .project .tools {
+        padding-left: 4px;
+        font-size: 16px;
+        font-style: normal;
+        color: #666666;
     }
 
-    .project h3:hover {
-        text-decoration: underline;
+    .project p {
+        clear: both;
+        padding-top: 4px;
     }
 
-    .project h4 {
-        font-weight: 300;
-        font-family: 'Open Sans Condensed', sans-serif;
-        line-height: 1em;
-        padding-left: 5px;
-        padding-bottom: 5px;
-    }
-
-    .project .year {
-        visibility: hidden;
-        display: block;
-        margin-left: -56px;
-        margin-bottom: -15px;
-        color: #009FC9;
-    }
-
-    .project .description {
-        border-top: dotted;
-        border-width: 6px;
-        padding-left: 5px;
-        padding-top: 5px;
-    }
-
-    .misc h3 {
-        font-size: 30px;
-    }
-
-/*.misc*/
-
-    .misc h3:hover {
-        text-decoration: none;
-    }
-
-    .misc ul {
-        list-style: none;
-        padding-top: 5px;
-        padding-left: 6px;
-    }
-
-    .misc ul li {
-        padding-top: 3px;
-    }
-
-.social {
-    margin-top: -37px;
-    margin-left: 15px;
+#todo:hover {
+    color: #FE0000;
 }
 
-    .social i {
-        padding-bottom: 5px;
-    }
+#rocks:hover {
+    color: #FDFE02;
+}
 
-    .social a:hover {
-        border: none;
+#dog:hover {
+    color: #0BFF01;
+}
+
+#montague:hover {
+    color: #011EFE;
+}
+
+
+
+
+/*Social*/
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+    .social i {
+        color: white;
+        background-color: black;
+        padding: 6px;
+        margin: 100px 30px 0px 30px;
     }
 
     #github:hover {
         color: #111111;
+        background-color: rgba(0, 0, 0, 0.0);
     }
 
     #twitch:hover {
         color: #6441A4;
+        background-color: rgba(0, 0, 0, 0.0);
     }
 
     #linkedin:hover {
         color: #007bb6;
+        background-color: rgba(0, 0, 0, 0.0);
     }
 
     #twitter:hover {
         color: #00aced;
+        background-color: rgba(0, 0, 0, 0.0);
     }
-
-.spacer {
-    margin-bottom: 6px; /*Makes the line look continuous*/
-    height: 350px;
-
-    border-left: dotted;
-    border-width: 6px;
-}
-
-.bottomSpacer {
-    height: 50vh;
-    border-top: dotted;
-    border-width: 6px;
-}
-
-
-
-
-
-/*Sketch Styling*/
-
-.sha {
-    width: 60vw;
-}
-
-
-
-
-
-
-
-/*About Me Page*/
-
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40vw;
-}
-
-.about a {
-    color: #00aced;
-}
-
-.me {
-    width: 310px;
-}
-
-.me p {
-    padding-bottom: 25px;
-}
-
 
 
 
 /*Lit Rocks Styling*/
 
-.rocks {
-    width: 100vw;
-}
-
 .rocks article {
-    margin: auto;
-    padding-top: 100px;
-    margin: auto;
-    overflow-y: visible;
+    overflow-y: scroll;
 }
 
 .rocks article h1 {

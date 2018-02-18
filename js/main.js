@@ -29,21 +29,12 @@ var rockPic;
 var isSidebarExpanded;
 
 function setup() {
-    article = document.querySelector("article");
+    article = document.querySelector(".content");
     scrollPos = 0;
 
-    //The sidebar does not start out expanded
-    isSidebarExpanded = false;
-
-    //Load images
-    characterCard = loadImage("media/character_small.jpg");
-    eventCard = loadImage("media/event_small.jpg");
-    willCard = loadImage("media/will_small.jpg");
-    rockPic = loadImage("media/litrock.jpg");
-
-    //Make a canvas that is half of the window, TODO: Make it resize
-    var cnv = createCanvas(window.innerWidth * 0.4, window.innerHeight);
-    cnv.parent("sketchHolder");
+    //Make the canvas and tell p5 about it
+    var cnv = createCanvas(window.innerWidth, window.innerHeight);
+    cnv.parent("sketch");
 
     //Create the physics engine
     engine = Engine.create();
@@ -55,14 +46,11 @@ function setup() {
 
     //Start the simulation that runs at 60 frames per second
     Engine.run(engine);
-
-    //This is so that the user immediately knows what is going on
-    spawnGreeting();
 }
 
 //Called every frame
 function draw() {
-    background(unhex(["EE", "EE", "EE"]));
+    background(unhex(["FF", "FF", "FF"]));
     noStroke();
 
     for (var i = 0; i < objects.length; i++) {
@@ -85,89 +73,9 @@ function draw() {
     }
 }
 
-function spawnGreeting() {
-    if (random(0, 1) < 0.5)
-        spawnHey();
-    else
-        spawnHi();
-}
-
-function spawnHey() {
-    objects.push(new Letter(width / 2 - 7.2, 20, unhex(["21", "21", "21"]), "H", 20, 0.02) );
-    objects.push(new Letter(width / 2, 20, unhex(["21", "21", "21"]), "E", 20, 0.02) );
-    objects.push(new Letter(width / 2 + 7.2, 20, unhex(["21", "21", "21"]), "Y", 20, 0.02) );
-}
-
-function spawnHi() {
-    //19.9 width
-    //middle is 9.95
-    objects.push(new Letter(width / 2 - 2.75, 20, unhex(["21", "21", "21"]), "H", 20, 0.02) );
-    objects.push(new Letter(width / 2 + 4.45, 20, unhex(["21", "21", "21"]), "I", 20, 0.02) );
-}
-
-function spawnTodo() {
-    var pos = randomSpawn(150);
-
-    objects.push(new Box(pos.x, pos.y, 300, 22, unhex(["23", "23", "23"]), 0.001 ) );
-    objects.push(new Box(pos.x - 170, pos.y - 6, 17, 3, unhex(["23", "23", "23"]), 0.05 ) );
-    objects.push(new Box(pos.x - 170, pos.y, 17, 3, unhex(["23", "23", "23"]), 0.05 ) );
-    objects.push(new Box(pos.x - 170, pos.y + 6, 17, 3, unhex(["23", "23", "23"]), 0.05 ) );
-}
-
-function spawnBoop() {
-    var pos1 = randomSpawn(25);
-    var pos2 = randomSpawn(25);
-
-    objects.push(new Circle(pos1.x, pos1.y, 50, unhex(["D0", "D0", "D0"]))); //#D05938 //D0D0D0
-    objects.push(new Circle(pos2.x, pos2.y, 50, unhex(["91", "91", "91"]))); //#95D1C5 //D1D1D1
-}
-
-function spawnGraph() {
-    var centerPos = randomSpawn(40);
-
-    var randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x - 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["E3", "04", "4A"]), 0.02 ) ); //#E3044A
-    randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x - 15, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
-
-    randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x + 15, centerPos.y - randHeight / 2, 15, randHeight, unhex(["E3", "04", "4A"]), 0.02 ) ); //#E3044A
-    randHeight = random(20, 100);
-    objects.push(new Box(centerPos.x + 30, centerPos.y - randHeight / 2, 15, randHeight, unhex(["06", "72", "9C"]), 0.02 ) ); //#06729C
-}
-
-function spawnDogs() {
-    var centerPos = randomSpawn(70);
-
-    //This was tedious
-    objects.push(new Letter(centerPos.x - 68.1, centerPos.y, unhex(["21", "21", "21"]), "M", 20, 0.02) );
-    objects.push(new Letter(centerPos.x - 54.8, centerPos.y, unhex(["21", "21", "21"]), "Y", 20, 0.02) );
-    objects.push(new Letter(centerPos.x - 34.9, centerPos.y, unhex(["21", "21", "21"]), "D", 20, 0.02) );
-    objects.push(new Letter(centerPos.x - 19.4, centerPos.y, unhex(["21", "21", "21"]), "O", 20, 0.02) );
-    objects.push(new Letter(centerPos.x - 3.9, centerPos.y, unhex(["21", "21", "21"]), "G", 20, 0.02) );
-    objects.push(new Letter(centerPos.x + 9.4, centerPos.y, unhex(["21", "21", "21"]), "S", 20, 0.02) );
-    objects.push(new Letter(centerPos.x + 28.2, centerPos.y, unhex(["21", "21", "21"]), "E", 20, 0.02) );
-    objects.push(new Letter(centerPos.x + 41.5, centerPos.y, unhex(["21", "21", "21"]), "Y", 20, 0.02) );
-    objects.push(new Letter(centerPos.x + 54.8, centerPos.y, unhex(["21", "21", "21"]), "E", 20, 0.02) );
-    objects.push(new Letter(centerPos.x + 68.1, centerPos.y, unhex(["21", "21", "21"]), "S", 20, 0.02) );
-}
-
-function spawnCard() {
-    var pos = randomSpawn(50);
-
-    var rand = random(0, 3);
-    if (rand < 1)
-        objects.push(new Sprite(pos.x, pos.y, 108, 156, characterCard) );
-    else if (rand < 2)
-        objects.push(new Sprite(pos.x, pos.y, 108, 156, eventCard) );
-    else
-        objects.push(new Sprite(pos.x, pos.y, 108, 156, willCard) );
-}
-
-function spawnRock() {
-    var pos = randomSpawn(50);
-
-    objects.push(new Sprite(pos.x, pos.y, 100, 100, rockPic) );
+function spawnCircle(color) {
+    var pos = randomSpawn(25);
+    objects.push(new Circle(pos.x, pos.y, 50, color)); 
 }
 
 function boostUpward(force) {
@@ -183,7 +91,7 @@ function translateCanvas(yTranslation) {
     yTranslation = Math.max(yTranslation, -75);
 
     if (yTranslation > 0) {
-        boostUpward(yTranslation * -0.001);
+        boostUpward(yTranslation * -0.0015);
     }
 
     Composite.translate(world, {x: 0, y: yTranslation});
@@ -204,7 +112,7 @@ function randomSpawn(buffer) {
 
 //Resize the canvas and reset the boundaries on window resize
 function windowResized() {
-    resizeCanvas(window.innerWidth * 0.4, window.innerHeight);
+    resizeCanvas(window.innerWidth, window.innerHeight);
 
     World.remove(world, leftWall);
     World.remove(world, rightWall);
@@ -242,9 +150,14 @@ function createBounds() {
 
 //Called at setup to link canvas events to html Elements
 function createHTMLEvents() {
-    document.querySelector("#todo").addEventListener("mouseenter", spawnTodo);
-    document.querySelector("#boop").addEventListener("mouseenter", spawnBoop);
-    document.querySelector("#dogseyes").addEventListener("mouseenter", spawnDogs);
-    document.querySelector("#card").addEventListener("mouseenter", spawnCard);
-    document.querySelector("#rocks").addEventListener("mouseenter", spawnRock);
+    document.querySelector("#todo").addEventListener("mouseenter", function() {spawnCircle(unhex(["FE", "00", "00"]))});
+    document.querySelector("#rocks").addEventListener("mouseenter", function() {spawnCircle(unhex(["FD", "FE", "02"]))});
+    document.querySelector("#dog").addEventListener("mouseenter", function() {spawnCircle(unhex(["0B", "FF", "01"]))});
+    document.querySelector("#montague").addEventListener("mouseenter", function() {spawnCircle(unhex(["01", "1E", "FE"]))});
+
+
+    document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"})
+    document.querySelector("#rocks").addEventListener("click", function() {window.location.href="./litrocks.html"})
+    document.querySelector("#dog").addEventListener("click", function() {window.location.href="./mydogseyes.html"})
+    document.querySelector("#montague").addEventListener("click", function() {window.location.href="./montague.html"})
 }
