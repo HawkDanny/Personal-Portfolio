@@ -80,6 +80,10 @@ function spawnCircle(color) {
 
 function boostUpward(force) {
     for (var i = 0; i < objects.length; i++) {
+        //Don't boost it if it isn't in contact with the floor
+        if (objects[i].body.position.y < window.innerHeight - objects[i].radius){
+            continue;
+        }
         objects[i].applyForce(objects[i].body.position, {x: 0, y: force});
     }
 }
@@ -91,7 +95,7 @@ function translateCanvas(yTranslation) {
     yTranslation = Math.max(yTranslation, -75);
 
     if (yTranslation > 0) {
-        boostUpward(yTranslation * -0.0015);
+        boostUpward(yTranslation * -0.005);
     }
 
     Composite.translate(world, {x: 0, y: yTranslation});
