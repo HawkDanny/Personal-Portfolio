@@ -193,24 +193,44 @@ article {
 
 .rocks article {
     overflow-y: scroll;
+    min-width: 800px;
 }
 
-.rocks article h1 {
-    text-align: center;
+.rockHeader {
+    color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    margin: auto;
+    max-width: 500px;
+}
+
+.rockHeader h1 {
     font-size: 50px;
-    margin: auto;
-    padding-bottom: 50px;
 }
 
-.rocks article p {
-    width: 500px;
-    margin: auto;
-    padding-bottom: 50px;
+.rockHeader p {
+    padding-top: 15px;
+    font-size: 15px;
 }
 
-.rocks .whyididthis {
+.whyididthis {
+    margin-top: 60px;
+    margin-bottom: 40px;
     text-align: center;
-    margin-bottom: 50px;
+}
+
+.whyididthis a {
+    background: #121212;
+    color: #FDFDFD;
+    padding: 8px;
+}
+
+.whyididthis a:hover {
+    background: #FDFDFD;
+    color: #121212;
 }
 
 .rocks .posts {
@@ -219,15 +239,11 @@ article {
     justify-content: center;
 }
 
-.rocks article a {
-    color: #009FC9;
-}
-
 .instagram-media {
     margin-bottom: 50px !important;
     margin-left: 25px !important;
     margin-right: 25px !important;
-    max-width: 600px !important;
+    min-width: 700px !important;
     /*
     box-shadow: 0px 0px 0px #FFFFFF !important;
     border-style: solid !important;
@@ -261,12 +277,11 @@ article {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    background-color: #EEEEEE;
-    border-radius: 3px;
-    box-shadow: 2px 2px 1px #DDDDDD;
-    transition: box-shadow 0.15s ease-in-out;
+    background-color: #121212;
+    color: #FDFDFD;
 }
 
 .takeaway:hover {
-    box-shadow: 2px 2px 1px #BBBBBB;
+    background-color: #FDFDFD;
+    color: #121212;
 }
