@@ -28,18 +28,22 @@ var mouse;
 //Skills
 var skills = [];
 
+//Screen info
+var halfWidth = window.innerWidth / 2;
+var halfHeight = window.innerHeight / 2;
+
 function setup() {
     article = document.querySelector("article");
     scrollPos = 0;
 
     //Make a canvas that is half of the window, TODO: Make it resize
     var cnv = createCanvas(window.innerWidth, window.innerHeight);
-    cnv.parent("sketchHolder");
+    cnv.parent("sketch");
 
     //Create the physics engine
     engine = Engine.create();
     world = engine.world;
-    world.gravity.scale = -0.0001;
+    world.gravity.scale = 0;
 
     createBounds();
 
@@ -55,27 +59,15 @@ function setup() {
         mouse: mouse
     });
 
+    document.querySelector("#sketch").addEventListener("mousedown", function() {setAboutMePointerEvents(false);});
+    document.querySelector("#sketch").addEventListener("mouseup", function() {setAboutMePointerEvents(true);});
+
     World.add(world, mConstraint);
 }
 
 //Called every frame
 function draw() {
-    background(unhex(["22", "22", "22"]));
-
-    //Draw lines
-    for (var i = 0; i < connections.length; i++) {
-        var aPos = {
-            x: connections[i].A.body.position.x,
-            y: connections[i].A.body.position.y
-        };
-
-        var bPos = {
-            x: connections[i].B.body.position.x,
-            y: connections[i].B.body.position.y
-        };
-
-        line(aPos.x, aPos.y, bPos.x, bPos.y);
-    }
+    background(unhex(["FD", "FD", "FD"]));
 
     noStroke();
 
@@ -87,34 +79,48 @@ function draw() {
             objects[i].translate(0, height + 120);
         }
 
+        //Add a circular force
+        var position = objects[i].body.position;
+        var upperForce = 0.002;
+        var constantForce = 0.001;
+
+        if (position.x < halfWidth && position.y < halfHeight) //top left
+        {
+            var yForce = map(position.x, 0, halfWidth, upperForce, 0);
+            Body.applyForce(objects[i].body, objects[i].body.position, {x: -constantForce, y: yForce});
+        }
+        else if (position.x < halfWidth && position.y > halfHeight) //bottom left
+        {
+            var xForce = map(position.y, halfHeight, window.innerHeight, 0, upperForce);
+            Body.applyForce(objects[i].body, objects[i].body.position, {x: xForce, y: constantForce});
+        }
+        else if (position.x > halfWidth && position.y > halfHeight) //bottom right
+        {
+            var yForce = map(position.x, halfWidth, window.innerWidth, 0, -upperForce);
+            Body.applyForce(objects[i].body, objects[i].body.position, {x: constantForce, y: yForce});
+        }
+        else if (position.x > halfWidth && position.y < halfHeight) //top right
+        {
+            var xForce = map(position.y, 0, halfHeight, -upperForce, 0);
+            Body.applyForce(objects[i].body, objects[i].body.position, {x: xForce, y: -constantForce});
+        }
+
         objects[i].show();
         objects[i].showText();
     }
-
-    //Draw text
-    //for (var i = 0; i < objects.length; i++) {
-    //}
 }
 
 function setupSkills() {
-    /**
-     * 1: 20, ffe6f7
-     * 2: 30, ff99dd
-     * 3: 40, ff33bb
-     * 4: 50, cc0088
-     * 5: 60, 660044
-     */
-
     var skill1 = 20;
     var skill2 = 30;
     var skill3 = 40;
     var skill4 = 50;
     var skill5 = 60;
-    var interest1 = unhex(["FF", "E6", "F7"]); //D696B7
-    var interest2 = unhex(["FF", "99", "DD"]); //BF6C97
-    var interest3 = unhex(["FF", "33", "BB"]); //CC4A8D
-    var interest4 = unhex(["CC", "00", "88"]); //D62E85
-    var interest5 = unhex(["66", "00", "44"]); //CC0D70
+    var interest1 = unhex(["C2", "C2", "C2"]);
+    var interest2 = unhex(["92", "92", "92"]);
+    var interest3 = unhex(["62", "62", "62"]);
+    var interest4 = unhex(["32", "32", "32"]);
+    var interest5 = unhex(["02", "02", "02"]);
 
     spawnSkill("C#", skill5, interest5); //0
     spawnSkill("C++", skill3, interest3); //1
@@ -156,26 +162,6 @@ function spawnSkill(label, size, color) {
     objects.push(new Skill(spawn.x, spawn.y, size, color, label) );
 }
 
-function connectSkills(skillA, skillB, length, stiffness) {
-
-    //Add the two bodies to an array of connections so that lines can be drawn
-    connections.push({
-        A: skillA,
-        B: skillB
-    });
-
-    var options = {
-        bodyA: skillA.body,
-        bodyB: skillB.body,
-        length: length,
-        stiffness: stiffness
-    }
-
-    var c = Constraint.create(options);
-
-    World.add(world, c);
-}
-
 //A function that returns a random spawn point in the top half of the canvas
 function randomSpawn(buffer) {
     var randX = random(buffer, width - buffer);
@@ -193,18 +179,7 @@ function windowResized() {
 
     World.remove(world, leftWall);
     World.remove(world, rightWall);
-    //World.remove(world, floor);
-    //World.remove(world, ceiling);
 
-    createBounds();
-}
-
-function resetBorders() {
-
-    World.remove(world, leftWall);
-    World.remove(world, rightWall);
-    World.remove(world, floor);
-    World.remove(world, ceiling);
 
     createBounds();
 }
@@ -212,14 +187,31 @@ function resetBorders() {
 //Create the floor and walls out of static rectangles
 function createBounds() {
     //Floor
-    //floor = Bodies.rectangle(width / 2, height + 50, width, 100, {isStatic: true});
+    floor = Bodies.rectangle(width / 2, height + 50, width, 100, {isStatic: true});
 
     //Ceiling
-    //ceiling = Bodies.rectangle(width / 2, -50, width, 100, {isStatic: true});
+    ceiling = Bodies.rectangle(width / 2, -50, width, 100, {isStatic: true});
 
     //Walls
     leftWall = Bodies.rectangle(-10, height / 2, 20, height * 2, {isStatic: true});
     rightWall = Bodies.rectangle(width + 10, height / 2, 20, height * 2, {isStatic: true});
 
-    World.add(world, [leftWall, rightWall]);
+    World.add(world, [floor, ceiling, leftWall, rightWall]);
+}
+
+//Val is a boolean, true = pointer-events: all
+function setAboutMePointerEvents(val) {
+    var me = document.querySelector(".me");
+    var nav = document.querySelector("nav");
+
+    if(val)
+    {
+        me.style.pointerEvents = "all";
+        nav.style.pointerEvents = "all";
+    }
+    else
+    {
+        me.style.pointerEvents = "none";
+        nav.style.pointerEvents = "none";
+    }
 }

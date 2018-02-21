@@ -26,6 +26,7 @@ nav {
     font-size: 16px;
     font-weight: 600;
     margin: 15px;
+    pointer-events: all;
 }
 
     nav ul {
@@ -44,6 +45,11 @@ nav {
     }
 
     nav a:hover {
+        background-color: rgba(0, 0, 0, 0.0);
+        color: #121212;
+    }
+
+    #active {
         background-color: rgba(0, 0, 0, 0.0);
         color: #121212;
     }
@@ -70,7 +76,6 @@ body {
 }
 
 article {
-    padding-top: 200px;
     padding-bottom: 200px;
     margin: auto;
     width: 500px;
@@ -95,12 +100,6 @@ article {
 
     .name {
         font-size: 70px;
-    }
-
-    .objective {
-        font-size: 9px;
-        margin-top: -18px;
-        margin-left: 5px;
     }
 
 
@@ -186,6 +185,37 @@ article {
         color: #00aced;
         background-color: rgba(0, 0, 0, 0.0);
     }
+
+
+
+
+/*About Styling*/
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.about .me {
+    max-width: 380px;
+    pointer-events: all;
+}
+
+.about p {
+    padding-bottom: 10px;
+}
+
+.about a {
+    color: #Bf6C97;
+}
+
+.about a:hover {
+    border-bottom-style: dashed;
+}
 
 
 

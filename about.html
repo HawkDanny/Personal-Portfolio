@@ -3,14 +3,6 @@
 <head>
     <meta charset="utf-8">
 
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#eeeeee">
-
     <!--Matter.js-->
     <script src="js/matter.min.js"></script>
     <!--p5.js-->
@@ -37,21 +29,22 @@
     <title>About | Danny Hawk</title>
 </head>
 <body>
-    <div id="sketchHolder" class="sha"></div>
-    <div class="container ca">
+    <div id="sketch"></div>
+    <div class="container" style="pointer-events: none;">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a id="active" href="about.html">About</a></li>
                 <li><a href="DannyHawk_Resume.pdf">Resume</a></li>
             </ul>
         </nav>
 
-        <article class="about">
+        <div class="about">
             <div class="me">
-                <p>Hey, I'm Danny Hawk. I love game design, and more specifically, <span style="cursor: vertical-text">interaction.</span></p>
-                <p>These are my skills. The bigger the circle, the better the skill. The darker the circle, the stronger the interest.</p>
-                <p>You can send your emails to<br><span style="font-weight: bold; ">danny <span class="dot">dot</span> hawk <span class="dot">@</span> gmail <span class="dot">dot</span> com</span></p>
-                <p style="padding:0px">If you just want to say hi, tweet me <a href="https://twitter.com/HawkDanny">@hawkdanny</a> with a current inspiration or a picture of your/a dog.</p>
+                <p>I'm Danny Hawk, and this is my interest-skills map.</p>
+                <p>The bigger a circle, the stronger my ability,<br>and the darker circle, the stronger my interest.</p>
+                <p>You can reach me on Twitter <a href="https://twitter.com/HawkDanny">@hawkdanny</a> or by email at <a href="mailto:danny.james.hawk@gmail.com">danny.james.hawk@gmail.com</a></p>
+                <p>If you just want a list of my skills, try my <a href="DannyHawk_Resume.pdf">resume</a>.</p>
             </div>
         </article>
     </div>
