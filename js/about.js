@@ -137,7 +137,7 @@ function setupSkills() {
     spawnSkill("Node", skill3, interest3); //12
     spawnSkill("Ink", skill3, interest3); //13
     spawnSkill("Unity", skill4, interest5); //14
-    spawnSkill("Git", skill4, interest5); //15
+    spawnSkill("Git", skill4, interest4); //15
     spawnSkill("Maya", skill2, interest2); //16
     spawnSkill("Visual Studio", skill4, interest3); //17
     spawnSkill("VS Code", skill4, interest3); //18
