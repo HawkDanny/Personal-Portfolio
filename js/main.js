@@ -154,14 +154,25 @@ function createBounds() {
 
 //Called at setup to link canvas events to html Elements
 function createHTMLEvents() {
-    document.querySelector("#todo").addEventListener("mouseenter", function() {spawnCircle(unhex(["FE", "00", "00"]))});
-    document.querySelector("#rocks").addEventListener("mouseenter", function() {spawnCircle(unhex(["FD", "FE", "02"]))});
-    document.querySelector("#dog").addEventListener("mouseenter", function() {spawnCircle(unhex(["0B", "FF", "01"]))});
-    document.querySelector("#montague").addEventListener("mouseenter", function() {spawnCircle(unhex(["01", "1E", "FE"]))});
+    var red = unhex(["FE", "00", "00"]);
+    var orange = unhex(["FF", "AA", "00"]);
+    var yellow = unhex(["FD", "FE", "02"]);
+    var green = unhex(["0B", "FF", "01"]);
+    var blue = unhex(["01", "1E", "FE"]);
+    var purple = unhex(["88", "00", "88"]);
+
+    document.querySelector("#boop").addEventListener("mouseenter", function() {spawnCircle(red)});
+    document.querySelector("#narwhal").addEventListener("mouseenter", function() {spawnCircle(orange)});
+    document.querySelector("#dog").addEventListener("mouseenter", function() {spawnCircle(yellow)});
+    document.querySelector("#rocks").addEventListener("mouseenter", function() {spawnCircle(green)});
+    document.querySelector("#todo").addEventListener("mouseenter", function() {spawnCircle(blue)});
+    document.querySelector("#montague").addEventListener("mouseenter", function() {spawnCircle(purple)});
 
 
-    document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"})
-    document.querySelector("#rocks").addEventListener("click", function() {window.location.href="./litrocks.html"})
-    document.querySelector("#dog").addEventListener("click", function() {window.location.href="./mydogseyes.html"})
-    document.querySelector("#montague").addEventListener("click", function() {window.location.href="./montague.html"})
+    document.querySelector("#boop").addEventListener("click", function() {window.location.href="./boop/index.html"});
+    document.querySelector("#narwhal").addEventListener("click", function() {window.location.href="https://vimeo.com/242861130"});
+    document.querySelector("#dog").addEventListener("click", function() {window.location.href="./mydogseyes.html"});
+    document.querySelector("#rocks").addEventListener("click", function() {window.location.href="./litrocks.html"});
+    document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"});
+    document.querySelector("#montague").addEventListener("click", function() {window.location.href="./montague.html"});
 }

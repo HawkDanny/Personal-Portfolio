@@ -136,20 +136,28 @@ article {
         padding-top: 10px;
     }
 
-#todo:hover {
+#boop:hover {
     color: #FE0000;
 }
 
-#rocks:hover {
-    color: #FDFE02;
+#narwhal:hover {
+    color: #FFAA00;
 }
 
 #dog:hover {
+    color: #FDFE02;
+}
+
+#rocks:hover {
     color: #0BFF01;
 }
 
-#montague:hover {
+#todo:hover {
     color: #011EFE;
+}
+
+#montague:hover {
+    color: #880088;
 }
 
 
