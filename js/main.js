@@ -155,7 +155,7 @@ function createBounds() {
 //Called at setup to link canvas events to html Elements
 function createHTMLEvents() {
     var red = unhex(["FE", "00", "00"]);
-    var orange = unhex(["FF", "AA", "00"]);
+    var orange = unhex(["FF", "88", "00"]);
     var yellow = unhex(["FD", "FE", "02"]);
     var green = unhex(["0B", "FF", "01"]);
     var blue = unhex(["01", "1E", "FE"]);
@@ -170,7 +170,7 @@ function createHTMLEvents() {
 
 
     document.querySelector("#boop").addEventListener("click", function() {window.location.href="./boop/index.html"});
-    document.querySelector("#narwhal").addEventListener("click", function() {window.location.href="https://vimeo.com/242861130"});
+    document.querySelector("#narwhal").addEventListener("click", function() {window.location.href="./narwhal.html"});
     document.querySelector("#dog").addEventListener("click", function() {window.location.href="./mydogseyes.html"});
     document.querySelector("#rocks").addEventListener("click", function() {window.location.href="./litrocks.html"});
     document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"});

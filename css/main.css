@@ -141,7 +141,7 @@ article {
 }
 
 #narwhal:hover {
-    color: #FFAA00;
+    color: #FF8800;
 }
 
 #dog:hover {
@@ -229,12 +229,12 @@ article {
 
 /*Lit Rocks Styling*/
 
-.rocks article {
-    overflow-y: scroll;
+.projectPage article {
     min-width: 800px;
+    margin-top: 200px;
 }
 
-.rockHeader {
+.projectPageHeader {
     color: #121212;
     display: flex;
     justify-content: center;
@@ -245,17 +245,17 @@ article {
     max-width: 500px;
 }
 
-.rockHeader h1 {
+.projectPageHeader h1 {
     font-size: 50px;
 }
 
-.rockHeader p {
+.projectPageHeader p {
     padding-top: 15px;
     font-size: 15px;
 }
 
 .whyididthis {
-    margin-top: 60px;
+    margin-top: 15px;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -271,10 +271,14 @@ article {
     color: #121212;
 }
 
-.rocks .posts {
+.projectPage .posts {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+iframe {
+    margin: 15px 0px 50px 0px;
 }
 
 .instagram-media {
@@ -290,13 +294,13 @@ article {
     box-shadow: 2px 2px 1px #DDDDDD !important;
 }
 
-.rocks article h3 {
+.projectPage article h3 {
     font-size: 30px;
     text-align: center;
     padding-bottom: 20px;
 }
 
-.rocksTakeaways {
+.takeaways {
     width: 500px;
     margin: auto;
     margin-bottom: 100px;
@@ -306,7 +310,7 @@ article {
     align-items: center;
 }
 
-.rocksTakeaways a:hover {
+.takeaways a:hover {
     border-bottom: none;
 }
 
