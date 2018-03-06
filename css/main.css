@@ -254,19 +254,20 @@ article {
     font-size: 15px;
 }
 
-.whyididthis {
+.whyididthis,.github {
     margin-top: 15px;
     margin-bottom: 40px;
     text-align: center;
+    font-weight: bold;
 }
 
-.whyididthis a {
+.whyididthis,.github a {
     background: #121212;
     color: #FDFDFD;
     padding: 8px;
 }
 
-.whyididthis a:hover {
+.whyididthis,.github a:hover {
     background: #FDFDFD;
     color: #121212;
 }
