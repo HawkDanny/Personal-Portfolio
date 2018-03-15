@@ -171,7 +171,7 @@ function createHTMLEvents() {
 
     document.querySelector("#boop").addEventListener("click", function() {window.location.href="./boop/index.html"});
     document.querySelector("#narwhal").addEventListener("click", function() {window.location.href="./narwhal.html"});
-    document.querySelector("#dog").addEventListener("click", function() {window.location.href="./mydogseyes.html"});
+    document.querySelector("#dog").addEventListener("click", function() {window.location.href="./dog.html"});
     document.querySelector("#rocks").addEventListener("click", function() {window.location.href="./litrocks.html"});
     document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"});
     document.querySelector("#montague").addEventListener("click", function() {window.location.href="./montague.html"});
