@@ -161,18 +161,18 @@ function createHTMLEvents() {
     var blue = unhex(["01", "1E", "FE"]);
     var purple = unhex(["88", "00", "88"]);
 
-    document.querySelector("#boop").addEventListener("mouseenter", function() {spawnCircle(red)});
-    document.querySelector("#narwhal").addEventListener("mouseenter", function() {spawnCircle(orange)});
+    document.querySelector("#narwhal").addEventListener("mouseenter", function() {spawnCircle(red)});
+    document.querySelector("#boop").addEventListener("mouseenter", function() {spawnCircle(orange)});
     document.querySelector("#dog").addEventListener("mouseenter", function() {spawnCircle(yellow)});
     document.querySelector("#rocks").addEventListener("mouseenter", function() {spawnCircle(green)});
-    document.querySelector("#todo").addEventListener("mouseenter", function() {spawnCircle(blue)});
-    document.querySelector("#montague").addEventListener("mouseenter", function() {spawnCircle(purple)});
+    //document.querySelector("#todo").addEventListener("mouseenter", function() {spawnCircle(blue)});
+    document.querySelector("#montague").addEventListener("mouseenter", function() {spawnCircle(blue)});
 
 
     document.querySelector("#boop").addEventListener("click", function() {window.location.href="./boop/index.html"});
     document.querySelector("#narwhal").addEventListener("click", function() {window.location.href="./narwhal.html"});
     document.querySelector("#dog").addEventListener("click", function() {window.location.href="./dog.html"});
     document.querySelector("#rocks").addEventListener("click", function() {window.location.href="./litrocks.html"});
-    document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"});
+    //document.querySelector("#todo").addEventListener("click", function() {window.location.href="http://puppyproductivity.club"});
     document.querySelector("#montague").addEventListener("click", function() {window.location.href="./montague.html"});
 }
