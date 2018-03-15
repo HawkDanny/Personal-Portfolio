@@ -59,6 +59,7 @@ nav {
 /*Basic website blockings*/
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #FDFDFD;
 }
 
 #sketch {
@@ -250,24 +251,39 @@ article {
 }
 
 .projectPageHeader p {
-    padding-top: 15px;
+    padding-top: 35px;
     font-size: 15px;
 }
 
-.whyididthis,.github {
+.projectPageHeader .quote {
+    font-weight: 200;
+}
+
+.projectPageHeader a {
+    background: #121212;
+    color: #FDFDFD;
+    padding: 0px 3px 2px 3px;
+}
+
+.projectPageHeader a:hover {
+    background: #FDFDFD;
+    color: #121212;
+}
+
+.whyididthis, .github {
     margin-top: 15px;
     margin-bottom: 40px;
     text-align: center;
     font-weight: bold;
 }
 
-.whyididthis,.github a {
+.whyididthis a, .github a {
     background: #121212;
     color: #FDFDFD;
     padding: 8px;
 }
 
-.whyididthis,.github a:hover {
+.whyididthis a:hover, .github a:hover {
     background: #FDFDFD;
     color: #121212;
 }
@@ -277,6 +293,7 @@ article {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 iframe {
     margin: 15px 0px 50px 0px;
