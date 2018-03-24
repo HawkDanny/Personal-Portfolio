@@ -16,7 +16,8 @@ article {
 .poem {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    text-align: center;
+    width: 272px;
 }
 
 .poem p {
