@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    background-color: #222;
+}
+
+article {
+    font-family: 'Lobster', cursive;
+    color: #00a478;
+    padding-top: 200px;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    padding-bottom: 75px;
+}
+
+img {
+    padding-bottom: 200px;
+}
