@@ -228,7 +228,7 @@ article {
 
 
 
-/*Lit Rocks Styling*/
+/*Project Page Styling*/
 
 .projectPage article {
     min-width: 800px;
@@ -304,12 +304,31 @@ iframe {
     margin-left: 25px !important;
     margin-right: 25px !important;
     min-width: 700px !important;
-    /*
-    box-shadow: 0px 0px 0px #FFFFFF !important;
-    border-style: solid !important;
-    border-width: 1px !important;
-    border-color: #EEEEEE !important;*/
     box-shadow: 2px 2px 1px #DDDDDD !important;
+}
+
+.beautifulItem {
+    margin: auto;
+    max-width: 768px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.beautifulItemTitle {
+    font-size: 26px;
+    font-style: italic;
+    max-width: 500px;
+    margin: auto;
+}
+
+.beautifulItem img {
+    display: block;
+    margin: 10px 0px 10px 0px;
+}
+
+.beautifulItemCaption {
+    width: 500px;
+    margin: auto;
 }
 
 .projectPage article h3 {
