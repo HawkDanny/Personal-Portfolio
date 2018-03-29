@@ -141,20 +141,23 @@ article {
     color: #FE0000;
 }
 
-#boop:hover {
+#beautiful:hover {
     color: #FF8800;
 }
 
-#dog:hover {
+#boop:hover {
     color: #FDFE02;
 }
 
-#rocks:hover {
+#dog:hover {
     color: #0BFF01;
 }
 
-#todo:hover {
+#rocks:hover {
     color: #011EFE;
+}
+
+#todo:hover {
 }
 
 #montague:hover {
@@ -308,6 +311,7 @@ iframe {
 }
 
 .beautifulItem {
+    text-align: center;
     margin: auto;
     max-width: 768px;
     padding-top: 50px;
@@ -315,15 +319,14 @@ iframe {
 }
 
 .beautifulItemTitle {
+    padding-top: 20px;
     font-size: 26px;
     font-style: italic;
-    max-width: 500px;
-    margin: auto;
 }
 
-.beautifulItem img {
+.beautifulItem video {
     display: block;
-    margin: 10px 0px 10px 0px;
+    margin: auto;
 }
 
 .beautifulItemCaption {
