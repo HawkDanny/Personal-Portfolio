@@ -151,6 +151,7 @@ function setupSkills() {
     spawnSkill("d3.js", skill1, interest2); //26
     spawnSkill("gulp", skill2, interest3); //27
     spawnSkill("browserify", skill2, interest3); //28
+    spawnSkill("Arduino", skill3, interest4); //29
 
     var connectorWidth = 250;
     var connectorStrength = 0.00005;
