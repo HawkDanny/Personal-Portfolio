@@ -170,7 +170,7 @@ function createHTMLEvents() {
     document.querySelector("#montague").addEventListener("mouseenter", function() {spawnCircle(purple)});
 
 
-    document.querySelector("#boop").addEventListener("click", function() {window.location.href="./boop/index.html"});
+    document.querySelector("#boop").addEventListener("click", function() {window.location.href="./boop.html"});
     document.querySelector("#narwhal").addEventListener("click", function() {window.location.href="./narwhal.html"});
     document.querySelector("#beautiful").addEventListener("click", function() {window.location.href="./beautiful.html"});
     document.querySelector("#dog").addEventListener("click", function() {window.location.href="./dog.html"});

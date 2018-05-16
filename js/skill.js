@@ -29,12 +29,10 @@ function Skill(x, y, radius, color, label) {
         var pos = this.body.position;
         var angle = this.body.angle;
 
-        push();
-        translate(pos.x, pos.y);
-        rotate(angle);
+        //translate(pos.x, pos.y);
+        //rotate(angle);
         fill(unhex(["FD", "FD", "FD"])); //the text color
-        text(label, textWidth(label) / -2, textSize() / 4);
-        pop();
+        text(label, pos.x + textWidth(label) / -2, pos.y + textSize() / 4);
     }
 
     this.applyForce = function(position, force) {

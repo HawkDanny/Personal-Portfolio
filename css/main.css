@@ -40,18 +40,22 @@ nav {
 
     nav a {
         background-color: #121212;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #FDFDFD;
         padding: 4px 6px 4px 6px;
         color: #FDFDFD;
     }
 
     nav a:hover {
-        background-color: rgba(0, 0, 0, 0.0);
+        background-color: #FDFDFD;
         color: #121212;
     }
 
     #active {
         background-color: rgba(0, 0, 0, 0.0);
         color: #121212;
+        border-width: 0px;
     }
 
 
@@ -141,11 +145,11 @@ article {
     color: #FE0000;
 }
 
-#beautiful:hover {
+#boop:hover {
     color: #FF8800;
 }
 
-#boop:hover {
+#beautiful:hover {
     color: #FDFE02;
 }
 
@@ -201,6 +205,35 @@ article {
 
 
 
+/*Skills Styling*/
+
+.pitch {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.pitch .me {
+    max-width: 390px;
+    pointer-events: all;
+}
+
+.pitch p {
+    padding-bottom: 20px;
+}
+
+.pitch a {
+    color: #Bf6C97;
+}
+
+.pitch a:hover {
+    border-bottom-style: dashed;
+}
+
+
 /*About Styling*/
 
 .about {
@@ -213,7 +246,7 @@ article {
 }
 
 .about .me {
-    max-width: 380px;
+    width: 480px;
     pointer-events: all;
 }
 
@@ -246,7 +279,6 @@ article {
     flex-direction: column;
     padding: 25px;
     margin: auto;
-    max-width: 500px;
 }
 
 .projectPageHeader h1 {
@@ -254,6 +286,7 @@ article {
 }
 
 .projectPageHeader p {
+    max-width: 500px;
     padding-top: 35px;
     font-size: 15px;
 }
@@ -355,7 +388,6 @@ iframe {
 }
 
 .takeaway {
-    max-width: 150px;
     margin: 10px;
     padding: 10px;
     text-align: center;
