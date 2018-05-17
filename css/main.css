@@ -142,30 +142,23 @@ article {
     }
 
 #narwhal:hover {
-    color: #FE0000;
+    color: #2a7f7d;
 }
 
 #boop:hover {
-    color: #FF8800;
+    color: #d1005f;
 }
 
 #beautiful:hover {
-    color: #FDFE02;
+    color: #4966a6;
 }
 
 #dog:hover {
-    color: #0BFF01;
+    color: #e39959;
 }
 
 #rocks:hover {
-    color: #011EFE;
-}
-
-#todo:hover {
-}
-
-#montague:hover {
-    color: #880088;
+    color: #ddd4c8;
 }
 
 
