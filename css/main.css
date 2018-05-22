@@ -112,7 +112,7 @@ article {
 /*PROJECTS*/
 
 .project {
-    margin-top: 100px;
+    margin-top: 75px;
     background-color: #121212;
     padding: 10px 14px 10px 14px;
     color: #FDFDFD;
@@ -138,7 +138,7 @@ article {
 
     .project p {
         clear: both;
-        padding-top: 10px;
+        padding-top: 2px;
     }
 
 #narwhal:hover {
@@ -172,7 +172,7 @@ article {
 }
     .social i {
         color: #121212;
-        margin: 100px 30px 0px 30px;
+        margin: 75px 30px 0px 30px;
     }
 
     #github:hover {
