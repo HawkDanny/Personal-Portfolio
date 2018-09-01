@@ -195,6 +195,11 @@ article {
         background-color: rgba(0, 0, 0, 0.0);
     }
 
+    #soundcloud:hover {
+        color: #ff7700;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
 
 
 
@@ -239,7 +244,7 @@ article {
 }
 
 .about .me {
-    width: 480px;
+    width: 600px;
     pointer-events: all;
 }
 
