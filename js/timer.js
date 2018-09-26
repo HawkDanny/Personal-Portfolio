@@ -33,7 +33,7 @@ function setup() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    canvas.addEventListener("touchstart", skip);
+    canvas.addEventListener("touchend", skip);
     canvas.addEventListener("click", skip);
 
     //Starting background color
@@ -59,7 +59,7 @@ function draw() {
 
     //TITLE TITLE TITLE
     if (gs === GAMESTATE.TITLESCREEN) {
-        ctx.font = "30px Amatic SC";
+        ctx.font = "90px Amatic SC";
         ctx.fillStyle = "#EEEEEE";
         var t = "TAP TO START";
         ctx.fillText(t, (canvas.width / 2) - (ctx.measureText(t).width / 2), canvas.height / 2);
@@ -105,7 +105,7 @@ function draw() {
     }
     //GAME OVER GAME OVER GAME OVER
     else if (gs === GAMESTATE.GAMEOVER) {
-        ctx.font = "30px Amatic SC";
+        ctx.font = "90px Amatic SC";
         ctx.fillStyle = "white";
         var t = "TAP TO RESTART";
         ctx.fillText(t, (canvas.width / 2) - (ctx.measureText(t).width / 2), canvas.height / 2);
