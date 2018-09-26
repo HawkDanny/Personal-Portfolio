@@ -33,7 +33,10 @@ function setup() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    canvas.addEventListener("touchend", skip);
+    canvas.addEventListener("touchstart", function(e) {
+        e.preventDefault();
+        skip();   
+    });
     canvas.addEventListener("click", skip);
 
     //Starting background color
