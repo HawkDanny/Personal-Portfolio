@@ -35,7 +35,7 @@ function hide() {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     ctx.fillStyle = "#222222";
-    ctx.font = "100px Fredoka One";
+    ctx.font = "50px Fredoka One";
     var t = "HOLD TO REVEAL COLORS";
     ctx.fillText(t, (canvas.width / 2) - (ctx.measureText(t).width / 2), canvas.height / 2);
 }
@@ -81,4 +81,6 @@ function reveal() {
 function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    hide();
 }
