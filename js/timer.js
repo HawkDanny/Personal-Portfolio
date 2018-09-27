@@ -38,7 +38,7 @@ function setup() {
         skip();   
     });
     canvas.addEventListener("click", skip);
-    window.screen.addEventListener("orientationchange", resize);
+    window.addEventListener("orientationchange", resize);
 
     //Starting background color
     backgroundColor = menuBackgroundColor;
