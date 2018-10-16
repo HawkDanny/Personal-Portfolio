@@ -41,7 +41,7 @@ function setup() {
 
     canvas.addEventListener("touchstart", function(e) {
         e.preventDefault();
-        tap();   
+        tap(e);   
     });
     canvas.addEventListener("click", tap);
     window.addEventListener("orientationchange", resize);
