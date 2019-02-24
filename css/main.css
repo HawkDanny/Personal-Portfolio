@@ -265,7 +265,6 @@ article {
 /*Project Page Styling*/
 
 .projectPage article {
-    min-width: 800px;
     margin-top: 200px;
 }
 
@@ -326,8 +325,9 @@ article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-width: 980px;
+    margin-left: -245px;
 }
-
 
 iframe {
     margin: 15px 0px 50px 0px;
@@ -402,19 +402,19 @@ iframe {
 /*BLOG*/
 
 .blog {
-    text-align: center;
+    max-width: 600px;
     padding-top: 100px;
     margin: auto;
 }
 
 .blog h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .blog article {
     padding-top: 20px;
+    font-size: 18px;
+    text-indent: 2em;
     text-align: left;
-    max-width: 500px;
-
 }
