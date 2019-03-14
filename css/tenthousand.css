@@ -1,0 +1,31 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  pointer-events: initial;
+}
+
+.main {
+  position: fixed;
+  text-align: center;
+  max-width: 68px;
+  pointer-events: none;
+  left: 50vw;
+  margin-left: -30px;
+  top: 50vh;
+  margin-top: -23px;
+}
+
+#form {
+  pointer-events: auto;
+}
