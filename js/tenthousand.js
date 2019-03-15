@@ -30,14 +30,25 @@ window.onblur = function() {
 
 function Update()
 {
-    if (counter === 0)
+    if (counter === 1)
     {
         if (!interacted)
         {
             counterElement.style = "pointer-events: auto;";
             counterElement.innerHTML = "<a href='https://www.instagram.com/smalldogsbehindlargerobjects/'>Welcome</a>"
         }
+        else
+            counterElement.innerHTML = "Done";
         return;
+    } else if (counter === 9000 && !interacted)
+    {
+        counterElement.style = "color: #666666;"
+    } else if (counter === 5000 && !interacted)
+    {
+        counterElement.style = "color: #EEEEEE;"
+    } else if (counter === 1000 && !interacted)
+    {
+        counterElement.style = "color: #FFFFFF;"
     }
     counter--;
     counterElement.innerHTML = counter;
@@ -49,9 +60,12 @@ function Reset()
     var value = input.value;
     
     if (value > 10000)
-        value = 10000
-    else if (value < 0)
-        value = 0;
+    {
+        interacted = false;
+        value = 10000;
+    }
+    else if (value < 1)
+        value = 1;
 
     input.value = "";
 
@@ -71,7 +85,7 @@ function ClickedOther(event) {
 
 function Clicked()
 {
-    interacted = true;
+    interacted = false;
     counter = 10000;
     counterElement.innerHTML = counter;
 }
