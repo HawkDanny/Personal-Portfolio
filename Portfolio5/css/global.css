@@ -1,0 +1,174 @@
+* {
+    --color-bg: #f33494; /*fa94d8*/
+    --color-accent1: #c764d4;
+    --color-accent2: #b1fcff;
+    --color-accent3: #fa94d8;
+    --color-accent4: #f54ea1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--color-bg);
+}
+
+.accent1 {
+    color: var(--color-accent1);
+}
+
+.accent2 {
+    color: var(--color-accent2);
+}
+
+.accent1:hover {
+    color: var(--color-bg);
+    background-color: var(--color-accent1);
+}
+
+.accent2:hover {
+    color: var(--color-bg);
+    background-color: var(--color-accent2);
+}
+
+.accent1Active {
+    color: var(--color-bg);
+    background-color: var(--color-accent1);
+}
+
+.accent2Active {
+    color: var(--color-bg);
+    background-color: var(--color-accent2);
+}
+
+
+
+/*NAVIGATION*/
+
+nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+}
+
+nav div {
+    padding-top: 30px;
+    font-size: 0px;
+}
+
+nav div a {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.navGlobal {
+    transform-origin: 100% 0%;
+    transform: rotate(-20deg);
+    float: left;
+}
+
+.navLocal {
+    transform-origin: 0% 0%;
+    transform: rotate(20deg);
+    float: right;
+}
+
+
+
+
+/*TIMELINE*/
+
+.timeline {
+    margin: auto;
+    max-width: 800px;
+}
+
+
+
+
+
+/*HEADER*/
+
+.header {
+    color: var(--color-accent3);
+    padding-top: 300px;
+    padding-bottom: 200px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.header h1,h3 {
+    line-height: 1em;
+    margin: 0px;
+}
+
+.header a {
+    text-decoration: underline;
+}
+
+
+
+/*PROJECTS*/
+
+.project {
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.year {
+    max-width: 450px;
+    margin-left: -190px;
+    transform: rotate(90deg);
+    transform-origin: 0% 100%;
+    text-align: center;
+    color: var(--color-accent4);
+}
+
+.yearContainer {
+    max-width: 800px;
+    text-align: right;
+}
+
+.year2 {
+    width: 800px;
+    position: absolute;
+    font-weight: 500px;
+    margin-top: -15px;
+    float: right;
+    z-index: -1;
+    color: var(--color-accent4);
+}
+
+.title {
+    color: var(--color-accent2);
+}
+
+.year2 h3 {
+    font-size: 200px;
+}
+
+.info {
+    clear: both;
+}
+
+.tags p {
+    padding-top: 15px;
+    padding-right: 10px;
+    font-weight: 800;
+    color: var(--color-accent3);
+    float: left;
+    margin: 0px;
+}
+
+.description {
+    width: 500px;
+    color: white;
+    padding-top: 5px;
+    clear: both;
+}
