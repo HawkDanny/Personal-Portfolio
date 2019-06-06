@@ -1,11 +1,16 @@
 * {
-    --color-bg: #ffffff; /*fa94d8*/
-    --color-header: #ff47ac;
-    --color-title: #ff47ac;
-    --color-detail: #a0dbfd;
-    --color-fade: #fff1f8;
-    --color-text: #242424;
+    --color-bg: #F57380; /*fa94d8*/
+    --color-header: #ffffff;
+    --color-detail: #4e4a4a;
+    --color-fade: #f55e6e;
+    --color-fade2: #aed3e6;
+    --color-fade3: #b47f85;
+    --color-text: #ffffff;
     font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    overflow: auto;
 }
 
 a {
@@ -13,9 +18,30 @@ a {
     color: inherit;
 }
 
+
 body {
+    height: 100%;
     margin: 0px;
     background-color: var(--color-bg);
+    border-left: 10px solid var(--color-header);
+    border-right: 10px solid var(--color-header);
+}
+
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background: var(--color-header);
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+body:before {
+    top: 0;
+}
+
+body:after {
+    bottom: 0;
 }
 
 
@@ -24,33 +50,26 @@ body {
 /*NAVIGATION*/
 
 nav {
-    display: none;
     position: fixed;
-    width: 100%;
+    padding: 20px;
 }
 
-nav div {
-    padding-top: 30px;
-    font-size: 0px;
-}
-
-nav div a {
-    padding-right: 10px;
-    padding-left: 10px;
+nav h5 {
+    margin: 0px;
+    font-size: 40px;
     font-weight: 800;
-    font-size: 50px;
+    color: var(--color-header);
+    text-shadow: 2px 2px 1px var(--color-fade2);
 }
 
-.navGlobal {
-    transform-origin: 100% 0%;
-    transform: rotate(-20deg);
-    float: left;
+nav li {
+    list-style: none;
 }
 
-.navLocal {
-    transform-origin: 0% 0%;
-    transform: rotate(20deg);
-    float: right;
+nav a {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--color-fade2);
 }
 
 
@@ -71,6 +90,7 @@ nav div a {
 
 .header {
     color: var(--color-header);
+    text-shadow: 2px 2px 1px var(--color-fade2);
     padding-top: 300px;
     padding-bottom: 200px;
     max-width: 650px;
@@ -120,7 +140,8 @@ nav div a {
 }
 
 .title {
-    color: var(--color-title);
+    color: var(--color-header);
+    text-shadow: 2px 2px 1px var(--color-fade2);
 }
 
 .year2 h3 {
@@ -132,15 +153,19 @@ nav div a {
 }
 
 .tags p {
-    padding-top: 15px;
-    padding-right: 10px;
+    padding-top: 5px;
+    padding-right: 20px;
     font-weight: 800;
+    font-size: 20px;
     color: var(--color-detail);
+    text-shadow: 2px 2px 1px var(--color-fade3);
     float: left;
     margin: 0px;
 }
 
 .description {
+    font-size: 18px;
+    font-weight: 600;
     width: 500px;
     color: var(--color-text);;
     padding-top: 5px;
