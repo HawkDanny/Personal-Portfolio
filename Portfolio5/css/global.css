@@ -1,10 +1,10 @@
 * {
     --color-bg: #F57380; /*fa94d8*/
     --color-header: #ffffff;
-    --color-detail: #4e4a4a;
+    --color-detail: #5bb2ec;
     --color-fade: #f55e6e;
     --color-fade2: #aed3e6;
-    --color-fade3: #b47f85;
+    --color-fade3: #717694;
     --color-text: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
@@ -66,7 +66,11 @@ nav li {
     list-style: none;
 }
 
-nav a {
+nav p {
+    line-height: 1em;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    cursor: pointer;
     font-weight: 800;
     font-size: 14px;
     color: var(--color-header);
@@ -94,17 +98,18 @@ nav a {
     text-shadow: 2px 2px 1px var(--color-fade2);
     padding-top: 300px;
     padding-bottom: 200px;
-    max-width: 650px;
+    max-width: 800px;
     margin: auto;
 }
 
 .header h1,h3 {
-    line-height: 1em;
+    line-height: 1.3em;
     margin: 0px;
 }
 
-.header a {
-    text-decoration: underline;
+.header .name {
+    color: var(--color-detail);
+    text-shadow: 2px 2px 1px var(--color-fade3);
 }
 
 
@@ -112,8 +117,8 @@ nav a {
 /*PROJECTS*/
 
 .project {
-    margin-top: 50px;
-    margin-bottom: 200px;
+    padding-top: 50px;
+    padding-bottom: 200px;
 }
 
 .year {
@@ -143,6 +148,7 @@ nav a {
 .title {
     color: var(--color-header);
     text-shadow: 2px 2px 1px var(--color-fade2);
+    margin-bottom: 10px;
 }
 
 .year2 h3 {

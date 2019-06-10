@@ -24,32 +24,28 @@
     <nav>
         <div class="navSidebar">
             <h5>2019</h5>
-            <li><a href="#">Imagine</a></li>
+            <li><p onload="setupScroll(this, 'imagine')">Imagine</p></li>
             <h5>2018</h5>
-            <li><a href="#">Narwhal Picnic</a></li>
-            <li><a href="#">lit.rocks</a></li>
-            <li><a href="#">Beautiful Series</a></li>
+            <li><p onload="setupScroll(this, 'rocks')">lit.rocks</p></li>
+            <li><p onload="setupScroll(this, 'boop')">Danny Hawk's Boop Game</p></li>
+            <li><p onload="setupScroll(this, 'beautiful')">Beautiful Series</p></li>
             <h5>2017</h5>
-            <li><a href="#">My Dog's Eyes</a></li>
+            <li><p onload="setupScroll(this, 'narwhal')">Narwhal Picnic</p></li>
+            <li><p onload="setupScroll(this, 'dog')">My Dog's Eyes</p></li>
         </div>
     </nav>
     <div class="timeline">
         <div class="header">
-            <div id="greeting">
-                <h1 class="fit">HELLO!!!!!</h1>
-                <h3 class="fit">THANKS FOR CHECKING OUT MY STUFF!</h3>
-                <h3 class="fit">HOPEFULLY THERE'S SOMETHING HERE YOU LIKE!!!</h3>
-                <h3 class="fit">MY NAME IS <span style="color: var(--color-accent2);">DANNY HAWK</span></h3>
-                <h3 class="fit">AND I'VE MADE A WHOLE BUNCH OF STUFF.</h3>
-                <h3 class="fit">IF YOU LIKE ANY OF IT OR HAVE ANY QUESTIONS,</h3>
-                <h3 class="fit">PLEASE FEEL FREE TO <a href="https://twitter.com/HawkDanny">TWEET ME</a>, ALSO MY DM'S ARE OPEN.</h3>
-                <h3 class="fit">OKAY NOW HAVE A GREAT DAY!!</h3>
-                <h3 class="fit">ALSO IF YOU ARE IN A HURRY THEN CLICK THE HIGHLIGHTS BUTTON UP THERE <i class="fas fa-hand-point-up"></i></h3>
-            </div>
+            <h1>
+                Hey my name's <span class="name">Danny Hawk.</span>
+                <br>I made all the projects on this website.
+                <br>Most of them are games, but some aren't.
+                <br>Thanks for coming, have a good day!! <i class="fas fa-laugh"></i>
+            </h1>
         </div>
 
         <!--IMAGINE-->
-        <div class="project">
+        <div id="imagine" class="project">
             <div class="title"><h3 class="fit">IMAGINE</h3></div>
             <video width="800" height="450" autoplay loop muted>
                 <source src="media/IMAGINE_HOMEPAGE.mp4" type="video/mp4">
@@ -69,26 +65,9 @@
             </div>
         </div>
 
-        <!--NARWHAL PICNIC-->
-        <div class="project">
-            <div class="title"><h3 class="fit">NARWHAL PICNIC</h3></div>
-            <iframe src="https://www.youtube-nocookie.com/embed/mC3KTQK0pqg?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="800" height="450" frameborder="0"></iframe>
-            <div class="yearContainer"><div class="year2"><h3>2018</h3></div></div>
-            <div class="info">
-                <div class="tags">
-                    <p>Game</p>
-                    <p>VR</p>
-                    <p>Unity</p>
-                    <p>Narwhals</p>
-                </div>
-                <div class="description">The coolest thing about VR is that the user is blind to the world around them, so I made Narwhal Picnic as an exploration of that design space, with an emphasis on player expression within a scene. It was super sucessful at both creating a very playful experience and also leaving red rings on my friends' foreheads.</div>
-                <a href="#" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
-            </div>
-        </div>
-
         <!--LIT ROCKS-->
-        <div class="project">
-            <div class="title"><h3 class="fit">INSTAGRAM.COM/LIT.ROCKS</h3></div>
+        <div id="rocks" class="project">
+            <div class="title"><h3 class="fit">LIT.ROCKS</h3></div>
             <video width="800" height="450" autoplay loop muted>
                 <source src="media/popsicle_loop.mp4" type="video/mp4">
                 Your browser does not support the video tag
@@ -106,8 +85,25 @@
             </div>
         </div>
 
+        <!--BOOP-->
+        <div id="boop" class="project">
+            <div class="title"><h3 class="fit">DANNY HAWK'S BOOP GAME</h3></div>
+            <iframe src="https://www.youtube-nocookie.com/embed/dJwRSW0mXaI?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="800" height="450" frameborder="0"></iframe>
+            <div class="yearContainer"><div class="year2"><h3>2018</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Game</p>
+                    <p>Arduino</p>
+                    <p>Arcade Controls</p>
+                    <p>Booping</p>
+                </div>
+                <div class="description">Danny Hawk's Boop Game is an examination into 'competitive sharing', which is what happens when players are forced to compete against each other while sharing a control. This project started as a web game that can be played here, and has since expanded to become a unity game with custom built arcade controls.</div>
+                <a href="#" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
+            </div>
+        </div>
+
         <!--BEAUTIFUL SERIES-->
-        <div class="project">
+        <div id="beautiful" class="project">
             <div class="title"><h3 class="fit">BEAUTIFUL SERIES</h3></div>
             <video width="800" height="450" autoplay loop muted>
                 <source src="media/luka_loop.mp4" type="video/mp4">
@@ -126,8 +122,25 @@
             </div>
         </div>
 
+        <!--NARWHAL PICNIC-->
+        <div id="narwhal" class="project">
+            <div class="title"><h3 class="fit">NARWHAL PICNIC</h3></div>
+            <iframe src="https://www.youtube-nocookie.com/embed/mC3KTQK0pqg?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="800" height="450" frameborder="0"></iframe>
+            <div class="yearContainer"><div class="year2"><h3>2017</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Game</p>
+                    <p>VR</p>
+                    <p>Unity</p>
+                    <p>Narwhals</p>
+                </div>
+                <div class="description">The coolest thing about VR is that the user is blind to the world around them, so I made Narwhal Picnic as an exploration of that design space, with an emphasis on player expression within a scene. It was super sucessful at both creating a very playful experience and also leaving red rings on my friends' foreheads.</div>
+                <a href="#" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
+            </div>
+        </div>
+
         <!--MY DOG'S EYES-->
-        <div class="project">
+        <div id="dog" class="project">
             <div class="title"><h3 class="fit">MY DOG'S EYES</h3></div>
             <video width="800" height="450" autoplay loop muted>
                 <source src="media/dogseyes_homepage.mp4" type="video/mp4">
