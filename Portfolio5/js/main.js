@@ -20,7 +20,6 @@ function init() {
 
     //Get all the scrollItems
     scrollItems = document.getElementsByClassName("sideBarClickable");
-    console.dir(scrollItems);
     for (var i = 0; i < scrollItems.length; i++)
     {
         scrollItems[i].addEventListener("click", (function(j) {
@@ -44,6 +43,9 @@ function updateNav() {
         scrollItems[scrollIndex - 1].style = activeNavStyle;
         scrollItems[scrollIndex].style = inactiveNavStyle;
         scrollIndex = Math.max(scrollIndex - 1, 0);
+    } else if (scrollIndex === 0)
+    {
+        scrollItems[0].style = inactiveNavStyle;
     }
 }
 
