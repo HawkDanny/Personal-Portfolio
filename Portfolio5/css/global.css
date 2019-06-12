@@ -1,5 +1,6 @@
 * {
-    --color-bg: #F57380; /*fa94d8*/
+    --color-bg: #F57380;
+    --color-bg2: #c849e7;
     --color-header: #ffffff;
     --color-detail: #5bb2ec;
     --color-fade: #f55e6e;
@@ -23,6 +24,7 @@ body {
     height: 100%;
     margin: 0px;
     background-color: var(--color-bg);
+    background-image: linear-gradient(var(--color-bg), var(--color-bg2));
     border-left: 10px solid var(--color-header);
     border-right: 10px solid var(--color-header);
 }
@@ -121,15 +123,6 @@ nav p {
     padding-bottom: 200px;
 }
 
-.year {
-    max-width: 450px;
-    margin-left: -190px;
-    transform: rotate(90deg);
-    transform-origin: 0% 100%;
-    text-align: center;
-    color: var(--color-fade);
-}
-
 .yearContainer {
     max-width: 800px;
     text-align: right;
@@ -142,7 +135,7 @@ nav p {
     margin-top: -15px;
     float: right;
     z-index: -1;
-    color: var(--color-fade);
+    color: rgba(0, 0, 0, 0.05);
 }
 
 .title {
