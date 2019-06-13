@@ -2,10 +2,10 @@
     --color-bg: #F57380;
     --color-bg2: #c849e7;
     --color-header: #ffffff;
-    --color-detail: #5bb2ec;
+    --color-detail: #2c2c2c;
     --color-fade: #f55e6e;
     --color-fade2: #aed3e6;
-    --color-fade3: #717694;
+    --color-fade3: #667274b6;
     --color-text: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
@@ -23,7 +23,6 @@ a {
 body {
     height: 100%;
     margin: 0px;
-    background-color: var(--color-bg);
     background-image: linear-gradient(var(--color-bg), var(--color-bg2));
     border-left: 10px solid var(--color-header);
     border-right: 10px solid var(--color-header);
@@ -53,30 +52,80 @@ body:after {
 
 nav {
     position: fixed;
-    padding: 20px;
+    width: 100%;
 }
 
-nav h5 {
+nav a {
+    line-height: 1em;
     margin: 0px;
-    font-size: 40px;
     font-weight: 800;
     color: var(--color-header);
-    text-shadow: 2px 2px 1px var(--color-fade2);
+    text-shadow: 1px 1px var(--color-fade2);
 }
 
-nav li {
+.inactive {
+    color: #ffffff63 !important;
+    text-shadow: none !important;
+}
+
+.inactive:hover {
+    color: var(--color-header) !important;
+    text-shadow: 1px 1px var(--color-fade2) !important;
+    animation-name: navHover;
+    animation-duration: 0.15s;
+}
+
+.navTopbar {
+    padding-top: 20px;
+    padding-right: 30px;
+}
+
+.navTopbar a {
+    font-size: 22px;
+    float: right;
+    padding-left: 20px;
+}
+
+
+.navSidebar {
+    max-width: 180px;
+    padding-left: 15px;
+}
+
+.navSidebar .toggles {
+    margin-bottom: -3px;
+}
+.navSidebar .toggles p {
+    cursor: pointer;
+    margin: 0px;
+    line-height: 0.85em;
+    font-size: 19.1px;
+    font-weight: 800;
+    color: var(--color-header);
+    text-shadow: 1px 1px var(--color-fade2);
+}
+
+.navSidebar h5 {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.navSidebar li {
     list-style: none;
 }
 
-nav p {
+.navSidebar li p {
     line-height: 1em;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     cursor: pointer;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 14px;
-    color: var(--color-header);
-    text-shadow: 1px 1px var(--color-fade2);
+    color: var(--color-detail);
 }
 
 
@@ -191,4 +240,38 @@ nav p {
 @keyframes linkHover {
     from {color: var(--color-detail); text-shadow: 2px 2px 1px var(--color-fade3);}
     to {color: var(--color-header); text-shadow: 2px 2px 1px var(--color-fade2);}
+}
+
+@keyframes navHover {
+    from {color: #ffffff63; text-shadow: none;}
+    to {color: var(--color-header); text-shadow: 1px 1px var(--color-fade2);}
+}
+
+
+
+
+
+.about {
+    overflow-y: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+}
+
+.about .me {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-header);
+    text-shadow: 1px 1px var(--color-fade2);
+}
+
+.about .me a {
+    color: var(--color-detail);
+    text-shadow: 2px 2px 1px var(--color-fade3);
+}
+
+.about .me a:hover {
+    border-bottom: 2px solid var(--color-detail);
 }

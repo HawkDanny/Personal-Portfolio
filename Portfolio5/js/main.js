@@ -3,8 +3,8 @@ window.onscroll = updateNav;
 var scrollItems;
 var scrollIndex = 0; //index of the current scrollItem being looked at by the user
 
-var activeNavStyle = "color: var(--color-detail); text-shadow: 2px 2px 1px var(--color-fade3);";
-var inactiveNavStyle = "color: var(--color-header); text-shadow: 2px 2px 1px var(--color-fade2);";
+var activeNavStyle = "color: var(--color-header); text-shadow: 1px 1px var(--color-fade2);";
+var inactiveNavStyle = "color: var(--color-detail);";
 
 function init() {
     var fitties = fitty('.fit', {
