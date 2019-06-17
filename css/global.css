@@ -2,7 +2,7 @@
     --color-bg: #F57380;
     --color-bg2: #c849e7;
     --color-header: #ffffff;
-    --color-detail: #73d5df;
+    --color-detail: #4d4d4d;
     --color-fade: #f55e6e;
     --color-fade2: #aed3e6;
     --color-fade3: #7c113a49;
@@ -139,6 +139,13 @@ nav a {
     max-width: 800px;
 }
 
+@media only screen and (max-width: 1240px) {
+    .timeline {
+        margin-left: 210px;
+        overflow-y: hidden;
+    }
+}
+
 
 
 
@@ -166,7 +173,7 @@ nav a {
 
 
 
-/*PROJECTS*/
+/*HOMEPAGE PROJECTS*/
 
 .project {
     padding-top: 50px;
@@ -286,6 +293,74 @@ nav a {
     max-width: 1000px;
     margin: auto;
     background-color: var(--color-bg);
+}
+
+.projectTitle {
+    margin: 0px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 100px; 
+    color: var(--color-header);
+    text-shadow: 2px 2px 1px var(--color-fade2);
+}
+
+.projectContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.projectDescription {
+    margin: auto;
+    width: 500px;
+    padding-bottom: 300px;
+}
+
+.projectDescription .projectLink {
+    float: none;
+    display: block;
+    padding-bottom: 50px;
+}
+
+.projectWriteup {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.projectWriteup a {
+    color: var(--color-detail);
+}
+
+.projectWriteup a:hover {
+    text-decoration: underline;
+}
+
+.takeaways {
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.takeaways a:hover {
+    border-bottom: none;
+}
+
+.takeaway {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #121212;
+    color: #FDFDFD;
+}
+
+.takeaway:hover {
+    background-color: #FDFDFD;
+    color: #121212;
 }
 
 
