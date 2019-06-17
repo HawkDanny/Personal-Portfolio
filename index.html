@@ -3,97 +3,194 @@
 <head>
     <meta charset="utf-8">
 
-    <!--Matter.js-->
-    <script src="js/matter.min.js"></script>
-    <!--p5.js-->
-    <script src="js/p5.min.js"></script>
-    <!--Main javaScript logic-->
-    <script src="js/main.js"></script>
-    <!--Extra js Files-->
-    <script src="js/decomp.js"></script>
-    <script src="js/circle.js"></script>
-    <script src="js/box.js"></script>
-    <script src="js/sprite.js"></script>
-    <script src="js/shape.js"></script>
-    <script src="js/letter.js"></script>
-
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 
     <!--Fontawesome-->
-    <script src="https://use.fontawesome.com/d5cda29867.js"></script>
+    <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
+
+    <!--Fitty-->
+    <script src="js/fitty.min.js"></script>
+    
+    <!--My JavaScript-->
+    <script src="js/main.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
 
     <title>Portfolio | Danny Hawk</title>
 </head>
 <body>
-    <div id="sketch"></div>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a id="active" href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="DannyHawk_Resume.pdf">Resume</a></li>
-                <li><a href="blog/index.html">Blog</a></li>
-            </ul>
-        </nav>
-
-        <div class="content">
-            <div class="header">
-                <div class="headerItem">
-                    <h1 class="name">Danny Hawk</h1>
-                </div>
+    <nav>
+        <div class="navTopbar">
+            <!--<a class="inactive" href="">BLOG</a>-->
+            <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
+            <a class="inactive" href="about.html">ABOUT</a>
+        </div>
+        <div class="navSidebar">
+            <a href="index.html" style="font-size: 22px;">DANNY HAWK'S</a>
+            <div class="toggles">
+                <p id="completeText" onclick="toggleComplete()" class="active">COMPLETE WORKS</p>
+                <p id="selectedText" onclick="toggleSelected()" class="inactive" style="font-size: 20.4px;">SELECTED WORKS</p>
             </div>
+            <h5 class="complete" style="padding-top:0px;">2019</h5>
+            <!--<li><p class="sideBarClickable complete selected" data-sister-tag="fun">Fun Game</p></li>-->
+            <li><p class="sideBarClickable complete selected" data-sister-tag="imagine">Imagine</p></li>
+            <h5 class="complete">2018</h5>
+            <li><p class="sideBarClickable complete" data-sister-tag="rocks">lit.rocks</p></li>
+            <li><p class="sideBarClickable complete selected" data-sister-tag="boop">Danny Hawk's Boop Game</p></li>
+            <li><p class="sideBarClickable complete" data-sister-tag="beautiful">Beautiful Series</p></li>
+            <h5 class="complete">2017</h5>
+            <li><p class="sideBarClickable complete selected" data-sister-tag="narwhal">Narwhal Picnic</p></li>
+            <li><p class="sideBarClickable complete" data-sister-tag="dog">My Dog's Eyes</p></li>
+        </div>
+    </nav>
+    <div class="timeline">
+        <div class="header">
+            <h1>
+                Hey my name's <span class="name">Danny Hawk.</span>
+                <br>I made all the projects on this website.
+                <br>Most of them are games, but some aren't.
+                <!--<br>Thanks for coming, have a good day!! <i class="fas fa-laugh"></i>-->
+            </h1>
+        </div>
 
-            <article>
-                <div class="project" id="narwhal">
-                    <h3>Narwhal Picnic <span class="tools">unity, htc vive</span></h3>
-                    <p>I strapped Vive controllers to peoples heads.</p>
+        <!--FUN GAME-->
+        <!--<div id="fun" class="project complete selected">
+                <div class="title"><h3 class="fit">FUN GAME</h3></div>
+                <img src="media/fun.png" width="800" height="450">
+                <div class="yearContainer"><div class="year2"><h3>2019</h3></div></div>
+                <div class="info">
+                    <div class="tags">
+                        <p>Game</p>
+                        <p>Fun!</p>
+                        <p>Unity</p>
+                        <p>Tiny</p>
+                    </div>
+                    <div class="description">I can guarantee to you that this game is fun. I made it and I made sure to make it fun. You need a controller, sorry about that. But as long as you have a controller you're going to have a lot of fun.</div>
+                    
+                    <a href="#" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
                 </div>
+            </div>-->
 
-                <div class="project" id="boop">
-                    <h3>Danny Hawk's Boop Game <span class="tools">unity, arduino, javascript</span></h3>
-                    <p>A competitive game with cooperative controls.</p>
+        <!--IMAGINE-->
+        <div id="imagine" class="project complete selected">
+            <div class="title"><h3 class="fit">IMAGINE</h3></div>
+            <video width="800" height="450" autoplay loop muted>
+                <source src="media/imagine_homepage.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+            <div class="yearContainer"><div class="year2"><h3>2019</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Game</p>
+                    <p>Game?</p>
+                    <p>Unity</p>
+                    <p>Tiny</p>
                 </div>
+                <div class="description">In this game I tell you to imagine spring,ecause I can't imagine it for you. So please just close your eyes and give it a go. WASD and mouse to control. Created in ten hours for the Game Center's Prototype Studio class, as part of my MFA in Game Design.</div>
+                
+                <a href="https://hawkdanny.itch.io/imagine" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
+            </div>
+        </div>
 
-                <div class="project" id="beautiful">
-                    <h3>The Beautiful Series <span class="tools">arduino</span></h3>
-                    <p>Anti-design physical interactions.</p>
+        <!--LIT ROCKS-->
+        <div id="rocks" class="project complete">
+            <div class="title"><h3 class="fit">LIT.ROCKS</h3></div>
+            <video width="800" height="450" autoplay loop muted>
+                <source src="media/popsicle_loop.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+            <div class="yearContainer"><div class="year2"><h3>2018</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Art</p>
+                    <p>Shaders</p>
+                    <p>Unity</p>
+                    <p>Instagram</p>
                 </div>
+                <div class="description">These rocks started as a project to learn to make things look good in Unity, with the stipulation that I use one of the rock models from Low Poly Rocks Pack by LMHPoly. The project was then revived in the summer of 2018 as a way to learn Unity's Shader Graph.</div>
+                <a href="https://www.instagram.com/lit.rocks/" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
+            </div>
+        </div>
 
-                <div class="project" id="dog">
-                    <h3>My Dog's Eyes <span class="tools">javascript, html canvas</span></h3>
-                    <p>Creating imagery using the words from a song.</p>
+        <!--BOOP-->
+        <div id="boop" class="project complete selected">
+            <div class="title"><h3 class="fit">DANNY HAWK'S BOOP GAME</h3></div>
+            <iframe src="https://www.youtube-nocookie.com/embed/dJwRSW0mXaI?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="800" height="450" frameborder="0"></iframe>
+            <div class="yearContainer"><div class="year2"><h3>2018</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Game</p>
+                    <p>Arduino</p>
+                    <p>Arcade Controls</p>
+                    <p>Booping</p>
                 </div>
+                <div class="description">Danny Hawk's Boop Game is an examination into 'competitive sharing', which is what happens when players are forced to compete against each other while sharing a control. This project started as a web game that can be played here, and has since expanded to become a unity game with custom built arcade controls.</div>
+            </div>
+        </div>
 
-                <div class="project" id="rocks">
-                    <h3>lit.rocks <span class="tools">unity, instagram</span></h3>
-                    <p>Daily shader graph projects in Unity.</p>
+        <!--BEAUTIFUL SERIES-->
+        <div id="beautiful" class="project complete">
+            <div class="title"><h3 class="fit">BEAUTIFUL SERIES</h3></div>
+            <video width="800" height="450" autoplay loop muted>
+                <source src="media/luka_loop.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+            <div class="yearContainer"><div class="year2"><h3>2018</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Art</p>
+                    <p>Physical Computing</p>
+                    <p>Arduino</p>
+                    <p>Beauty</p>
                 </div>
+                <div class="description">A series of pieces dealing with beauty and interaction. In order to learn the fundamentals of physical computing, I created a series of different experiments on the conjunction of interaction and expectations. They all serve to subvert good/expected design.</div>
+            </div>
+        </div>
 
-                <!--
-                <div class="project" id="todo">
-                    <h3>Puppy Productivity Club <span class="tools">html, css, javascript</span></h3>
-                    <p>Half pomodoro timer, half to-do list. It keeps me productive.</p>
-                </div>-->
-
-                <!--
-                <div class="project" id="montague">
-                    <h3>The Death of Mr. Montague <span class="tools">analog game</span></h3>
-                    <p>A framework for bickering, packaged as a role-playing game.</p>
-                </div>-->
-
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/hawkdanny/"><i id="linkedin" class="fa fa-linkedin fa-2x"></i></a>
-                    <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fa fa-twitter fa-2x"></i></a>
-                    <a href="https://github.com/hawkdanny"><i id="github" class="fa fa-github fa-2x"></i></a>
-                    <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fa fa-twitch fa-2x"></i></a>
-                    <a href="https://soundcloud.com/dannyhawkmusic"><i id="soundcloud" class="fa fa-soundcloud fa-2x"></i></a>
+        <!--NARWHAL PICNIC-->
+        <div id="narwhal" class="project complete selected">
+            <div class="title"><h3 class="fit">NARWHAL PICNIC</h3></div>
+            <iframe src="https://www.youtube-nocookie.com/embed/mC3KTQK0pqg?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="800" height="450" frameborder="0"></iframe>
+            <div class="yearContainer"><div class="year2"><h3>2017</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Game</p>
+                    <p>VR</p>
+                    <p>Unity</p>
+                    <p>Narwhals</p>
                 </div>
-            </article>
+                <div class="description">The coolest thing about VR is that the user is blind to the world around them, so I made Narwhal Picnic as an exploration of that design space, with an emphasis on player expression within a scene. It was super sucessful at both creating a very playful experience and also leaving red rings on my friends' foreheads.</div>
+            </div>
+        </div>
+
+        <!--MY DOG'S EYES-->
+        <div id="dog" class="project complete">
+            <div class="title"><h3 class="fit">MY DOG'S EYES</h3></div>
+            <video width="800" height="450" autoplay loop muted>
+                <source src="media/dogseyes_homepage.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+            <div class="yearContainer"><div class="year2"><h3>2017</h3></div></div>
+            <div class="info">
+                <div class="tags">
+                    <p>Art</p>
+                    <p>Creative Coding</p>
+                    <p>HTML5 Canvas</p>
+                    <p>Zammuto</p>
+                </div>
+                <div class="description">The artist Zammuto wrote a song titled "My Dog's Eyes" and the first time I heard it I stood still. It is my favorite song. The words are steeped in imagery, and I used the words themselves to construct the moments they describe. This piece is my lover letter to the song.</div>
+                <a href="mydogseyes.html" class="projectLink">CHECK IT OUT <i class="fas fa-hand-point-right"></i></a>
+            </div>
+        </div>
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/hawkdanny/"><i id="linkedin" class="fab fa-linkedin-in fa-2x"></i></a>
+            <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://github.com/hawkdanny"><i id="github" class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fab fa-twitch fa-2x"></i></i></a>
+            <a href="https://soundcloud.com/dannyhawkmusic"><i id="soundcloud" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 </body>

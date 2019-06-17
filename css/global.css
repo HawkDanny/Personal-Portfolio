@@ -2,10 +2,10 @@
     --color-bg: #F57380;
     --color-bg2: #c849e7;
     --color-header: #ffffff;
-    --color-detail: #2c2c2c;
+    --color-detail: #73d5df;
     --color-fade: #f55e6e;
     --color-fade2: #aed3e6;
-    --color-fade3: #667274b6;
+    --color-fade3: #7c113a49;
     --color-text: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
@@ -56,7 +56,7 @@ nav {
 }
 
 nav a {
-    line-height: 1em;
+    line-height: 0.9em;
     margin: 0px;
     font-weight: 800;
     color: var(--color-header);
@@ -93,12 +93,13 @@ nav a {
 }
 
 .navSidebar .toggles {
-    margin-bottom: -3px;
+    padding-bottom: 10px;
 }
+
 .navSidebar .toggles p {
+    line-height: 1em;
     cursor: pointer;
     margin: 0px;
-    line-height: 0.85em;
     font-size: 19.1px;
     font-weight: 800;
     color: var(--color-header);
@@ -267,11 +268,62 @@ nav a {
     text-shadow: 1px 1px var(--color-fade2);
 }
 
-.about .me a {
+.meLink {
     color: var(--color-detail);
     text-shadow: 2px 2px 1px var(--color-fade3);
 }
 
-.about .me a:hover {
+.meLink:hover {
     border-bottom: 2px solid var(--color-detail);
 }
+
+
+
+
+/*PROJECT PAGES*/
+
+.projectPage {
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--color-bg);
+}
+
+
+
+
+/*SOCIAL*/
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    margin-bottom: 300px;
+}
+    .social i {
+        color: #121212;
+        margin: 75px 30px 0px 30px;
+    }
+
+    #github:hover {
+        color: #777777;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #twitch:hover {
+        color: #6441A4;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #linkedin:hover {
+        color: #007bb6;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #twitter:hover {
+        color: #00aced;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #soundcloud:hover {
+        color: #ff7700;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
