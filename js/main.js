@@ -6,7 +6,7 @@ var scrollEvents;
 var firstSetup = true;
 var scrollIndex = 0; //index of the current scrollItem being looked at by the user
 
-var activeNavStyle = "color: var(--color-header); text-shadow: 1px 1px var(--color-fade2);";
+var activeNavStyle = "color: var(--color-header);";
 var inactiveNavStyle = "color: var(--color-detail);";
 
 var complete = true;
@@ -14,7 +14,7 @@ var complete = true;
 function init() {
     var fitties = fitty('.fit', {
     minSize: 12,
-    maxSize: 92
+    maxSize: 96
     });
 
     for (var i = 0; i < fitties.length; i++)

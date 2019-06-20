@@ -2,12 +2,11 @@
     --color-bg: #F57380;
     --color-bg2: #c849e7;
     --color-header: #ffffff;
-    --color-detail: #4d4d4d;
+    --color-detail: #ffffff52;
     --color-fade: #f55e6e;
     --color-fade2: #aed3e6;
     --color-fade3: #7c113a49;
     --color-text: #ffffff;
-    font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -21,6 +20,7 @@ a {
 
 
 body {
+    font-family: 'Open Sans', sans-serif;
     height: 100%;
     margin: 0px;
     background-image: linear-gradient(var(--color-bg), var(--color-bg2));
@@ -60,7 +60,6 @@ nav a {
     margin: 0px;
     font-weight: 800;
     color: var(--color-header);
-    text-shadow: 1px 1px var(--color-fade2);
 }
 
 .inactive {
@@ -70,7 +69,6 @@ nav a {
 
 .inactive:hover {
     color: var(--color-header) !important;
-    text-shadow: 1px 1px var(--color-fade2) !important;
     animation-name: navHover;
     animation-duration: 0.15s;
 }
@@ -103,7 +101,6 @@ nav a {
     font-size: 19.1px;
     font-weight: 800;
     color: var(--color-header);
-    text-shadow: 1px 1px var(--color-fade2);
 }
 
 .navSidebar h5 {
@@ -112,7 +109,7 @@ nav a {
     padding-top: 10px;
     font-size: 12px;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .navSidebar li {
@@ -154,21 +151,22 @@ nav a {
 
 .header {
     color: var(--color-header);
-    text-shadow: 2px 2px 1px var(--color-fade2);
     padding-top: 300px;
     padding-bottom: 200px;
     max-width: 800px;
     margin: auto;
+    font-size: 16px;
+    font-family: 'Cutive Mono', monospace;
 }
 
 .header h1,h3 {
+    font-weight: 400;
     line-height: 1.3em;
     margin: 0px;
 }
 
 .header .name {
     color: var(--color-detail);
-    text-shadow: 2px 2px 1px var(--color-fade3);
 }
 
 
@@ -201,7 +199,12 @@ nav a {
     margin-bottom: 10px;
 }
 
+.title h3 {
+    font-weight: bold;
+}
+
 .year2 h3 {
+    font-weight: 800;
     font-size: 200px;
 }
 
@@ -213,9 +216,8 @@ nav a {
     padding-top: 5px;
     padding-right: 20px;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 16px;
     color: var(--color-detail);
-    text-shadow: 2px 2px 1px var(--color-fade3);
     float: left;
     margin: 0px;
 }
@@ -234,25 +236,22 @@ nav a {
     float: left;
     font-weight: 800;
     font-size: 25px;
-    color: var(--color-detail);
-    text-shadow: 2px 2px 1px var(--color-fade3);
+    color: #ffffff81;
 }
 
 .projectLink:hover {
+    animation: linkHover 0.15s forwards;
     color: var(--color-header);
-    text-shadow: 2px 2px 1px var(--color-fade2);
-    animation-name: linkHover;
-    animation-duration: 0.15s;
 }
 
 @keyframes linkHover {
-    from {color: var(--color-detail); text-shadow: 2px 2px 1px var(--color-fade3);}
-    to {color: var(--color-header); text-shadow: 2px 2px 1px var(--color-fade2);}
+    from {color: #ffffff81;}
+    to {color: var(--color-header);}
 }
 
 @keyframes navHover {
-    from {color: #ffffff63; text-shadow: none;}
-    to {color: var(--color-header); text-shadow: 1px 1px var(--color-fade2);}
+    from {color: #ffffff63;}
+    to {color: var(--color-header);}
 }
 
 
@@ -272,12 +271,10 @@ nav a {
     font-size: 18px;
     font-weight: 600;
     color: var(--color-header);
-    text-shadow: 1px 1px var(--color-fade2);
 }
 
 .meLink {
     color: var(--color-detail);
-    text-shadow: 2px 2px 1px var(--color-fade3);
 }
 
 .meLink:hover {
@@ -375,7 +372,12 @@ nav a {
 }
     .social i {
         color: #121212;
-        margin: 75px 30px 0px 30px;
+        margin: 75px 20px 0px 20px;
+    }
+
+    #itch:hover {
+        color: #FA5C5B;
+        background-color: rgba(0, 0, 0, 0.0);
     }
 
     #github:hover {
