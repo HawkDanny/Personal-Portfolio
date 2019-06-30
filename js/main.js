@@ -12,22 +12,14 @@ var inactiveNavStyle = "color: var(--color-detail);";
 var complete = true;
 
 function init() {
-    var fitties = fitty('.fit', {
-    minSize: 12,
-    maxSize: 96
-    });
-
-    for (var i = 0; i < fitties.length; i++)
-    {
-        fitties[0].fit();
-    }
-
-    getScrollItems();
+    //Temporarily like this. TODO: the css and html itself should reflect the selected start state
+    toggleSelected();
 }
 
 //Called every time the window is scrolled
 function updateNav() {
-    if (document.getElementById(scrollSelectedItems[scrollIndex].dataset.sisterTag).getBoundingClientRect().y < window.innerHeight / 2)
+    //+ 50 so that the nav updates correctly?
+    if (document.getElementById(scrollSelectedItems[scrollIndex].dataset.sisterTag).getBoundingClientRect().y + 50 < window.innerHeight / 2)
     {
         scrollSelectedItems[scrollIndex].style = activeNavStyle;
         if (scrollIndex > 0)

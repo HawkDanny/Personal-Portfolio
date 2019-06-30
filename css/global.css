@@ -5,8 +5,8 @@
     --color-detail: #ffffff52;
     --color-fade: #f55e6e;
     --color-fade2: #aed3e6;
-    --color-fade3: #7c113a49;
-    --color-text: #ffffff;
+    --color-fade3: #ffffff88;
+    --color-text: #ffffff85;
 }
 
 html {
@@ -174,74 +174,81 @@ nav a {
 /*HOMEPAGE PROJECTS*/
 
 .project {
-    padding-top: 50px;
+    clear: both;
+    padding-top: 100px;
     padding-bottom: 200px;
 }
 
-.yearContainer {
-    max-width: 800px;
-    text-align: right;
+.projectMedia {
+    float: left;
 }
 
-.year2 {
-    width: 800px;
-    position: absolute;
-    font-weight: 500px;
-    margin-top: -15px;
-    float: right;
-    z-index: -1;
-    color: rgba(0, 0, 0, 0.05);
+.info {
+    max-width: 180px;
+    float: left;
+    padding-left: 10px;
+}
+
+.infoHeader {
+    position: relative;
 }
 
 .title {
     color: var(--color-header);
-    text-shadow: 2px 2px 1px var(--color-fade2);
-    margin-bottom: 10px;
-}
-
-.title h3 {
+    /*text-shadow: 2px 2px 1px var(--color-fade2);*/
+    font-size: 20px;
     font-weight: bold;
+    line-height: 0.9em;
 }
 
-.year2 h3 {
-    font-weight: 800;
-    font-size: 200px;
-}
-
-.info {
-    clear: both;
-}
-
-.tags p {
-    padding-top: 5px;
-    padding-right: 20px;
-    font-weight: 800;
-    font-size: 16px;
-    color: var(--color-detail);
-    float: left;
-    margin: 0px;
+.year {
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--color-text);
 }
 
 .description {
-    font-size: 18px;
-    font-weight: 600;
-    width: 500px;
-    color: var(--color-text);;
-    padding-top: 5px;
-    clear: both;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1em;
+    padding-top: 10px;
 }
 
-.projectLink {
-    margin-top: 5px;
-    float: left;
-    font-weight: 800;
-    font-size: 25px;
-    color: #ffffff81;
+.infoLinks {
+    padding-top: 10px;
+    line-height: 1em;
 }
 
-.projectLink:hover {
-    animation: linkHover 0.15s forwards;
-    color: var(--color-header);
+.infoLinks a {
+    font-size: 14px;
+    color: white;
+    position: relative;
+}
+
+.infoLinks a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.infoLinks a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.spacer {
+    height: 50vh;
 }
 
 @keyframes linkHover {
@@ -364,15 +371,20 @@ nav a {
 
 
 /*SOCIAL*/
+.socialContainer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
 .social {
+    margin-bottom: 20px;
+    margin-left: 25px;
     display: flex;
-    justify-content: center;
-    margin-top: -100px;
-    margin-bottom: 300px;
 }
     .social i {
         color: #121212;
-        margin: 75px 20px 0px 20px;
+        margin-right: 20px;
     }
 
     #itch:hover {
