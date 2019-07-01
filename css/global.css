@@ -21,7 +21,7 @@ a {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
+    min-height: 100vh;
     margin: 0px;
     background-image: linear-gradient(var(--color-bg), var(--color-bg2));
     border-left: 10px solid var(--color-header);
@@ -220,13 +220,13 @@ nav a {
     line-height: 1em;
 }
 
-.infoLinks a {
+.fancyLink {
     font-size: 14px;
     color: white;
     position: relative;
 }
 
-.infoLinks a:before {
+.fancyLink:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -241,7 +241,7 @@ nav a {
     transition: all 0.15s ease-in-out 0s;
 }
 
-.infoLinks a:hover:before {
+.fancyLink:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
@@ -294,77 +294,71 @@ nav a {
 /*PROJECT PAGES*/
 
 .projectPage {
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
-    background-color: var(--color-bg);
+}
+
+.projectHeaderMedia {
+    padding-top: 150px;
+}
+
+.projectInfo {
+    padding-top: 50px;
 }
 
 .projectTitle {
     margin: 0px;
-    padding-top: 100px;
-    padding-bottom: 30px;
-    text-align: center;
-    font-size: 100px; 
+    font-size: 18px; 
+    font-weight: bold;
     color: var(--color-header);
-    text-shadow: 2px 2px 1px var(--color-fade2);
 }
 
 .projectContent {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
 }
 
 .projectDescription {
-    margin: auto;
-    width: 500px;
-    padding-bottom: 300px;
+    padding-top: 5px;
+    color: var(--color-text);
+    width: 550px;
+    margin: 0px;
+    font-size: 16px;
 }
 
-.projectDescription .projectLink {
-    float: none;
-    display: block;
-    padding-bottom: 50px;
+.projectLearnings {
+    margin: 0px;
+    padding-left: 20px;
+    width: 230px;
+    padding-top: 5px;
 }
 
-.projectWriteup {
+.projectLearnings h5 {
+    margin: 0px;
     font-size: 18px;
-    font-weight: 600;
     color: var(--color-text);
 }
 
-.projectWriteup a {
-    color: var(--color-detail);
-}
-
-.projectWriteup a:hover {
-    text-decoration: underline;
-}
-
-.takeaways {
-    margin-bottom: 100px;
+.learnings {
+    padding-top: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+}   
+
+.learning {
+    font-size: 14px;
+    padding-right: 10px;
+    padding-top: 3px;
+    color: var(--color-header);
 }
 
-.takeaways a:hover {
-    border-bottom: none;
+.projectLinks {
+    padding-top: 20px;
 }
 
-.takeaway {
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    background-color: #121212;
-    color: #FDFDFD;
-}
-
-.takeaway:hover {
-    background-color: #FDFDFD;
-    color: #121212;
+.projectLinks a {
+    color: var(--color-header);
+    font-size: 14px;
+    font-weight: bold;
 }
 
 

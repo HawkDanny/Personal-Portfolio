@@ -14,7 +14,7 @@
     <meta charset="utf-8">
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,600,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400,600,800&display=swap" rel="stylesheet">
 
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
@@ -32,40 +32,59 @@
 
     <title>Portfolio | Danny Hawk</title>
 </head>
-<body style="background-color: var(--color-bg); background-image: none;">
+<body>
     <nav>
         <div class="navTopbar">
-            <a class="inactive" href="">BLOG</a>
-            <a class="inactive" href="">RESUME</a>
+            <!--<a class="inactive" href="">BLOG</a>-->
+            <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
             <a class="inactive" href="about.html">ABOUT</a>
         </div>
         <div class="navSidebar">
             <a class="inactive" href="index.html" style="font-size: 22px;">DANNY HAWK</a>
         </div>
     </nav>
+
+    <div class="socialContainer">
+        <div class="social">
+            <a href="https://hawkdanny.itch.io/"><i id="itch" class="fab fa-itch-io"></i></a>
+            <a href="https://www.linkedin.com/in/hawkdanny/"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fab fa-twitter"></i></a>
+            <a href="https://github.com/hawkdanny"><i id="github" class="fab fa-github"></i></a>
+            <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fab fa-twitch"></i></i></a>
+            <a href="https://soundcloud.com/dannyhawkmusic"><i id="soundcloud" class="fab fa-soundcloud"></i></a>
+        </div>
+    </div>
+
     <div class="projectPage">
-        <h1 class="projectTitle">Imagine</h1>
-        <div class="projectContent">
+        <div class="projectHeaderMedia">
             <video width="800" height="450" autoplay loop muted>
                 <source src="media/imagine_homepage.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video>
         </div>
-        <article class="projectDescription">
-            <div class="projectWriteup">In this game I tell you to imagine spring, because I can't imagine it for you. So please just close your eyes and give it a go. WASD and mouse to control. Created in ten hours for the Game Center's Prototype Studio class, as part of my MFA in Game Design.<br><br>
-            I wrote a post about the creation of this game and its goals <a href="#">here.</a>
+
+        <div class="projectInfo">
+            <div class="projectContent">
+                <div class="projectDescription">
+                    <h1 class="projectTitle">IMAGINE</h1>
+                    <p class="projectDescription">In this game I tell you to imagine spring, because I can't imagine it for you. So please just close your eyes and give it a go. WASD and mouse to control. Created in ten hours for the Game Center's Prototype Studio class, as part of my MFA in Game Design.</p>
+                    
+                    <div class="projectLinks">
+                        <a class="fancyLink" href="https://hawkdanny.itch.io/imagine">PLAY IMAGINE ONLINE</a>
+                    </div>
+                </div>
+                <div class="projectLearnings">
+                    <h5>THINGS I LEARNED</h5>
+                    <div class="learnings">
+                        <div class="learning"><a class="fancyLink" href="https://www.youtube.com/watch?v=6OT43pvUyfY">Audio Manager</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.ableton.com/en/live/">Ableton Live</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.native-instruments.com/en/products/komplete/synths/massive/">Massive</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://en.wikipedia.org/wiki/Seventh_chord">Seventh Chords</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://forum.unity.com/threads/mapping-or-scaling-values-to-a-new-range.180090/">Lerp + Inverse Lerp Combo</a></div>
+                    </div>
+                </div>
             </div>
-            <h3>What I learned</h3>
-            <div class="takeaways">
-                <a href="https://www.arduino.cc/"><div class="takeaway"><h4>Arduino</h4></div></a>
-                <a href="https://docs.unity3d.com/Manual/class-ReflectionProbe.html"><div class="takeaway"><h4>Reflection Probes</h4></div></a>
-                <a href="https://github.com/relativty/wrmhl"><div class="takeaway"><h4>wrmhl</h4></div></a>
-                <a href="http://digitalnativestudios.com/textmeshpro/docs/"><div class="takeaway"><h4>TextMesh Pro</h4></div></a>
-                <a href="https://cdn.sparkfun.com/datasheets/Components/Switches/ZippyyStick.pdf"><div class="takeaway"><h4>Zippyy Joystick</h4></div></a>
-                <a href="https://docs.unity3d.com/ScriptReference/Camera-orthographicSize.html"><div class="takeaway"><h4>Camera.orthographicSize</h4></div></a>
-                <a href="https://www.teenageengineering.com/products/op-1"><div class="takeaway"><h4>OP-1</h4></div></a>
-            </div>
-        </article>
+        </div>
     </div>
 </body>
 </html>
