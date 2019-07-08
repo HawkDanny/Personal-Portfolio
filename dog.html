@@ -1,51 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142326937-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142326937-1');
+    </script>
+
     <meta charset="utf-8">
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400,600,800&display=swap" rel="stylesheet">
 
     <!--Fontawesome-->
-    <script src="https://use.fontawesome.com/d5cda29867.js"></script>
+    <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
     <title>My Dog's Eyes | Danny Hawk</title>
 </head>
 <body>
-    <div class="container projectPage">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="DannyHawk_Resume.pdf">Resume</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <article style="min-width: 1280px">
-                <div class="projectPageHeader">
-                    <h1>My Dog's Eyes</h1>
-                    <p><span class="quote">“<i>My Dog’s Eyes</i> is based on an outdated list of children’s favorite things. Zammuto took each image, found its rhythmic heartbeat and intrinsic melody, and put them in order of increasing tempo as a structural basis for the track. He then composed additional instrumentation around this structure, in the process revealing the natural cadence and harmony within each phrase"</span> - Temporary Residence Ltd</p>
-                    <p style="margin-bottom: 100px;">The words of <i>My Dog’s Eyes</i> are steeped in imagery, and I wanted to crate a marriage between the imagery and the lyrics. So I constructed the images using the literal words. Please <a href="mydogseyes.html">go to the full project here</a>.</p>
-                </div>
+    <nav>
+        <div class="navTopbar">
+            <!--<a class="inactive" href="">BLOG</a>-->
+            <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
+            <a class="inactive" href="about.html">ABOUT</a>
+        </div>
+        <div class="navSidebar">
+            <a class="inactive" href="index.html" style="font-size: 22px;">DANNY HAWK</a>
+        </div>
+    </nav>
 
-                <div class="github"><a href="https://github.com/HawkDanny/MyDogsEyes">Github Repo</a></div>
-
-                <h3>What I learned</h3>
-                <div class="takeaways">
-                    <a href="http://alpha.editor.p5js.org/generative-design/sketches/P_4_3_2_01"><div class="takeaway"><h4>Pixel Mapping</h4></div></a>
-                    <a href="https://gulpjs.com/"><div class="takeaway"><h4>Gulp</h4></div></a>
-                    <a href="https://www.npmjs.com/"><div class="takeaway"><h4>NPM</h4></div></a>
-                    <a href="https://www.npmjs.com/package/uglify-js"><div class="takeaway"><h4>Uglify</h4></div></a>
-                    <a href="https://babeljs.io/"><div class="takeaway"><h4>Babel</h4></div></a>
-                </div>
-            </article>
+    <div class="socialContainer">
+        <div class="social">
+            <a href="https://hawkdanny.itch.io/"><i id="itch" class="fab fa-itch-io"></i></a>
+            <a href="https://www.linkedin.com/in/hawkdanny/"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fab fa-twitter"></i></a>
+            <a href="https://github.com/hawkdanny"><i id="github" class="fab fa-github"></i></a>
+            <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fab fa-twitch"></i></i></a>
+            <a href="https://soundcloud.com/dannyhawkmusic"><i id="soundcloud" class="fab fa-soundcloud"></i></a>
         </div>
     </div>
 
+    <div class="projectPage">
+        <div class="projectHeaderMedia">
+            <video width="800" height="450" autoplay loop muted>
+                <source src="media/dogseyes_homepage.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+        </div>
 
+        <div class="projectInfo">
+            <div class="projectContent">
+                <div class="projectDescription">
+                    <h1 class="projectTitle">MY DOG'S EYES</h1>
+                    <p class="projectDescription">The artist Zammuto wrote a song titled "My Dog's Eyes" and the first time I heard it I stood still. It is my favorite song. The words are steeped in imagery, and I used the words themselves to construct the moments they describe. This piece is my lover letter to the song.</p>
+                    
+                    <div class="projectLinks">
+                        <a class="fancyLink" href="mydogseyes.html">VIEW PROJECT</a><br>
+                        <a class="fancyLink" href="https://github.com/HawkDanny/MyDogsEyes">GITHUB REPO</a>
+                    </div>
+                </div>
+                <div class="projectLearnings">
+                    <h5>THINGS I LEARNED</h5>
+                    <div class="learnings">
+                        <div class="learning"><a class="fancyLink" href="https://gulpjs.com/">Gulp</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.npmjs.com/package/uglify-js">Uglify</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://babeljs.io/">Babel</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://editor.p5js.org/generative-design/sketches/P_4_3_2_01">Pixel Mapping</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.npmjs.com/">NPM</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectExtraMedia">
+                <!--TODO: Replace with recorded videos
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BjqhaPmFH3n/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BjqhaPmFH3n/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">📺</a></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BlvS0_pnpjR/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BlvS0_pnpjR/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">🌸</a></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BlEr4m3HJEE/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BlEr4m3HJEE/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">🌃</a></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Bji17_IFPZb/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:350px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/Bji17_IFPZb/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">✨</a></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+                -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,84 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142326937-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142326937-1');
+    </script>
+
     <meta charset="utf-8">
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400,600,800&display=swap" rel="stylesheet">
 
     <!--Fontawesome-->
-    <script src="https://use.fontawesome.com/d5cda29867.js"></script>
+    <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
 
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
     <title>Beautiful | Danny Hawk</title>
 </head>
 <body>
-    <div class="container projectPage">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="DannyHawk_Resume.pdf">Resume</a></li>
-            </ul>
-        </nav>
-        <div class="content">
-            <article>
-                <div class="projectPageHeader">
-                    <h1>The Beautiful Series</h1>
-                    <p>A series of pieces dealing with beauty and interaction. In order to learn the fundamentals of physical computing, I created a series of different experiments on the conjunction of interaction and expectations. They all serve to subvert good/expected design.</p>
-                </div>
+    <nav>
+        <div class="navTopbar">
+            <!--<a class="inactive" href="">BLOG</a>-->
+            <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
+            <a class="inactive" href="about.html">ABOUT</a>
+        </div>
+        <div class="navSidebar">
+            <a class="inactive" href="index.html" style="font-size: 22px;">DANNY HAWK</a>
+        </div>
+    </nav>
 
-                <div class="beautifulItem">
+    <div class="socialContainer">
+        <div class="social">
+            <a href="https://hawkdanny.itch.io/"><i id="itch" class="fab fa-itch-io"></i></a>
+            <a href="https://www.linkedin.com/in/hawkdanny/"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fab fa-twitter"></i></a>
+            <a href="https://github.com/hawkdanny"><i id="github" class="fab fa-github"></i></a>
+            <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fab fa-twitch"></i></i></a>
+            <a href="https://soundcloud.com/dannyhawkmusic"><i id="soundcloud" class="fab fa-soundcloud"></i></a>
+        </div>
+    </div>
+
+    <div class="projectPage">
+        <div class="projectHeaderMedia">
+            <video width="800" height="450" autoplay loop muted>
+                <source src="media/luka_loop.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+        </div>
+
+        <div class="projectInfo">
+            <div class="projectContent">
+                <div class="projectDescription">
+                    <h1 class="projectTitle">BEAUTIFUL SERIES</h1>
+                    <p class="projectDescription">In 2018 I was experimenting with physical computing because my eyes were getting tired of looking at computers all day. The Beautiful Series is a series of pieces I made that all revolved around beauty. Each piece is intended to subvert good/expected design.</p>
+                    
+                    <div class="projectLinks">
+                        <a class="fancyLink" href="https://github.com/HawkDanny/Beautiful">GITHUB REPO</a>
+                    </div>
+                </div>
+                <div class="projectLearnings">
+                    <h5>THINGS I LEARNED</h5>
+                    <div class="learnings">
+                        <div class="learning"><a class="fancyLink" href="https://www.adafruit.com/product/1063">Mic Amp</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://learn.adafruit.com/photocells/overview">Photocell</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.wikihow.com/Solder">Soldering</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://en.wikipedia.org/wiki/Pull-up_resistor">Pull-up / Pull-down Resistors</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.arduino.cc/">Arduino</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://en.wikipedia.org/wiki/User_experience_design">Experience Design</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.wikihow.com/Use-a-Glue-Gun">Hot Glue</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf">RGB LED</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://learn.sparkfun.com/tutorials/working-with-wire">Wires</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://en.wikipedia.org/wiki/Servomotor">Servomotor</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.arduino.cc/en/Tutorial/toneMelody">ToneMelody</a></div>
+                        <div class="learning"><a class="fancyLink" href="https://www.arduino.cc/en/Tutorial/PWM">Pulse Width Modulation</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projectExtraMedia">
+                <div class="beautifulPiece">
                     <video width="272" height="480" autoplay loop muted>
                         <source src="media/flower.mp4" type="video/mp4">
                         Your browser does not support the video tag
                     </video>
-                    <h5 class="beautifulItemTitle">He is beautiful, but shy.</h5>
-                    <p class="beautifulItemCaption">The flower only lights up when you cover it with your hand.</p>
+                    <p class="beautifulTitle"><i>He is beautiful, but shy.</i></p>
+                    <p class="beautifulDescription">The flower only lights up when you cover it with your hand.</p>
                 </div>
 
-                <div class="beautifulItem">
+                <div class="beautifulPiece">
                     <video width="272" height="480" autoplay loop muted>
                         <source src="media/glasses.mp4" type="video/mp4">
                         Your browser does not support the video tag
                     </video>
-                    <h5 class="beautifulItemTitle">You're beautiful, but you're too close.</h5>
-                    <p class="beautifulItemCaption">When you wear the glasses, mirrors drop in front of your eyes.</p>
+                    <p class="beautifulTitle"><i>You're beautiful, but you're too close.</i></p>
+                    <p class="beautifulDescription">When you wear the glasses, mirror's drop in front of your eyes</p>
                 </div>
 
-                <div class="beautifulItem">
-                        <video width="272" height="480" autoplay loop muted>
-                            <source src="media/banana.mp4" type="video/mp4">
-                            Your browser does not support the video tag
-                        </video>
-                        <h5 class="beautifulItemTitle">"You're beautiful," but they hung up.</h5>
-                        <p class="beautifulItemCaption">You try and speak but only hear them hang up, then a dial tone.</p>
-                    </div>
-
-                <div class="github"><a href="https://github.com/HawkDanny/Beautiful">Github Repo</a></div>
-
-                <h3>What I learned</h3>
-                <div class="takeaways">
-                    <a href="https://www.arduino.cc/"><div class="takeaway"><h4>Arduino</h4></div></a>
-                    <a href="https://en.wikipedia.org/wiki/Servomotor"><div class="takeaway"><h4>Servomotor</h4></div></a>
-                    <a href="https://en.wikipedia.org/wiki/Experience_design"><div class="takeaway"><h4>Experience Design</h4></div></a>
-                    <a href="https://learn.adafruit.com/photocells/overview"><div class="takeaway"><h4>Photocell</h4></div></a>
-                    <a href="https://www.wikihow.com/Use-a-Glue-Gun"><div class="takeaway"><h4>Hot Glue</h4></div></a>
-                    <a href="https://www.sparkfun.com/datasheets/Components/YSL-R596CR3G4B5C-C10.pdf"><div class="takeaway"><h4>RGB LED</h4></div></a>
-                    <a href="https://learn.sparkfun.com/tutorials/working-with-wire"><div class="takeaway"><h4>Wires</h4></div></a>
-                    <a href="https://en.wikipedia.org/wiki/Pull-up_resistor"><div class="takeaway"><h4>Pull-up / Pull-down Resistors</h4></div></a>
-                    <a href="https://www.arduino.cc/en/Tutorial/PWM"><div class="takeaway"><h4>Pulse Width Modulation</h4></div></a>
-                    <a href="https://www.adafruit.com/product/1063"><div class="takeaway"><h4>Mic Amp</h4></div></a>
-                    <a href="https://www.arduino.cc/en/Tutorial/toneMelody"><div class="takeaway"><h4>ToneMelody</h4></div></a>
-                    <a href="https://www.wikihow.com/Solder"><div class="takeaway"><h4>Soldering</h4></div></a>
+                <div class="beautifulPiece">
+                    <video width="272" height="480" autoplay loop muted>
+                        <source src="media/banana.mp4" type="video/mp4">
+                        Your browser does not support the video tag
+                    </video>
+                    <p class="beautifulTitle"><i>"You're beautiful," but they hung up.</i></p>
+                    <p class="beautifulDescription">You try and speak but only hear them hang up, then a dial tone.</p>
                 </div>
-            </article>
+            </div>
         </div>
     </div>
-
-
 </body>
 </html>

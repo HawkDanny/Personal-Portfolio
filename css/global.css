@@ -359,18 +359,38 @@ nav a {
     color: var(--color-header);
     font-size: 14px;
     font-weight: bold;
+    display: inline;
 }
 
 .projectExtraMedia {
-    margin-top: 50px;
+    margin-top: 100px;
     padding-bottom: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.instagram-media {
-    margin: 25px !important;
+.beautifulPiece {
+    max-width: 272px;
+    margin: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.beautifulPiece p {
+    margin: 0px;
+}
+
+.beautifulTitle {
+    color: var(--color-header);
+    font-size: 14px;
+    margin-top: 5px !important;
+}
+
+.beautifulDescription {
+    color: var(--color-text);
+    font-size: 14px;
+    margin-top: 20px !important;
 }
 
 
