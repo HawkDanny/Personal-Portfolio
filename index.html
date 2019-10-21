@@ -15,6 +15,7 @@
 
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400,600,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
 
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
@@ -36,19 +37,37 @@
     <title>Portfolio | Danny Hawk</title>
 </head>
 <body>
+    <!--Preload images-->
+    <div style="display: none;">
+        <img src="media/homepage/narwhal_homepage.jpg"/>
+        <img src="media/homepage/rock_homepage.jpg"/>
+        <img src="media/homepage/imagine_homepage.jpg"/>
+        <img src="media/homepage/dog_homepage.jpg"/>
+        <img src="media/homepage/boop2_homepage.jpg"/>
+        <img src="media/homepage/beautiful_homepage.jpg"/>
+    </div>
+
+
+
     <nav>
         <div class="navTopbar">
             <!--<a class="inactive" href="">BLOG</a>-->
-            <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
-            <a class="inactive" href="about.html">ABOUT</a>
         </div>
         <div class="navSidebar">
-            <a href="index.html" style="font-size: 22px;">DANNY HAWK'S</a>
+            <a href="index.html" style="font-size: 24.5px;">DANNY HAWK</a>
+            <div class="navLinks">
+                <a class="inactive" href="about.html">ABOUT</a>
+                <p>•</p>
+                <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
+            </div>
+            <h3>WORK</h3>
             <div class="toggles">
-                <p id="selectedText" onclick="toggleSelected()" class="active" style="font-size: 20.4px;">SELECTED WORKS</p>
-                <p id="completeText" onclick="toggleComplete()" class="inactive">COMPLETE WORKS</p>
+                <p id="selectedText" onclick="toggleSelected()" class="toggle active">SELECTED</p>
+                <p>•</p>
+                <p id="completeText" onclick="toggleComplete()" class="toggle inactive">COMPLETE</p>
             </div>
             <h5 style="padding-top:0px;">2019</h5>
+            <li><p class="sideBarClickable complete" data-sister-tag="court">Court</p></li>
             <!--<li><p class="sideBarClickable complete selected" data-sister-tag="fun">Fun Game</p></li>-->
             <li><p class="sideBarClickable complete selected" data-sister-tag="imagine">Imagine</p></li>
             <h5>2018</h5>
@@ -73,14 +92,14 @@
     </div>
 
     <div class="timeline">
-        <div class="header">
-            <h1>
-                Hey my name's <span style="font-family: 'Open Sans', sans-serif; font-weight: 800; text-shadow: 2px 2px 1px var(--color-fade2);">Danny Hawk</span>.
-                <br>I made all the projects on this website.
-                <br>Most of them are games, but some aren't.
-                <!--<br>Thanks for coming, have a good day!! <i class="fas fa-laugh"></i>-->
-            </h1>
-        </div>
+        <!--COURT
+        <div id="court" class="project complete">
+            <a href="court.html"><h3 class="title">COURT</h3></a>
+            <div class="info">
+                <h5 class="description">Card games are cool again.</h5>
+                <h5 class="credit">co-designer</h5>
+            </div>
+        </div>-->
 
         <!--FUN GAME-->
         <!--<div id="fun" class="project complete selected">
@@ -101,119 +120,56 @@
             </div>-->
 
         <!--IMAGINE-->
-        <div id="imagine" class="project complete selected">
-            <a class="projectMedia" href="imagine.html">
-            <video width="592" height="333" autoplay loop muted>
-                <source src="media/imagine_homepage.mp4" type="video/mp4">
-                    Your browser does not support the video tag
-            </video>
-            </a>
+        <br><div id="imagine" class="project complete selected">
+            <a href="imagine.html"><h3 class="title" onmouseover="FadeInBackground('imagine')" onmouseout="FadeOutBackground()">IMAGINE</h3></a>
             <div class="info">
-                <div class="infoHeader">
-                    <h3 class="year">2019</h3>
-                    <a href="imagine.html"><h3 class="title">IMAGINE</h3></a>
-                </div>
-                <div class="description">Think about spring for me.</div>
-                <div class="infoLinks">
-                    <div class="moreInfo"><a class="fancyLink" href="imagine.html">more info</a></div>
-                    <div class="projectLink"><a class="fancyLink" href="https://hawkdanny.itch.io/imagine">view project</a></div>
-                </div>
+                <h5 class="description">Think about spring for me.</h5>
+                <h5 class="credit">solo creator</h5>
             </div>
         </div>
 
         <!--LIT ROCKS-->
         <div id="rocks" class="project complete">
-            <a class="projectMedia" href="rocks.html">
-            <video width="592" height="333" autoplay loop muted>
-                <source src="media/popsicle_loop.mp4" type="video/mp4">
-                Your browser does not support the video tag
-            </video>
-            </a>
+            <a href="rocks.html"><h3 class="title" onmouseover="FadeInBackground('rocks')" onmouseout="FadeOutBackground()">LIT.ROCKS</h3></a>
             <div class="info">
-                <div class="infoHeader">
-                    <h3 class="year">2018</h3>
-                    <a href="rocks.html"><h3 class="title">LIT.ROCKS</h3></a>
-                </div>
-                <div class="description">A collection of pretty rocks.</div>
-                <div class="infoLinks">
-                    <div class="moreInfo"><a class="fancyLink" href="rocks.html">more info</a></div>
-                    <div class="projectLink"><a class="fancyLink" href="https://www.instagram.com/lit.rocks/">view project</a></div>
-                </div>
+                <h5 class="description">A collection of pretty rocks.</h5>
+                <h5 class="credit">solo creator</h5>
             </div>
         </div>
 
         <!--DANNY HAWK'S BOOP GAME-->
         <div id="boop2" class="project complete selected">
-            <a class="projectMedia" href="boop2.html">
-                <iframe src="https://www.youtube-nocookie.com/embed/dJwRSW0mXaI?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="592" height="333" frameborder="0"></iframe>
-            </a>
+            <a href="boop2.html"><h3 class="title" onmouseover="FadeInBackground('boop2')" onmouseout="FadeOutBackground()">DANNY HAWK'S BOOP GAME</h3></a>
             <div class="info">
-                <div class="infoHeader">
-                    <h3 class="year">2018</h3>
-                    <a href="boop2.html"><h3 class="title">DANNY HAWK'S BOOP GAME</h3></a>
-                </div>
-                <div class="description">A game where you share and compete.</div>
-                <div class="infoLink">
-                    <div class="moreInfo"><a class="fancyLink" href="boop2.html">more info</a></div>
-                </div>
+                <h5 class="description">A game where you share and compete.</h5>
+                <h5 class="credit">solo creator</h5>
             </div>
         </div>
 
         <!--BEAUTIFUL SERIES-->
         <div id="beautiful" class="project complete">
-            <a class="projectMedia" href="beautiful.html">
-            <video width="592" height="333" autoplay loop muted>
-                <source src="media/luka_loop.mp4" type="video/mp4">
-                Your browser does not support the video tag
-            </video>
-            </a>
+            <a href="beautiful.html"><h3 class="title" onmouseover="FadeInBackground('beautiful')" onmouseout="FadeOutBackground()">BEAUTIFUL SERIES</h3></a>
             <div class="info">
-                <div class="infoHeader">
-                    <h3 class="year">2018</h3>
-                    <a href="beautiful.html"><h3 class="title">BEAUTIFUL SERIES</h3></a>
-                </div>
-                <div class="description">Three interactive artworks about beauty.</div>
-                <div class="infoLinks">
-                    <div class="moreInfo"><a class="fancyLink" href="beautiful.html">more info</a></div>
-                </div>
+                <h5 class="description">Three interactive artworks about beauty</h5>
+                <h5 class="credit">solo creator</h5>
             </div>
         </div>
 
         <!--NARWHAL PICNIC-->
         <div id="narwhal" class="project complete selected">
-            <a class="projectMedia" href="narwhal.html">
-                <iframe src="https://www.youtube-nocookie.com/embed/mC3KTQK0pqg?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white" width="592" height="333" frameborder="0"></iframe>
-            </a>
+            <a href="narwhal.html"><h3 class="title" onmouseover="FadeInBackground('narwhal')" onmouseout="FadeOutBackground()">NARWHAL PICNIC</h3></a>
             <div class="info">
-                <div class="infoHeader">
-                    <h3 class="year">2017</h3>
-                    <a href="narwhal.html"><h3 class="title">NARWHAL PICNIC</h3></a>
-                </div>
-                <div class="description">Put vive controllers on your forehead to play.</div>
-                <div class="infoLinks">
-                    <div class="moreInfo"><a class="fancyLink" href="narwhal.html">more info</a></div>
-                </div>
+                <h5 class="description">Put a vive controller on your forehead to play.</h5>
+                <h5 class="credit">solo creator</h5>
             </div>
         </div>
 
         <!--MY DOG'S EYES-->
         <div id="dog" class="project complete">
-            <a class="projectMedia" href="dog.html">
-            <video width="592" height="333" autoplay loop muted>
-                <source src="media/dogseyes_homepage.mp4" type="video/mp4">
-                Your browser does not support the video tag
-            </video>
-            </a>
+            <a href="dog.html"><h3 class="title" onmouseover="FadeInBackground('dog')" onmouseout="FadeOutBackground()">MY DOG'S EYES</h3></a>
             <div class="info">
-                <div class="infoHeader">
-                    <h3 class="year">2017</h3>
-                    <a href="dog.html"><h3 class="title">MY DOG'S EYES</h3></a>
-                </div>
-                <div class="description">I made a love letter to my favorite song.</div>
-                <div class="infoLinks">
-                    <div class="moreInfo"><a class="fancyLink" href="dog.html">more info</a></div>
-                    <div class="projectLink"><a class="fancyLink" href="mydogseyes.html">view project</a></div>
-                </div>
+                <h5 class="description">I made a love letter to my favorite song.</h5>
+                <h5 class="credit">developer and designer, audio from Zammuto</h5>
             </div>
         </div>
 

@@ -1,12 +1,10 @@
-* {
+:root {
     --color-bg: #F57380;
-    --color-bg2: #c849e7;
     --color-header: #ffffff;
-    --color-detail: #ffffff52;
-    --color-fade: #f55e6e;
-    --color-fade2: #aed3e6;
-    --color-fade3: #ffffff88;
     --color-text: #ffffff85;
+    --color-inactive: #ffffff63;
+    --color-detail: #ffffff52;
+    --color-shadow: #000000;
 }
 
 html {
@@ -18,12 +16,15 @@ a {
     color: inherit;
 }
 
-
 body {
     font-family: 'Open Sans', sans-serif;
     min-height: 100vh;
     margin: 0px;
-    background-image: linear-gradient(var(--color-bg), var(--color-bg2));
+    background-image: url(../media/homepage/narwhal_homepage.jpg);
+    background-image: linear-gradient(var(--color-bg), var(--color-bg));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
     border-left: 10px solid var(--color-header);
     border-right: 10px solid var(--color-header);
 }
@@ -45,6 +46,14 @@ body:after {
     bottom: 0;
 }
 
+.complete {
+    display: none;
+}
+
+.selected {
+    display: block;
+}
+
 
 
 
@@ -52,7 +61,6 @@ body:after {
 
 nav {
     position: fixed;
-    width: 100%;
 }
 
 nav a {
@@ -63,7 +71,7 @@ nav a {
 }
 
 .inactive {
-    color: #ffffff63 !important;
+    color: var(--color-inactive);
     text-shadow: none !important;
 }
 
@@ -73,33 +81,48 @@ nav a {
     animation-duration: 0.15s;
 }
 
-.navTopbar {
-    padding-top: 20px;
-    padding-right: 30px;
-}
-
-.navTopbar a {
-    font-size: 22px;
-    float: right;
-    padding-left: 20px;
-}
-
 
 .navSidebar {
     max-width: 180px;
     padding-left: 15px;
+    padding-top: 20px;
+}
+
+.navLinks {
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-header);
+}
+
+.navSidebar p {
+    margin: 0px;
+    cursor: default;
+    color: var(--color-text);
+}
+
+.navSidebar h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    color: var(--color-header);
+    font-weight: 800;
 }
 
 .navSidebar .toggles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-bottom: 10px;
+    font-weight: 800;
+    line-height: 1em;
+    margin: 0px;
+    font-size: 16px;
 }
 
-.navSidebar .toggles p {
-    line-height: 1em;
+.navSidebar .toggle {
     cursor: pointer;
-    margin: 0px;
-    font-size: 19.1px;
-    font-weight: 800;
     color: var(--color-header);
 }
 
@@ -109,7 +132,7 @@ nav a {
     padding-top: 10px;
     font-size: 12px;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-detail);
 }
 
 .navSidebar li {
@@ -133,10 +156,10 @@ nav a {
 
 .timeline {
     margin: auto;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1470px) {
     .timeline {
         margin-left: 210px;
         overflow-y: hidden;
@@ -174,45 +197,60 @@ nav a {
 /*HOMEPAGE PROJECTS*/
 
 .project {
-    clear: both;
-    padding-top: 100px;
-    padding-bottom: 200px;
-}
-
-.projectMedia {
-    float: left;
-}
-
-.info {
-    max-width: 180px;
-    float: left;
-    padding-left: 10px;
-}
-
-.infoHeader {
-    position: relative;
+    display: inline-block;
+    margin-top: 100px;
 }
 
 .title {
     color: var(--color-header);
-    /*text-shadow: 2px 2px 1px var(--color-fade2);*/
-    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    font-size: 120px;
     font-weight: bold;
+    font-style: italic;
     line-height: 0.9em;
+    text-shadow: 0px 0px var(--color-shadow);
+    animation-name: titleHoverOut;
+    animation-duration: 0.15s;
+    display: inline;
 }
 
-.year {
-    font-weight: 300;
-    font-size: 15px;
-    color: var(--color-text);
+.title:hover {
+    text-shadow: 10px 0px var(--color-shadow);
+    animation-name: titleHover;
+    animation-duration: 0.15s;
+}
+
+@keyframes titleHover {
+    from {text-shadow: 0px 0px var(--color-shadow);}
+    to {text-shadow: 10px 0px var(--color-shadow);}
+}
+
+@keyframes titleHoverOut {
+    from {text-shadow: 10px 0px var(--color-shadow);}
+    to {text-shadow: 0px 0px var(--color-shadow);}
+}
+
+.info {
+    display: flex;
+    padding-top: 5px;
+}
+
+.info h5 {
+    padding-right: 10px;
 }
 
 .description {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-header);
+    margin: 0px;
+}
+
+.credit {
+    font-weight: 300;
+    font-size: 18px;
     color: var(--color-text);
-    line-height: 1em;
-    padding-top: 10px;
+    margin: 0px;
 }
 
 .infoLinks {
@@ -248,7 +286,7 @@ nav a {
 }
 
 .spacer {
-    height: 50vh;
+    height: 25vh;
 }
 
 @keyframes linkHover {
@@ -271,7 +309,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--color-bg), var(--color-bg2));
+    background-image: linear-gradient(var(--color-bg), var(--color-bg));
 }
 
 .about .me {
