@@ -132,7 +132,7 @@ nav a {
     padding-top: 10px;
     font-size: 12px;
     font-weight: 800;
-    color: var(--color-detail);
+    color: var(--color-header);
 }
 
 .navSidebar li {
