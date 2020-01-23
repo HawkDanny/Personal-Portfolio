@@ -77,6 +77,11 @@ function FadeInBackground(background)
         case "beautiful":
             document.body.style.backgroundImage = "url('media/homepage/beautiful_homepage.jpg')";
             break;
+        case "goodsex":
+            InvertColors();
+            doUninvert = true;
+            document.body.style.backgroundImage = "url('media/homepage/goodsex_homepage.png')";
+            break;
     }
 }
 
