@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142326937-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142326937-1');
+    </script>
+
+    <meta charset="utf-8">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>finched update</title>
+</head>
+<body>
+<pre style="word-wrap: break-word; white-space: pre-wrap;">
+//Script written with the help of Gabe Cuzzilo, used to create a more
+//reliable fixedupdate in unity, here named FinchedUpdate for its use in Bird Town
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Global : MonoBehaviour
+{
+    public static Global reference;
+    public List<System.Action> finchedUpdates;
+    private float timeDebt;
+    private int maxFinchedUpdates; //per frame
+    private bool freeze;
+
+    void Awake() {
+        if (reference != null) {
+            Debug.LogError("There are too many globals");
+            Destroy(gameObject);
+            return;
+        }
+        reference = this;
+        finchedUpdates = new List<System.Action>();
+        Time.fixedDeltaTime = Mathf.Max(1f / Screen.currentResolution.refreshRate, 1/60f); //set the fixedDeltaTime to be based on refresh rate
+        Physics.autoSimulation = false; //we'll be doing that
+        maxFinchedUpdates = 4;
+    } 
+
+    void Update()
+    {
+        if (!freeze)
+        {
+            //Ignore any reports of deltaTime being shorter than fixedDeltaTime, because fixedDeltaTime is the literal refresh rate of the monitor
+            if (timeDebt + Time.deltaTime < Time.fixedDeltaTime - .01f)
+            {
+                timeDebt += Time.deltaTime;
+                return;
+            }
+
+            if (Time.deltaTime > Time.fixedDeltaTime)
+            {
+                timeDebt += Time.deltaTime - Time.fixedDeltaTime;
+            }
+            int updates = 0;
+            RunFinchedUpdate();
+            Physics.Simulate(Time.fixedDeltaTime);
+            updates++;
+            for (int i = 0; i < maxFinchedUpdates; i++)
+            {
+                if (timeDebt > Time.fixedDeltaTime)
+                {
+                    timeDebt -= Time.fixedDeltaTime;
+                    RunFinchedUpdate();
+
+                    Physics.Simulate(Time.fixedDeltaTime);
+                    updates++;
+                }
+            }
+            timeDebt %= Time.fixedDeltaTime;
+            timeDebt = Mathf.Max(timeDebt, 0);
+        }
+    }
+
+    public void Freeze(bool newFreeze)
+    {
+        freeze = newFreeze;
+
+        if (newFreeze)
+            //pause other game processes running
+        else
+            //unpause other game processes running
+    }
+
+    private void RunFinchedUpdate()
+    {
+        updatesRan++;
+        foreach(System.Action a in finchedUpdates)
+        {
+            a();
+        }
+    }
+}
+</pre>
+</body>

@@ -1,7 +1,7 @@
 window.onload = init;
 
 var bodyBackgroundStyle = "linear-gradient(var(--color-bg), var(--color-bg))"
-var activeNavStyle = "color: var(--color-header); cursor: default;";
+var activeNavStyle = "color: var(--color-header); cursor: pointer;";
 var inactiveNavStyle = "color: var(--color-detail); cursor: pointer;";
 
 var complete = true;
@@ -20,10 +20,15 @@ function scrollToProject(elementID) {
 }
 
 function toggleComplete() {
-    document.getElementById("completeText").className = "active";
-    document.getElementById("completeText").style = activeNavStyle;
-    document.getElementById("selectedText").className = "inactive";
-    document.getElementById("selectedText").style = inactiveNavStyle;
+    var completeTextElements = document.getElementsByClassName("completeText");
+    var selectedTextElements = document.getElementsByClassName("selectedText");
+
+    for (var i = 0; i < completeTextElements.length; i++) {
+        completeTextElements[i].className = "completeText active";
+        completeTextElements[i].style = activeNavStyle;
+        selectedTextElements[i].className = "selectedText inactive";
+        selectedTextElements[i].style = inactiveNavStyle;
+    }
 
     complete = !complete;
     var completeItems = document.getElementsByClassName('complete');
@@ -35,10 +40,15 @@ function toggleComplete() {
 }
 
 function toggleSelected() {
-    document.getElementById("completeText").className = "inactive";
-    document.getElementById("completeText").style = inactiveNavStyle;
-    document.getElementById("selectedText").className = "active";
-    document.getElementById("selectedText").style = activeNavStyle;
+    var completeTextElements = document.getElementsByClassName("completeText");
+    var selectedTextElements = document.getElementsByClassName("selectedText");
+
+    for (var i = 0; i < completeTextElements.length; i++) {
+        completeTextElements[i].className = "completeText inactive";
+        completeTextElements[i].style = inactiveNavStyle;
+        selectedTextElements[i].className = "selectedText active";
+        selectedTextElements[i].style = activeNavStyle;
+    }
 
     complete = !complete;
     var completeItems = document.getElementsByClassName('complete');
@@ -81,6 +91,11 @@ function FadeInBackground(background)
             InvertColors();
             doUninvert = true;
             document.body.style.backgroundImage = "url('media/homepage/goodsex_homepage.png')";
+            break;
+        case "birdtown":
+            InvertColors();
+            doUninvert = true;
+            document.body.style.backgroundImage = "url('media/homepage/birdtown_homepage.png')";
             break;
     }
 }
