@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142326937-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142326937-1');
+    </script>
+
+    <meta charset="utf-8">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans:400,600,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
+    
+    <!--My JavaScript-->
+    <script src="js/main2.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/global2.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Portfolio | Danny Hawk</title>
+</head>
+<body>
+    <!--Preload images-->
+    <div style="display: none;">
+        <img src="media/homepage/narwhal_homepage.jpg"/>
+        <img src="media/homepage/rock_homepage.jpg"/>
+        <img src="media/homepage/imagine_homepage.jpg"/>
+        <img src="media/homepage/dog_homepage.jpg"/>
+        <img src="media/homepage/boop2_homepage.jpg"/>
+        <img src="media/homepage/beautiful_homepage.jpg"/>
+        <img src="media/homepage/goodsex_homepage.png"/>
+        <img src="media/homepage/birdtown_homepage.png"/>
+    </div>
+
+    <div class="container">
+        <nav class="dohide">
+            <div class="navSidebar">
+                <a href="index.html" style="font-size: 24.5px;">DANNY HAWK</a>
+                <div class="navLinks">
+                    <a class="inactive" href="about.html">ABOUT</a>
+                    <p>•</p>
+                    <a class="inactive" href="DannyHawk_Resume.pdf">RESUME</a>
+                </div>
+                <h3>WORK</h3>
+                <h5 style="padding-top:0px;">2020</h5>
+                <li><p class="sideBarClickable complete selected" onclick="scrollToProject('birdtown')">Bird Town</p></li>
+                <li><p class="sideBarClickable complete selected" onclick="scrollToProject('goodsex')">Good Sex</p></li>
+                <h5>2019</h5>
+                <!--<li><p class="sideBarClickable complete" data-sister-tag="court">Court</p></li>-->
+                <!--<li><p class="sideBarClickable complete selected" data-sister-tag="fun">Fun Game</p></li>-->
+                <li><p class="sideBarClickable complete selected" onclick="scrollToProject('imagine')">Imagine</p></li>
+                <h5>2018</h5>
+                <li><p class="sideBarClickable complete" onclick="scrollToProject('rocks')">lit.rocks</p></li>
+                <li><p class="sideBarClickable complete selected" onclick="scrollToProject('boop2')">Danny Hawk's Boop Game</p></li>
+                <li><p class="sideBarClickable complete" onclick="scrollToProject('beautiful')">Beautiful Series</p></li>
+                <h5>2017</h5>
+                <li><p class="sideBarClickable complete selected" onclick="scrollToProject('narwhal')">Narwhal Picnic</p></li>
+                <li><p class="sideBarClickable complete" onclick="scrollToProject('dog')">My Dog's Eyes</p></li>
+            </div>
+        </nav>
+
+        <div class="timeline">
+            <!--
+            <div class="filters dohide">
+                <div class="filter">highlights</div>
+                <div class="filter">video game</div>
+                <div class="filter">analog game</div>
+                <div class="filterBreak"></div>
+                <div class="filter">video</div>
+                <div class="filter">talk</div>
+                <div class="filter">event</div>
+            </div>
+            -->
+
+            <div class="header dohide">
+                <h1>Hi! My name's Danny and this is my portfolio!!! You can look at the
+                <a style="color: white; border-bottom: solid white 5px;" href="">highlights</a>, or
+                <a href="">everything</a>. Other filters are
+                <a href="">video games</a>,
+                <a href="">analog games</a>,
+                <a href="">physical computing</a>,
+                <a href="">events</a>,
+                <a href="">talks</a>, and
+                <a href="">videos</a>.<br>
+                I ask there is no flash photography, but please do enjoy your stay.
+                </h1>
+            </div>
+
+
+            <div id="birdtown" class="project projectInvert dohide" onmouseover="FadeInBackground('birdtown')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">BIRD TOWN</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">A comedy video game about a town of birds</h5>
+                        <h5 class="projectCred">developer, designer, art director</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="goodsex" class="project projectInvert dohide" onmouseover="FadeInBackground('goodsex')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">GOOD SEX</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">Communication is key</h5>
+                        <h5 class="projectCred">solo creator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="imagine" class="project projectInvert dohide" onmouseover="FadeInBackground('imagine')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">IMAGINE</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">Think about spring for me</h5>
+                        <h5 class="projectCred">solo creator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="litrocks" class="project dohide" onmouseover="FadeInBackground('litrocks')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">LIT.ROCKS</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">A collection of pretty rocks</h5>
+                        <h5 class="projectCred">solo creator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="boop2" class="project dohide" onmouseover="FadeInBackground('boop2')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">DANNY HAWK'S BOOP GAME</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">A game where you share and compete</h5>
+                        <h5 class="projectCred">solo creator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="beautiful" class="project dohide" onmouseover="FadeInBackground('beautiful')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">BEAUTIFUL SERIES</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">Three interactive artworks about beauty</h5>
+                        <h5 class="projectCred">solo creator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="narwhal" class="project dohide" onmouseover="FadeInBackground('narwhal')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">NARWHAL PICNIC</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">Put a vive controller on your forehead to play</h5>
+                        <h5 class="projectCred">solo creator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dog" class="project projectInvert dohide" onmouseover="FadeInBackground('dog')" onmouseout="FadeOutBackground()">
+                <div class="projectInfo">
+                    <h1 class="projectTitle"><a href="">MY DOG'S EYES</a></h1>
+                    <div class="projectDetails">
+                        <h5 class="projectDesc">I made a love letter to my favorite song</h5>
+                        <h5 class="projectCred">developer and designer, audio from Zammuto</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

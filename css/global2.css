@@ -1,0 +1,244 @@
+:root {
+    --color-bg: rgb(238, 164, 201);
+    --color-header: #ffffff;
+    --color-header2: #000000;
+    --color-text: #ffffff85;
+    --color-text2: #00000085;
+    --color-border: #000000;
+}
+
+html {
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    min-height: 100vh;
+    background-image: linear-gradient(var(--color-bg), var(--color-bg));
+    /*background-image: url(../media/homepage/rock_homepage.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    border-left: 4px solid var(--color-border);
+    border-right: 4px solid var(--color-border);
+}
+
+body:before, body:after {
+    z-index: 1;
+    content: "";
+    position: fixed;
+    background: var(--color-border);
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+body:before {
+    top: 0;
+}
+
+body:after {
+    bottom: 0;
+}
+
+
+
+/*structure*/
+.container {
+    width: 100%;
+}
+
+.timeline {
+    z-index: -1;
+    width: 1000px;
+    margin: auto;
+    padding-top: 25vh;
+}
+
+
+/*nav*/
+nav {
+    position: fixed;
+}
+
+nav a {
+    line-height: 0.9em;
+    margin: 0px;
+    font-weight: 800;
+    color: var(--color-header2);
+}
+
+
+.navSidebar {
+    max-width: 180px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.navLinks {
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-header2);
+}
+
+.navSidebar p {
+    margin: 0px;
+    cursor: default;
+    color: var(--color-header2);
+}
+
+.navSidebar h3 {
+    padding-top: 10px;
+    font-size: 25px;
+    color: var(--color-header2);
+    font-weight: 800;
+    margin: 0px;
+}
+
+.navSidebar .toggles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    font-weight: 800;
+    line-height: 1em;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.navSidebar h5 {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--color-header2);
+}
+
+.navSidebar li {
+    list-style: none;
+}
+
+.navSidebar li p {
+    line-height: 1em;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-detail);
+}
+
+/*header*/
+.header a {
+    color: #FFFFFF88;
+}
+
+.header a:hover {
+    color: #FFFFFF;
+}
+
+
+/*filters*/
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter {
+    flex-grow: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    border: solid black 4px;
+    text-align: center;
+    padding: 0.3em 1em;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.filterBreak {
+    flex-basis: 100%;
+}
+
+
+/*projects*/
+.project {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    height: 500px;
+    background-image: url(../media/homepage/rock_homepage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+
+    border: solid black 4px;
+}
+
+.projectInvert .projectTitle { color: var(--color-header2);}
+.projectInvert .projectDesc { color: var(--color-header2);}
+.projectInvert .projectCred { color: var(--color-text2);}
+
+.projectInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+
+.projectTitle {
+    color: var(--color-header);
+    font-family: 'Noto Serif', serif;
+    font-size: 120px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 0.9em;
+    display: inline;
+}
+
+.projectDetails {
+    display: flex;
+    padding-top: 5px;
+}
+
+.projectDetails h5 {
+    padding-right: 10px;
+}
+
+.projectDesc {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-header);
+    margin: 0px;
+}
+
+.projectCred {
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--color-text);
+    margin: 0px;
+}
+
+#birdtown { background-image: url(../media/homepage/birdtown_homepage.png); }
+#goodsex { background-image: url(../media/homepage/goodsex_homepage.png); }
+#imagine { background-image: url(../media/homepage/imagine_homepage.jpg); }
+#litrocks { background-image: url(../media/homepage/rock_homepage.jpg); }
+#boop2 { background-image: url(../media/homepage/boop2_homepage.jpg); }
+#beautiful { background-image: url(../media/homepage/beautiful_homepage.jpg); }
+#narwhal { background-image: url(../media/homepage/narwhal_homepage.jpg); }
+#dog { background-image: url(../media/homepage/dog_homepage.jpg); }
