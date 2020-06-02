@@ -156,20 +156,16 @@ nav a {
 }
 
 .filter {
-    flex-grow: 1;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
-    border: solid black 4px;
-    text-align: center;
-    padding: 0.3em 1em;
-    margin: 10px;
-    cursor: pointer;
+    
 }
 
 .filterBreak {
     flex-basis: 100%;
+}
+
+.filterActive {
+    color: white !important;
+    border-bottom: solid white 5px;
 }
 
 
@@ -188,6 +184,7 @@ nav a {
     border: solid black 4px;
 }
 
+
 .projectInvert .projectTitle { color: var(--color-header2);}
 .projectInvert .projectDesc { color: var(--color-header2);}
 .projectInvert .projectCred { color: var(--color-text2);}
@@ -197,8 +194,7 @@ nav a {
     bottom: 0;
     left: 0;
     margin: 0px;
-    padding-left: 25px;
-    padding-bottom: 25px;
+    padding: 25px;
 }
 
 .projectTitle {
@@ -235,6 +231,10 @@ nav a {
 }
 
 #birdtown { background-image: url(../media/homepage/birdtown_homepage.png); }
+#sax { background-image: url(../media/homepage/sax_homepage.jpg); }
+#folk { background-image: url(../media/homepage/folk_homepage.jpg); }
+#abg { background-image: url(../media/homepage/abg_homepage.jpg); }
+#newtrees { background-image: url(../media/homepage/newtrees_homepage.jpg); }
 #goodsex { background-image: url(../media/homepage/goodsex_homepage.png); }
 #imagine { background-image: url(../media/homepage/imagine_homepage.jpg); }
 #litrocks { background-image: url(../media/homepage/rock_homepage.jpg); }

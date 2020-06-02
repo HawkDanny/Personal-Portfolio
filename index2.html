@@ -92,112 +92,164 @@
         </nav>
 
         <div class="timeline">
-            <!--
-            <div class="filters dohide">
-                <div class="filter">highlights</div>
-                <div class="filter">video game</div>
-                <div class="filter">analog game</div>
-                <div class="filterBreak"></div>
-                <div class="filter">video</div>
-                <div class="filter">talk</div>
-                <div class="filter">event</div>
-            </div>
-            -->
-
             <div class="header dohide">
                 <h1>Hi! My name's Danny and this is my portfolio!!! You can look at the
-                <a style="color: white; border-bottom: solid white 5px;" href="">highlights</a>, or
-                <a href="">everything</a>. Other filters are
-                <a href="">video games</a>,
-                <a href="">analog games</a>,
-                <a href="">physical computing</a>,
-                <a href="">events</a>,
-                <a href="">talks</a>, and
-                <a href="">videos</a>.<br>
+                <a class="filter" href="#highlights" onclick="filter('hl', this)">highlights</a>, or
+                <a class="filter" href="#everything" onclick="filter('ev', this)">everything</a>. Other filters are
+                <a class="filter" href="#videogames" onclick="filter('vg', this)">video games</a>,
+                <a class="filter" href="#analoggames" onclick="filter('ag', this)">analog games</a>,
+                <a class="filter" href="#physicalcomputing" onclick="filter('pc', this)">physical computing</a>,
+                <a class="filter" href="#events" onclick="filter('evn', this)">events</a>,
+                <a class="filter" href="#talks" onclick="filter('ta', this)">talks</a>, and
+                <a class="filter" href="#videos" onclick="filter('vi', this)">videos</a>.<br>
                 I ask there is no flash photography, but please do enjoy your stay.
                 </h1>
             </div>
 
 
-            <div id="birdtown" class="project projectInvert dohide" onmouseover="FadeInBackground('birdtown')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">BIRD TOWN</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">A comedy video game about a town of birds</h5>
-                        <h5 class="projectCred">developer, designer, art director</h5>
+            <a href="birdtown.html" class="ev hl vg">
+                <div id="birdtown" class="project projectInvert dohide" onmouseover="FadeInBackground('birdtown', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">BIRD TOWN</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">A comedy video game about a town of birds</h5>
+                            <h5 class="projectCred">developer, designer, art director</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="goodsex" class="project projectInvert dohide" onmouseover="FadeInBackground('goodsex')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">GOOD SEX</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">Communication is key</h5>
-                        <h5 class="projectCred">solo creator</h5>
+            <a href="saxophoneskateboard.html" class="ev vi">
+                <div id="sax" class="project dohide" onmouseover="FadeInBackground('sax', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">SAXOPHONE SKATEBOARD</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">Improv jazz and falling a lot</h5>
+                            <h5 class="projectCred">composer, performer</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="imagine" class="project projectInvert dohide" onmouseover="FadeInBackground('imagine')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">IMAGINE</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">Think about spring for me</h5>
-                        <h5 class="projectCred">solo creator</h5>
+            <a href="folkgamegamejam.html" class="ev evn">
+                <div id="folk" class="project dohide" onmouseover="FadeInBackground('folk', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">FOLK GAME GAME JAM</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">diy folk games</h5>
+                            <h5 class="projectCred">co-organizer</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="litrocks" class="project dohide" onmouseover="FadeInBackground('litrocks')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">LIT.ROCKS</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">A collection of pretty rocks</h5>
-                        <h5 class="projectCred">solo creator</h5>
+            <a href="anythingbutgames.html" class="ev evn">
+                <div id="abg" class="project dohide" onmouseover="FadeInBackground('abg', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">ANYTHING BUT GAMES</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">An open mic series about everything else</h5>
+                            <h5 class="projectCred">organizer</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="boop2" class="project dohide" onmouseover="FadeInBackground('boop2')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">DANNY HAWK'S BOOP GAME</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">A game where you share and compete</h5>
-                        <h5 class="projectCred">solo creator</h5>
+            <a href="newtrees.html" class="ev vg">
+                <div id="newtrees" class="project dohide" onmouseover="FadeInBackground('newtrees', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">NEW TREES</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">A story of passing time</h5>
+                            <h5 class="projectCred">developer, designer, composer</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="beautiful" class="project dohide" onmouseover="FadeInBackground('beautiful')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">BEAUTIFUL SERIES</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">Three interactive artworks about beauty</h5>
-                        <h5 class="projectCred">solo creator</h5>
+            <a href="goodsex.html" class="ev hl vg">
+                <div id="goodsex" class="project projectInvert dohide" onmouseover="FadeInBackground('goodsex', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">GOOD SEX</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">Communication is key</h5>
+                            <h5 class="projectCred">solo creator</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="narwhal" class="project dohide" onmouseover="FadeInBackground('narwhal')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">NARWHAL PICNIC</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">Put a vive controller on your forehead to play</h5>
-                        <h5 class="projectCred">solo creator</h5>
+            <a href="imagine.html" class="ev hl vg">
+                <div id="imagine" class="project projectInvert dohide" onmouseover="FadeInBackground('imagine', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">IMAGINE</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">Think about spring for me</h5>
+                            <h5 class="projectCred">solo creator</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="dog" class="project projectInvert dohide" onmouseover="FadeInBackground('dog')" onmouseout="FadeOutBackground()">
-                <div class="projectInfo">
-                    <h1 class="projectTitle"><a href="">MY DOG'S EYES</a></h1>
-                    <div class="projectDetails">
-                        <h5 class="projectDesc">I made a love letter to my favorite song</h5>
-                        <h5 class="projectCred">developer and designer, audio from Zammuto</h5>
+            <a href="litrocks.html" class="ev ot">
+                <div id="litrocks" class="project projectInvert dohide" onmouseover="FadeInBackground('litrocks', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">LIT.ROCKS</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">A collection of pretty rocks</h5>
+                            <h5 class="projectCred">solo creator</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
+
+            <a href="boop2.html" class="ev vg pc">
+                <div id="boop2" class="project dohide" onmouseover="FadeInBackground('boop2', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">DANNY HAWK'S BOOP GAME</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">A game where you share and compete</h5>
+                            <h5 class="projectCred">solo creator</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="beautiful.html" class="ev pc">
+                <div id="beautiful" class="project dohide" onmouseover="FadeInBackground('beautiful', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">BEAUTIFUL SERIES</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">Three interactive artworks about beauty</h5>
+                            <h5 class="projectCred">solo creator</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="narwhal.html" class="ev vg">
+                <div id="narwhal" class="project dohide" onmouseover="FadeInBackground('narwhal', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">NARWHAL PICNIC</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">Put a vive controller on your forehead to play</h5>
+                            <h5 class="projectCred">solo creator</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="dog.html" class="ev">
+                <div id="dog" class="project projectInvert dohide" onmouseover="FadeInBackground('dog', this)" onmouseout="FadeOutBackground(this)">
+                    <div class="projectInfo">
+                        <h1 class="projectTitle">MY DOG'S EYES</h1>
+                        <div class="projectDetails">
+                            <h5 class="projectDesc">I made a love letter to my favorite song</h5>
+                            <h5 class="projectCred">developer and designer, audio from Zammuto</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </body>
