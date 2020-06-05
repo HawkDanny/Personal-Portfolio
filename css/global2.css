@@ -87,8 +87,19 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--color-header2);
+    padding-bottom: 1px;
+}
+
+.navLinks a {
+    color: var(--color-text2);
+}
+
+.navLinks a:hover {
+    color: var(--color-header2);
+}
+
+.navLinks .active {
+    color: var(--color-header2);
 }
 
 .navSidebar p {
@@ -98,7 +109,7 @@ nav a {
 }
 
 .navSidebar h3 {
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 25px;
     color: var(--color-header2);
     font-weight: 800;
@@ -136,8 +147,57 @@ nav a {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    color: var(--color-detail);
+    color: var(--color-text2);
 }
+
+.navSidebar li a:hover {
+    text-decoration: underline;
+}
+
+/*SOCIAL*/
+.socialContainer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+    .social i {
+        color: #121212;
+    }
+
+    #itch:hover {
+        color: #FA5C5B;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #github:hover {
+        color: #777777;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #twitch:hover {
+        color: #6441A4;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #linkedin:hover {
+        color: #007bb6;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #twitter:hover {
+        color: #00aced;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    #soundcloud:hover {
+        color: #ff7700;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
 
 /*header*/
 .header a {
@@ -153,10 +213,6 @@ nav a {
 .filters {
     display: flex;
     flex-wrap: wrap;
-}
-
-.filter {
-    
 }
 
 .filterBreak {
@@ -190,6 +246,7 @@ nav a {
 .projectInvert .projectCred { color: var(--color-text2);}
 
 .projectInfo {
+    pointer-events: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -235,6 +292,7 @@ nav a {
 #folk { background-image: url(../media/homepage/folk_homepage.jpg); }
 #abg { background-image: url(../media/homepage/abg_homepage.jpg); }
 #newtrees { background-image: url(../media/homepage/newtrees_homepage.jpg); }
+#tabs { background-image: url(../media/homepage/tabs_homepage.jpg); }
 #goodsex { background-image: url(../media/homepage/goodsex_homepage.png); }
 #imagine { background-image: url(../media/homepage/imagine_homepage.jpg); }
 #litrocks { background-image: url(../media/homepage/rock_homepage.jpg); }
@@ -242,3 +300,163 @@ nav a {
 #beautiful { background-image: url(../media/homepage/beautiful_homepage.jpg); }
 #narwhal { background-image: url(../media/homepage/narwhal_homepage.jpg); }
 #dog { background-image: url(../media/homepage/dog_homepage.jpg); }
+
+
+/*project pages*/
+.projectPage {
+    max-width: 800px;
+    margin: auto;
+}
+
+.projectPageHeaderMedia {
+    padding-top: 150px;
+}
+
+.projectPageInfo {
+    padding-top: 50px;
+}
+
+.projectPageTitle {
+    margin: 0px;
+    font-size: 18px; 
+    font-weight: bold;
+    color: var(--color-header);
+}
+
+.projectPageContent {
+    display: flex;
+}
+
+.projectPageDescription {
+    padding-top: 5px;
+    color: var(--color-text);
+    width: 550px;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.projectPageLearnings {
+    margin: 0px;
+    padding-left: 20px;
+    width: 230px;
+    padding-top: 5px;
+}
+
+.projectPageLearnings h5 {
+    margin: 0px;
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.learnings {
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}   
+
+.learning {
+    font-size: 14px;
+    padding-right: 15px;
+    padding-top: 3px;
+    color: var(--color-header);
+}
+
+.projectPageLinks {
+    padding-top: 20px;
+}
+
+.projectPageLinks p {
+    color: var(--color-header);
+    font-size: 14px;
+    display: block;
+    margin: 0px;
+}
+
+.projectPageLinks a {
+    color: var(--color-header);
+    font-size: 14px;
+    font-weight: bold;
+    display: inline;
+}
+
+.projectPageExtraMedia {
+    margin-top: 100px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.beautifulPiece {
+    max-width: 272px;
+    margin: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.beautifulPiece p {
+    margin: 0px;
+}
+
+.beautifulTitle {
+    color: var(--color-header);
+    font-size: 14px;
+    margin-top: 5px !important;
+}
+
+.beautifulDescription {
+    color: var(--color-text);
+    font-size: 14px;
+    margin-top: 20px !important;
+}
+
+.fancyLink {
+    font-size: 14px;
+    color: white;
+    position: relative;
+}
+
+.fancyLink:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.fancyLink:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/*about*/
+.about {
+    overflow-y: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--color-bg), var(--color-bg));
+}
+
+.about .me {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-header2);
+}
+
+.meLink {
+    color: var(--color-text2);
+}
+
+.meLink:hover {
+    border-bottom: 2px solid var(--color-text2);
+}
