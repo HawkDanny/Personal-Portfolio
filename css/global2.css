@@ -528,11 +528,19 @@ nav a {
     }
 
     .projectTitle {
-        font-size: 80px;
+        font-size: 105px;
     }
 
     .project {
         background-attachment:  local;
+    }
+
+    .projectDetails {
+        display: inline-block;
+    }
+
+    .projectDesc,.projectCred {
+        font-size: 30px;
     }
 
     .about {
@@ -551,5 +559,6 @@ nav a {
 
     .projectPageDescription { 
         width: auto;
+        font-size: 25px;
     }
 }
