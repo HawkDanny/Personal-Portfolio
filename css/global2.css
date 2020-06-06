@@ -62,6 +62,10 @@ body:after {
     padding-top: 25vh;
 }
 
+.pageBottom {
+    height: 30vh;
+}
+
 
 /*nav*/
 nav {
@@ -80,6 +84,7 @@ nav a {
     max-width: 180px;
     padding-left: 15px;
     padding-top: 20px;
+    z-index: 100;
 }
 
 .navLinks {
@@ -201,7 +206,7 @@ nav a {
 
 /*header*/
 .header a {
-    color: #FFFFFF88;
+    color: #FFFFFFAA;
 }
 
 .header a:hover {
@@ -227,7 +232,7 @@ nav a {
 
 /*projects*/
 .project {
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
     position: relative;
     height: 500px;
@@ -459,4 +464,92 @@ nav a {
 
 .meLink:hover {
     border-bottom: 2px solid var(--color-text2);
+}
+
+@media only screen and (max-width: 1470px) {
+    .work {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .navSidebar {
+        padding-left: 0px;
+        padding-top: 0px;
+        max-width: none;
+        display: inline-block;
+    }
+
+    .danny {
+        font-size: 100px !important;
+    }
+
+    nav a {
+        font-size: 60px;
+    }
+
+    .navLinks {
+        margin-top: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1px;
+    }
+
+    .navLinks a {
+        padding: 25px;
+    }
+
+    .navLinks p {
+        display: none;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    .social a {
+        font-size: 40px;
+        padding: 20px;
+        padding-top: 0px;
+    }
+
+    .timeline {
+        width: 800px;
+        padding-top: 100px;
+    }
+
+    .header {
+        font-size: 16px;
+    }
+
+    .projectTitle {
+        font-size: 80px;
+    }
+
+    .project {
+        background-attachment:  local;
+    }
+
+    .about {
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .about .me {
+        font-size: 16pt;
+        padding: 150px;
+    }
+
+    .projectPageLearnings { 
+        display: none;
+    }
+
+    .projectPageDescription { 
+        width: auto;
+    }
 }

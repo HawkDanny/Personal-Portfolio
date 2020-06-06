@@ -12,6 +12,12 @@ let projBorder = "solid black 4px";
 let projBorderInvert = "solid white 4px";
 
 let years = {};
+let mousePos = {};
+
+let hoveringOnProject = false;
+let activeHoverElement;
+
+let dontDoIt;
 
 function init() {
     root = document.documentElement;
@@ -42,6 +48,32 @@ function init() {
     else
         filter("hl");
 
+    if (window.innerWidth < 1470)
+        dontDoIt = true;
+    else
+        dontDoIt = false;
+}
+
+window.onresize = function() {
+    if (window.innerWidth < 1470)
+        dontDoIt = true;
+    else
+        dontDoIt = false;
+}
+
+document.onmousemove = function(e) {
+    mousePos.x = e.clientX;
+    mousePos.y = e.clientY;
+}
+
+window.onscroll = function() {
+    let elmnt = document.elementFromPoint(mousePos.x, mousePos.y);
+    if (hoveringOnProject && !elmnt.classList.contains("project")) {
+        this.FadeOutBackground(activeHoverElement);
+        hoveringOnProject = false;
+    } else if (!hoveringOnProject && elmnt.classList.contains("project")) {
+        this.FadeInBackground(elmnt);
+    }
 }
 
 function filterFromURL(hash) {
@@ -125,20 +157,26 @@ function filterSidebarYear(year, years) {
         year.style.display = "none";
 }
 
-function FadeInBackground(background, elmnt)
+function FadeInBackground(elmnt)
 {
+    if (dontDoIt)
+        return;
+
+    hoveringOnProject = true;
+    activeHoverElement = elmnt;
+
     dohideElements.forEach(function(elmnt) {
         elmnt.style.visibility = "hidden";
     });
 
-    document.querySelector("#" + background).style.visibility = "visible";
+    document.querySelector("#" + elmnt.id).style.visibility = "visible";
 
     if (!elmnt.classList.contains("projectInvert")) {
         elmnt.style.border = projBorderInvert;
         root.style.setProperty("--color-border", "#FFFFFF");
     }
 
-    switch (background) {
+    switch (elmnt.id) {
         case "narwhal":
             document.body.style.backgroundImage = "url('media/homepage/narwhal_homepage.jpg')";
             break;
@@ -182,6 +220,9 @@ function FadeInBackground(background, elmnt)
 }
 
 function FadeOutBackground(elmnt) {
+    if (dontDoIt)
+        return;
+
     document.body.style.backgroundImage = "linear-gradient(var(--color-bg), var(--color-bg))";
 
     dohideElements.forEach(function(elmnt) {
@@ -192,4 +233,7 @@ function FadeOutBackground(elmnt) {
         elmnt.style.border = projBorder;
         root.style.setProperty("--color-border", "#000000");
     }
+
+    hoveringOnProject = false;
+    activeHoverElement = null;
 }
