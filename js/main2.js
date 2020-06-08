@@ -27,16 +27,16 @@ function init() {
     everythingSide = document.querySelectorAll(".ev-s");
     
     //sidebar year headers
-    years.y2015 = document.querySelector(".y2015");
-    years.y2016 = document.querySelector(".y2016");
+    //years.y2015 = document.querySelector(".y2015");
+    //years.y2016 = document.querySelector(".y2016");
     years.y2017 = document.querySelector(".y2017");
     years.y2018 = document.querySelector(".y2018");
     years.y2019 = document.querySelector(".y2019");
     years.y2020 = document.querySelector(".y2020");
 
     //sidebar year projects
-    years.y2015s = document.querySelectorAll(".y15");
-    years.y2016s = document.querySelectorAll(".y16");
+    //years.y2015s = document.querySelectorAll(".y15");
+    //years.y2016s = document.querySelectorAll(".y16");
     years.y2017s = document.querySelectorAll(".y17");
     years.y2018s = document.querySelectorAll(".y18");
     years.y2019s = document.querySelectorAll(".y19");
@@ -134,8 +134,8 @@ function filterProjects(clss) {
 
 
     //sidebar
-    filterSidebarYear(years.y2015, years.y2015s);
-    filterSidebarYear(years.y2016, years.y2016s);
+    //filterSidebarYear(years.y2015, years.y2015s);
+    //filterSidebarYear(years.y2016, years.y2016s);
     filterSidebarYear(years.y2017, years.y2017s);
     filterSidebarYear(years.y2018, years.y2018s);
     filterSidebarYear(years.y2019, years.y2019s);
@@ -182,6 +182,9 @@ function FadeInBackground(elmnt)
             break;
         case "imagine":
             document.body.style.backgroundImage = "url('media/homepage/imagine_homepage.jpg')";
+            break;
+        case "court":
+            document.body.style.backgroundImage = "url('media/homepage/court_homepage.jpg')";
             break;
         case "litrocks":
             document.body.style.backgroundImage = "url('media/homepage/rock_homepage.jpg')";

@@ -2,7 +2,7 @@
     --color-bg: rgb(238, 164, 201);
     --color-header: #ffffff;
     --color-header2: #000000;
-    --color-text: #ffffff85;
+    --color-text: #ffffff99;
     --color-text2: #00000085;
     --color-border: #000000;
 }
@@ -299,6 +299,8 @@ nav a {
 #newtrees { background-image: url(../media/homepage/newtrees_homepage.jpg); }
 #tabs { background-image: url(../media/homepage/tabs_homepage.jpg); }
 #goodsex { background-image: url(../media/homepage/goodsex_homepage.png); }
+#court { background-image: url(../media/homepage/court_homepage.jpg); }
+#court { background-image: url(../media/homepage/court_homepage.jpg); }
 #imagine { background-image: url(../media/homepage/imagine_homepage.jpg); }
 #litrocks { background-image: url(../media/homepage/rock_homepage.jpg); }
 #boop2 { background-image: url(../media/homepage/boop2_homepage.jpg); }
@@ -311,6 +313,7 @@ nav a {
 .projectPage {
     max-width: 800px;
     margin: auto;
+    padding-bottom: 200px;
 }
 
 .projectPageHeaderMedia {
