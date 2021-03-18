@@ -33,6 +33,7 @@ function init() {
     years.y2018 = document.querySelector(".y2018");
     years.y2019 = document.querySelector(".y2019");
     years.y2020 = document.querySelector(".y2020");
+    years.y2021 = document.querySelector(".y2021");
 
     //sidebar year projects
     //years.y2015s = document.querySelectorAll(".y15");
@@ -41,6 +42,7 @@ function init() {
     years.y2018s = document.querySelectorAll(".y18");
     years.y2019s = document.querySelectorAll(".y19");
     years.y2020s = document.querySelectorAll(".y20");
+    years.y2021s = document.querySelectorAll(".y21");
 
     let url = new URL(window.location.href);
     if (url.hash !== "")
@@ -102,6 +104,9 @@ function filterFromURL(hash) {
         case "#videos":
             filter('vi');
         break;
+        case "#writing":
+            filter('wr');
+        break;
     }
 }
 
@@ -140,6 +145,7 @@ function filterProjects(clss) {
     filterSidebarYear(years.y2018, years.y2018s);
     filterSidebarYear(years.y2019, years.y2019s);
     filterSidebarYear(years.y2020, years.y2020s);
+    filterSidebarYear(years.y2021, years.y2021s);
 }
 
 function filterSidebarYear(year, years) {
@@ -218,6 +224,9 @@ function FadeInBackground(elmnt)
             break;
         case 'tabs':
             document.body.style.backgroundImage = "url('media/homepage/tabs_homepage.jpg')";
+            break;
+        case 'newrules':
+            document.body.style.backgroundImage = "url('media/homepage/newrules_homepage.png')";
             break;
     }
 }

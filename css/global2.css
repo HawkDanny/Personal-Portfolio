@@ -1,10 +1,11 @@
 :root {
-    --color-bg: rgb(238, 164, 201);
+    --color-bg: #ffffff;
     --color-header: #ffffff;
     --color-header2: #000000;
-    --color-text: #ffffff99;
-    --color-text2: #00000085;
+    --color-text: #00000085;
     --color-border: #000000;
+    --color-link: #ffc1e7;
+    --color-link-active: #f77ac7;
 }
 
 html {
@@ -96,7 +97,7 @@ nav a {
 }
 
 .navLinks a {
-    color: var(--color-text2);
+    color: var(--color-text);
 }
 
 .navLinks a:hover {
@@ -152,7 +153,7 @@ nav a {
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
-    color: var(--color-text2);
+    color: var(--color-text);
 }
 
 .navSidebar li a:hover {
@@ -169,6 +170,7 @@ nav a {
 .social {
     display: flex;
     justify-content: space-between;
+    padding-top: 15px;
 }
     .social i {
         color: #121212;
@@ -206,11 +208,11 @@ nav a {
 
 /*header*/
 .header a {
-    color: #FFFFFFAA;
+    color: var(--color-link);
 }
 
 .header a:hover {
-    color: #FFFFFF;
+    color: var(--color-link-active);
 }
 
 
@@ -225,8 +227,8 @@ nav a {
 }
 
 .filterActive {
-    color: white !important;
-    border-bottom: solid white 5px;
+    color: var(--color-link-active) !important;
+    border-bottom: solid var(--color-link-active) 5px;
 }
 
 
@@ -248,7 +250,7 @@ nav a {
 
 .projectInvert .projectTitle { color: var(--color-header2);}
 .projectInvert .projectDesc { color: var(--color-header2);}
-.projectInvert .projectCred { color: var(--color-text2);}
+.projectInvert .projectCred { color: var(--color-text);}
 
 .projectInfo {
     pointer-events: none;
@@ -292,6 +294,7 @@ nav a {
     margin: 0px;
 }
 
+#newrules { background-image: url(../media/homepage/newrules_homepage.png); }
 #birdtown { background-image: url(../media/homepage/birdtown_homepage.png); }
 #sax { background-image: url(../media/homepage/sax_homepage.jpg); }
 #folk { background-image: url(../media/homepage/folk_homepage.jpg); }
@@ -328,7 +331,7 @@ nav a {
     margin: 0px;
     font-size: 18px; 
     font-weight: bold;
-    color: var(--color-header);
+    color: var(--color-header2);
 }
 
 .projectPageContent {
@@ -366,7 +369,7 @@ nav a {
     font-size: 14px;
     padding-right: 15px;
     padding-top: 3px;
-    color: var(--color-header);
+    color: var(--color-header2);
 }
 
 .projectPageLinks {
@@ -374,14 +377,14 @@ nav a {
 }
 
 .projectPageLinks p {
-    color: var(--color-header);
+    color: var(--color-header2);
     font-size: 14px;
     display: block;
     margin: 0px;
 }
 
 .projectPageLinks a {
-    color: var(--color-header);
+    color: var(--color-header2);
     font-size: 14px;
     font-weight: bold;
     display: inline;
@@ -420,7 +423,7 @@ nav a {
 
 .fancyLink {
     font-size: 14px;
-    color: white;
+    color: black;
     position: relative;
 }
 
@@ -431,7 +434,7 @@ nav a {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: black;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -462,11 +465,11 @@ nav a {
 }
 
 .meLink {
-    color: var(--color-text2);
+    color: var(--color-text);
 }
 
 .meLink:hover {
-    border-bottom: 2px solid var(--color-text2);
+    border-bottom: 2px solid var(--color-text);
 }
 
 @media only screen and (max-width: 1470px) {
