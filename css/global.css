@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+}
+
+#sidebar {
+    background-color: red;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+#content {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    height: 400px;
+    background-color: green;
+}
