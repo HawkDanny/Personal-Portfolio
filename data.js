@@ -5,6 +5,7 @@ let data = {
             year: 2023,
             logline: "Weekly livestream playing curated games",
             role: "co-host",
+            tags: ["streaming"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -14,6 +15,7 @@ let data = {
             year: 2023,
             logline: "A comedy video game about a town of birds",
             role: "developer, designer, art director",
+            tags: ["video game"],
             headerImageURL: "media/homepage/birdtown_homepage.png",
             invertTitleColor: false,
             description: ""
@@ -23,6 +25,7 @@ let data = {
             year: 2022,
             logline: "\"Oh yeah, that's it. Keep doing what you're doing.\"",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "media/homepage/goodsex_homepage.png",
             invertTitleColor: false,
             description: ""
@@ -32,6 +35,7 @@ let data = {
             year: 2021,
             logline: "How to create tiktok games",
             role: "co-speaker",
+            tags: ["talk"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -41,6 +45,7 @@ let data = {
             year: 2021,
             logline: "In conversation with Now Play This",
             role: "speaker",
+            tags: ["talk"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -50,6 +55,7 @@ let data = {
             year: 2021,
             logline: "Downloadable interactive tutorial",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -59,6 +65,7 @@ let data = {
             year: 2021,
             logline: "A weekly streaming playing through experimental games from itch.io",
             role: "host",
+            tags: ["streaming"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -68,6 +75,7 @@ let data = {
             year: 2021,
             logline: "An essay on how folk games have adapted to an algorithmic world",
             role: "author",
+            tags: ["writing"],
             headerImageURL: "media/homepage/newrules_homepage.png",
             invertTitleColor: true,
             description: ""
@@ -77,6 +85,7 @@ let data = {
             year: 2020,
             logline: "Improv jazz over falls",
             role: "composer, performer",
+            tags: ["video"],
             headerImageURL: "media/homepage/sax_homepage.jpg",
             invertTitleColor: true,
             description: ""
@@ -86,6 +95,7 @@ let data = {
             year: 2020,
             logline: "DIY folk games",
             role: "co-organizer",
+            tags: ["event"],
             headerImageURL: "media/homepage/folk_homepage.jpg",
             invertTitleColor: true,
             description: ""
@@ -95,6 +105,7 @@ let data = {
             year: 2020,
             logline: "An open mic series about everything else",
             role: "organizer",
+            tags: ["event"],
             headerImageURL: "media/homepage/abg_homepage.jpg",
             invertTitleColor: true,
             description: ""
@@ -104,8 +115,9 @@ let data = {
             year: 2020,
             logline: "A story of passing time",
             role: "developer, designer, composer",
+            tags: ["video game"],
             headerImageURL: "media/homepage/newtrees_homepage.jpg",
-            invertTitleColor: false,
+            invertTitleColor: true,
             description: ""
         },
         {
@@ -113,6 +125,7 @@ let data = {
             year: 2020,
             logline: "painful productivity",
             role: "creator",
+            tags: ["tool"],
             headerImageURL: "media/homepage/tabs_homepage.jpg",
             invertTitleColor: false,
             description: ""
@@ -122,6 +135,7 @@ let data = {
             year: 2019,
             logline: "A card game for a deck of cards",
             role: "co-designer",
+            tags: ["card game"],
             headerImageURL: "media/homepage/court_homepage.jpg",
             invertTitleColor: false,
             description: ""
@@ -131,6 +145,7 @@ let data = {
             year: 2019,
             logline: "Think about spring",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "media/homepage/imagine_homepage.jpg",
             invertTitleColor: false,
             description: ""
@@ -140,6 +155,7 @@ let data = {
             year: 2018,
             logline: "Cooperative chopsticks simulator",
             role: "co-creator",
+            tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -149,6 +165,7 @@ let data = {
             year: 2018,
             logline: "A realtime strategy party game",
             role: "co-creator",
+            tags: ["board game"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -158,6 +175,7 @@ let data = {
             year: 2018,
             logline: "A collection of virtual rocks",
             role: "creator",
+            tags: ["art"],
             headerImageURL: "media/homepage/rock_homepage.jpg",
             invertTitleColor: false,
             description: ""
@@ -167,8 +185,9 @@ let data = {
             year: 2018,
             logline: "The game where you share and compete",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "media/homepage/boop2_homepage.jpg",
-            invertTitleColor: false,
+            invertTitleColor: true,
             description: ""
         },
         {
@@ -176,6 +195,7 @@ let data = {
             year: 2018,
             logline: "Three interactive artworks about beauty",
             role: "creator",
+            tags: ["art"],
             headerImageURL: "media/homepage/beautiful_homepage.jpg",
             invertTitleColor: true,
             description: ""
@@ -185,6 +205,7 @@ let data = {
             year: 2018,
             logline: "An interactive comparison of Godzilla (1954) and Godzilla (1956)",
             role: "creator",
+            tags: ["creative code"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -194,6 +215,7 @@ let data = {
             year: 2017,
             logline: "Put a vive controller on your forehead",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "media/homepage/narwhal_homepage.jpg",
             invertTitleColor: true,
             description: ""
@@ -203,6 +225,7 @@ let data = {
             year: 2017,
             logline: "A love letter to my favorite song",
             role: "developer and designer, song from Zammuto",
+            tags: ["art", "creative code"],
             headerImageURL: "media/homepage/dog_homepage.jpg",
             invertTitleColor: false,
             description: ""
@@ -212,6 +235,7 @@ let data = {
             year: 2016,
             logline: "A competitive game where you share the spacebar",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -221,6 +245,7 @@ let data = {
             year: 2016,
             logline: "A card game about making up extravagant lies",
             role: "co-designer",
+            tags: ["board game"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""
@@ -230,6 +255,7 @@ let data = {
             year: 2015,
             logline: "My first video game",
             role: "creator",
+            tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
             description: ""

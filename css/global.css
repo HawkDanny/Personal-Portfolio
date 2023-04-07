@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #home {
@@ -17,21 +18,45 @@ body {
 
 #timeline {
     text-align: right;
-    align-items: center;
-    border-right: 1px solid black;
-    padding-right: 10px;
+    width: 175px;
+    margin-top: -20px;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+#timeline::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
 }
 
 #timeline .year {
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 #timeline p {
     margin: 0px;
+    font-size: 14px;
+}
+
+#filters {
+    width: 175px;
+}
+
+#filters #filtersTitle {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#filters p {
+    margin: 0px;
+    font-size: 14px;
 }
 
 #content {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 20px 0px 20px;
     overflow: scroll;
     height: 100%;
     scrollbar-width: none; /* Firefox */
@@ -51,7 +76,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
-    margin: 25px 0px 25px 0px;
+    margin: 0px 0px 25px 0px;
     border: 1px solid black;
 }
 
