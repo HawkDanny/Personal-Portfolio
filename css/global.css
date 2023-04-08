@@ -111,24 +111,23 @@ p {
     background-size: cover;
 
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    align-items: end;
-}
-
-.pageHeader .pageRole {
-    margin-bottom: 10px;
-    margin-left: 5px;
-}
-
-.pageHeader .pageYear {
-    margin-bottom: 10px;
-    margin-left: 5px;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: end;
 }
 
 .pageTitle {
     font-style: italic;
     padding-left: 10px;
+}
+
+.pageHeaderInfo {
+    margin: -10px 0px 10px 10px;
+    display: flex;
+}
+
+.pageHeaderInfo p {
+    margin-right: 0.25em; /*this is the standard with of a font's space character*/
 }
 
 .pageContent {

@@ -8,7 +8,12 @@ let data = {
             tags: ["streaming"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Bird Town",
@@ -18,7 +23,20 @@ let data = {
             tags: ["video game"],
             headerImageURL: "media/homepage/birdtown_homepage.png",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: "Bird Town is a comedy video game about a town of birds where you play as Margo in the final 15 minutes of her town's summer festival. Each playthrough of the game is a real time fifteen minutes where you decide how to spend your day, whether its getting into hijinks or talking with neighbors, going on bite sized adventures or taking a nap. It's your day and you can do whatever you want."
+                },
+                {
+                    element: 'p',
+                    text: "Bird Town is a comedy video game about a town of birds where you play as Margo in the final 15 minutes of her town's summer festival. Each playthrough of the game is a real time fifteen minutes where you decide how to spend your day, whether its getting into hijinks or talking with neighbors, going on bite sized adventures or taking a nap. It's your day and you can do whatever you want."
+                },
+                {
+                    element: 'p',
+                    text: "Bird Town is a comedy video game about a town of birds where you play as Margo in the final 15 minutes of her town's summer festival. Each playthrough of the game is a real time fifteen minutes where you decide how to spend your day, whether its getting into hijinks or talking with neighbors, going on bite sized adventures or taking a nap. It's your day and you can do whatever you want."
+                }
+            ]
         },
         {
             name: "Good Sex",
@@ -28,7 +46,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "media/homepage/goodsex_homepage.png",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Social Media Games - Play and Make",
@@ -38,7 +61,12 @@ let data = {
             tags: ["talk"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Folk Game TikToks",
@@ -48,7 +76,12 @@ let data = {
             tags: ["talk"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "How To Be Born",
@@ -58,7 +91,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Itch.io Monday",
@@ -68,7 +106,12 @@ let data = {
             tags: ["streaming"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Folk Games, Flash Communities, and TikTok",
@@ -78,7 +121,12 @@ let data = {
             tags: ["writing"],
             headerImageURL: "media/homepage/newrules_homepage.png",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Saxophone Skateboard",
@@ -88,7 +136,12 @@ let data = {
             tags: ["video"],
             headerImageURL: "media/homepage/sax_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Folk Game Game Jam",
@@ -98,7 +151,12 @@ let data = {
             tags: ["event"],
             headerImageURL: "media/homepage/folk_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Anything But Games",
@@ -108,7 +166,12 @@ let data = {
             tags: ["event"],
             headerImageURL: "media/homepage/abg_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "New Trees",
@@ -118,7 +181,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "media/homepage/newtrees_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Three Tabs",
@@ -128,7 +196,12 @@ let data = {
             tags: ["tool"],
             headerImageURL: "media/homepage/tabs_homepage.jpg",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Court",
@@ -138,7 +211,12 @@ let data = {
             tags: ["card game"],
             headerImageURL: "media/homepage/court_homepage.jpg",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Imagine",
@@ -148,7 +226,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "media/homepage/imagine_homepage.jpg",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Perfect Ramen",
@@ -158,7 +241,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Dam It!",
@@ -168,7 +256,12 @@ let data = {
             tags: ["board game"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "lit.rocks",
@@ -178,7 +271,12 @@ let data = {
             tags: ["art"],
             headerImageURL: "media/homepage/rock_homepage.jpg",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Danny Hawk's Boop Game",
@@ -188,7 +286,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "media/homepage/boop2_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Beautiful Series",
@@ -198,7 +301,12 @@ let data = {
             tags: ["art"],
             headerImageURL: "media/homepage/beautiful_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Gojira",
@@ -208,7 +316,12 @@ let data = {
             tags: ["creative code"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Narwhal Picnic",
@@ -218,7 +331,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "media/homepage/narwhal_homepage.jpg",
             invertTitleColor: true,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "My Dog's Eyes",
@@ -228,7 +346,12 @@ let data = {
             tags: ["art", "creative code"],
             headerImageURL: "media/homepage/dog_homepage.jpg",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Boop 1",
@@ -238,7 +361,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "The Death of Mr. Montague",
@@ -248,7 +376,12 @@ let data = {
             tags: ["board game"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
         {
             name: "Switch Blade",
@@ -258,7 +391,12 @@ let data = {
             tags: ["video game"],
             headerImageURL: "",
             invertTitleColor: false,
-            description: ""
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
         },
     ]
 }
