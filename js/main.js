@@ -1,11 +1,18 @@
 window.onload = init;
 
 let items = {};
+let tl;
+let cont;
+let filters;
 
 function init() {
-    let tl = document.querySelector("#timeline");
-    let cont = document.querySelector("#content");
-    let filters = document.querySelector("#filters");
+    buildTimeline();
+    //buildContent();
+    buildFilters();
+}
+
+function buildTimeline() {
+    tl = document.querySelector("#timeline");
     let currentYear;
     
     for (let i = 0; i < data.projects.length; i++) {
@@ -24,26 +31,14 @@ function init() {
         let proj = document.createElement('p');
         proj.textContent = currentProj.name;
         tl.appendChild(proj);
+    }
+}
 
-        for (let j = 0; j < currentProj.tags.length; j++)
-        {
-            let currentTag = currentProj.tags[j];
+function buildContent() {
+    cont = document.querySelector("#content");
 
-            //add to appropriate items arrays to track all the items by tag
-            if (items.hasOwnProperty(currentTag)) {
-                let list = items[currentTag];
-                list[list.length - 1] = currentProj;
-            } else {
-                //create a new list in items for a new tag
-                let list = items[currentTag] = [];
-                list[0] = currentProj;
-
-                //also add to the filters element
-                let filter = document.createElement('p');
-                filter.innerText = currentTag;
-                filters.appendChild(filter);
-            }
-        }
+    for (let i = 0; i < data.projects.length; i++) {
+        let currentProj = data.projects[i];
 
         //create item
         let item = document.createElement('div');
@@ -69,4 +64,37 @@ function init() {
 
         cont.appendChild(item);
     }
+}
+
+function buildFilters() {
+    filters = document.querySelector("#filters");
+
+
+    for (let i = 0; i < data.projects.length; i++) {
+        let currentProj = data.projects[i];
+
+        for (let j = 0; j < currentProj.tags.length; j++)
+        {
+            let currentTag = currentProj.tags[j];
+
+            //add to appropriate items arrays to track all the items by tag
+            if (items.hasOwnProperty(currentTag)) {
+                let list = items[currentTag];
+                list[list.length - 1] = currentProj;
+            } else {
+                //create a new list in items for a new tag
+                let list = items[currentTag] = [];
+                list[0] = currentProj;
+
+                //also add to the filters element
+                let filter = document.createElement('p');
+                filter.innerText = currentTag;
+                filters.appendChild(filter);
+            }
+        }
+    }
+}
+
+function buildPage() {
+
 }

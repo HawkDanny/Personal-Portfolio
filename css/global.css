@@ -3,6 +3,16 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 45px;
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
 #home {
     position: fixed;
 }
@@ -37,7 +47,6 @@ body {
 }
 
 #timeline p {
-    margin: 0px;
     font-size: 14px;
 }
 
@@ -51,7 +60,6 @@ body {
 }
 
 #filters p {
-    margin: 0px;
     font-size: 14px;
 }
 
@@ -85,14 +93,48 @@ body {
 }
 
 .itemText h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 45px;
     line-height: 0.9em;
     overflow: hidden;
-    margin: 0px;
     font-style: italic;
 }
 
-.itemText p {
-    margin: 0px;
+/*PAGE PAGE PAGE PAGE*/
+.page {
+    width: 700px;
+}
+
+.pageHeader {
+    border: 1px solid black;
+    height: 200px;
+    background-image: url(../media/homepage/birdtown_homepage.png);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: end;
+}
+
+.pageHeader .pageRole {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.pageHeader .pageYear {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.pageTitle {
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.pageContent {
+    margin: 50px 100px 10px 100px;
+}
+
+.pageContent p {
+    margin-top: 25px;
 }
