@@ -11,8 +11,14 @@ function init() {
     filters = document.querySelector("#filters");
 
     buildTimeline();
-    buildContent();
-    //buildPage('Beautiful Series');
+
+
+    let url = new URL(window.location);
+    if (url.searchParams.get('proj') != null)
+        buildPage(url.searchParams.get('proj'));
+    else
+        buildContent();
+
     buildFilters();
 }
 
@@ -32,7 +38,10 @@ function buildTimeline() {
         }
 
         //add project to timeline
-        let proj = document.createElement('p');
+        let proj = document.createElement('a');
+        let gotoURL = new URL(window.location.href.split('?')[0]);
+        gotoURL.searchParams.append('proj', currentProj.name);
+        proj.href = gotoURL;
         proj.textContent = currentProj.name;
         tl.appendChild(proj);
     }
@@ -45,6 +54,11 @@ function buildContent() {
         //create item
         let item = document.createElement('div');
         item.className = "item";
+        item.addEventListener('click',  function() {
+            let gotoURL = new URL(window.location.href.split('?')[0]);
+            gotoURL.searchParams.append('proj', currentProj.name);
+            window.location = gotoURL;
+        }, false);
         item.style.backgroundImage = "url('" + currentProj.headerImageURL + "')";
         if (currentProj.invertTitleColor)
             item.style.color = "white";
@@ -156,9 +170,13 @@ function buildPage(projName) {
         page.appendChild(pageContent);
 
         for (let j = 0; j < currentProj.page.length; j++) {
-            let pageElement = document.createElement(currentProj.page[j].element);
-            pageElement.innerText = currentProj.page[j].text;
-            pageContent.appendChild(pageElement);
+            if (currentProj.page[j].html != null)
+                pageContent.innerHTML += currentProj.page[j].html;
+            else {
+                let pageElement = document.createElement(currentProj.page[j].element);
+                pageElement.innerText = currentProj.page[j].text;
+                pageContent.appendChild(pageElement);
+            }
         }
 
         return;

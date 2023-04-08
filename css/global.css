@@ -13,8 +13,38 @@ p {
     margin: 0px;
 }
 
-#home {
+#links {
     position: fixed;
+    margin: 10px;
+    width: 165px;
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+}
+
+#home a {
+    color: black;
+    text-decoration: none;
+}
+
+#home a:hover { 
+    color: blue;
+}
+
+#social {
+    display: flex;
+    justify-content: space-between;
+}
+
+#social a {
+    color: black;
+    text-decoration: none;
+}
+
+#social a:hover { 
+    color: blue;
 }
 
 #page {
@@ -22,12 +52,13 @@ p {
     flex-direction: row;
     justify-content: center;
     width: 100vw;
-    height: 90vh;
-    padding-top: 5vh;
+    height: calc(100vh - 120px);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #timeline {
-    text-align: right;
+    text-align: left;
     width: 175px;
     margin-top: -20px;
     overflow: scroll;
@@ -46,12 +77,26 @@ p {
     font-size: 16px;
 }
 
-#timeline p {
+#timeline a {
     font-size: 14px;
+    line-height: 1em;
+    margin-bottom: 7px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+#timeline a:hover {
+    color: blue !important;
+}
+
+#timeline a:visited {
+    color: black;
 }
 
 #filters {
     width: 175px;
+    text-align: right;
 }
 
 #filters #filtersTitle {

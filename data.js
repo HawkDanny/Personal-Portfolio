@@ -25,12 +25,7 @@ let data = {
             invertTitleColor: false,
             page: [
                 {
-                    element: 'p',
-                    text: "Bird Town is a comedy video game about a town of birds where you play as Margo in the final 15 minutes of her town's summer festival. Each playthrough of the game is a real time fifteen minutes where you decide how to spend your day, whether its getting into hijinks or talking with neighbors, going on bite sized adventures or taking a nap. It's your day and you can do whatever you want."
-                },
-                {
-                    element: 'p',
-                    text: "Bird Town is a comedy video game about a town of birds where you play as Margo in the final 15 minutes of her town's summer festival. Each playthrough of the game is a real time fifteen minutes where you decide how to spend your day, whether its getting into hijinks or talking with neighbors, going on bite sized adventures or taking a nap. It's your day and you can do whatever you want."
+                    html: '<iframe width="560" height="315" src="https://www.youtube.com/embed/J6_313EJJb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
                 },
                 {
                     element: 'p',
