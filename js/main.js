@@ -10,16 +10,17 @@ function init() {
     cont = document.querySelector("#content");
     filters = document.querySelector("#filters");
 
-    buildTimeline();
-
-
-    let url = new URL(window.location);
-    if (url.searchParams.get('proj') != null)
-        buildPage(url.searchParams.get('proj'));
-    else
-        buildContent();
 
     buildFilters();
+    buildTimeline();
+
+    let url = new URL(window.location);
+    if (url.searchParams.get('p') != null)
+        buildPage(url.searchParams.get('p'));
+    else if (url.searchParams.get('f') != null)
+        buildContentFromFilter(url.searchParams.get('f'));
+    else
+        buildContent();
 }
 
 function buildTimeline() {
@@ -40,7 +41,7 @@ function buildTimeline() {
         //add project to timeline
         let proj = document.createElement('a');
         let gotoURL = new URL(window.location.href.split('?')[0]);
-        gotoURL.searchParams.append('proj', currentProj.name);
+        gotoURL.searchParams.append('p', currentProj.name);
         proj.href = gotoURL;
         proj.textContent = currentProj.name;
         tl.appendChild(proj);
@@ -56,7 +57,47 @@ function buildContent() {
         item.className = "item";
         item.addEventListener('click',  function() {
             let gotoURL = new URL(window.location.href.split('?')[0]);
-            gotoURL.searchParams.append('proj', currentProj.name);
+            gotoURL.searchParams.append('p', currentProj.name);
+            window.location = gotoURL;
+        }, false);
+        item.style.backgroundImage = "url('" + currentProj.headerImageURL + "')";
+        if (currentProj.invertTitleColor)
+            item.style.color = "white";
+
+        //create itemText
+        let itemText = document.createElement('div');
+        itemText.className = "itemText";
+        item.appendChild(itemText);
+
+        //create title
+        let title = document.createElement("h1");
+        title.innerText = currentProj.name.toUpperCase();
+        itemText.appendChild(title);
+
+        //create logline
+        let logline = document.createElement("p");
+        logline.innerText = currentProj.logline;
+        itemText.appendChild(logline);
+
+        cont.appendChild(item);
+    }
+}
+
+function buildContentFromFilter(tagName) {
+    //clear out content div
+    cont.innerHTML = "";
+
+    console.log(tagName);
+
+    for (let i = 0; i < items[tagName].length; i++) {
+        let currentProj = items[tagName][i]
+
+        //create item
+        let item = document.createElement('div');
+        item.className = "item";
+        item.addEventListener('click',  function() {
+            let gotoURL = new URL(window.location.href.split('?')[0]);
+            gotoURL.searchParams.append('p', currentProj.name);
             window.location = gotoURL;
         }, false);
         item.style.backgroundImage = "url('" + currentProj.headerImageURL + "')";
@@ -94,14 +135,17 @@ function buildFilters() {
             //add to appropriate items arrays to track all the items by tag
             if (items.hasOwnProperty(currentTag)) {
                 let list = items[currentTag];
-                list[list.length - 1] = currentProj;
+                list[list.length] = currentProj;
             } else {
                 //create a new list in items for a new tag
                 let list = items[currentTag] = [];
                 list[0] = currentProj;
 
                 //also add to the filters element
-                let filter = document.createElement('p');
+                let filter = document.createElement('a');
+                let gotoURL = new URL(window.location.href.split('?')[0]);
+                gotoURL.searchParams.append('f', currentTag);
+                filter.href = gotoURL;
                 filter.innerText = currentTag;
                 filters.appendChild(filter);
             }
@@ -125,6 +169,9 @@ function buildFilters() {
 </div>
 */
 function buildPage(projName) {
+    //clear out content div
+    cont.innerHTML = "";
+
     for (let i = 0; i < data.projects.length; i++) {
 
         //loop until we find the project TODO: make a dictionary
@@ -134,8 +181,6 @@ function buildPage(projName) {
         //save current proj
         let currentProj = data.projects[i];
 
-        //clear out content div
-        cont.innerHTML = "";
 
         let page = document.createElement('div');
         page.className = "page";

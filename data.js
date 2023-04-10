@@ -1,6 +1,21 @@
 let data = {
     projects: [
         {
+            name: "The Lifetime Contract",
+            year: 2023,
+            logline: "My lifelong binding contract",
+            role: "fool",
+            tags: ["video game", "art"],
+            headerImageURL: "",
+            invertTitleColor: false,
+            page: [
+                {
+                    element: 'p',
+                    text: ''
+                }
+            ]
+        },
+        {
             name: "GAMER POTLUCK",
             year: 2023,
             logline: "Weekly livestream playing curated games",
@@ -42,6 +57,9 @@ let data = {
             headerImageURL: "media/homepage/goodsex_homepage.png",
             invertTitleColor: false,
             page: [
+                {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AQ1MWlxuarA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
                 {
                     element: 'p',
                     text: ''
@@ -88,6 +106,9 @@ let data = {
             invertTitleColor: false,
             page: [
                 {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KGbTTfgkVUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
+                {
                     element: 'p',
                     text: ''
                 }
@@ -132,6 +153,9 @@ let data = {
             headerImageURL: "media/homepage/sax_homepage.jpg",
             invertTitleColor: true,
             page: [
+                {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ns9mnYG6kfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
                 {
                     element: 'p',
                     text: ''
@@ -229,6 +253,20 @@ let data = {
             ]
         },
         {
+            name: "Square Up",
+            year: 2019,
+            logline: "An exploration in radical softness",
+            role: "co-designer, programmer",
+            tags: ["video game"],
+            headerImageURL: "",
+            invertTitleColor: false,
+            page: [
+                {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/k52Y-yWPCIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                }
+            ]
+        },
+        {
             name: "Perfect Ramen",
             year: 2018,
             logline: "Cooperative chopsticks simulator",
@@ -278,10 +316,13 @@ let data = {
             year: 2018,
             logline: "The game where you share and compete",
             role: "creator",
-            tags: ["video game"],
+            tags: ["video game", "physical computing"],
             headerImageURL: "media/homepage/boop2_homepage.jpg",
             invertTitleColor: true,
             page: [
+                {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dJwRSW0mXaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
                 {
                     element: 'p',
                     text: ''
@@ -293,7 +334,7 @@ let data = {
             year: 2018,
             logline: "Three interactive artworks about beauty",
             role: "creator",
-            tags: ["art"],
+            tags: ["art", "physical computing"],
             headerImageURL: "media/homepage/beautiful_homepage.jpg",
             invertTitleColor: true,
             page: [
@@ -329,7 +370,14 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'test test'
+                },
+                {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mC3KTQK0pqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
+                {
+                    element: 'p',
+                    text: 'test test'
                 }
             ]
         },

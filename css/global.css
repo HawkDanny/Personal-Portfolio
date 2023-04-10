@@ -4,8 +4,8 @@ body {
 }
 
 h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 45px;
+    font-family: 'Judson', serif;
+    font-size: 54px;
     margin: 0px;
 }
 
@@ -104,8 +104,15 @@ p {
     font-size: 16px;
 }
 
-#filters p {
+#filters a {
+    display: block;
     font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+#filters a:hover {
+    color: blue;
 }
 
 #content {
@@ -130,7 +137,7 @@ p {
     flex-wrap: wrap;
     align-content: flex-end;
     margin: 0px 0px 25px 0px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .itemText {
@@ -149,7 +156,7 @@ p {
 }
 
 .pageHeader {
-    border: 1px solid black;
+    border: 2px solid black;
     height: 200px;
     background-image: url(../media/homepage/birdtown_homepage.png);
     background-position: center;
@@ -180,5 +187,11 @@ p {
 }
 
 .pageContent p {
+    margin-top: 25px;
+}
+
+.pageContent iframe {
+    /*youtube default embed width is 560*/
+    margin-left: -30px;
     margin-top: 25px;
 }
