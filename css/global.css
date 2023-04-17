@@ -13,40 +13,6 @@ p {
     margin: 0px;
 }
 
-#links {
-    position: fixed;
-    margin: 10px;
-    width: 165px;
-}
-
-#home {
-    display: flex;
-    justify-content: space-between;
-}
-
-#home a {
-    color: black;
-    text-decoration: none;
-}
-
-#home a:hover { 
-    color: blue;
-}
-
-#social {
-    display: flex;
-    justify-content: space-between;
-}
-
-#social a {
-    color: black;
-    text-decoration: none;
-}
-
-#social a:hover { 
-    color: blue;
-}
-
 #page {
     display: flex;
     flex-direction: row;
@@ -84,7 +50,6 @@ p {
     display: block;
     text-decoration: none;
     color: black;
-    padding-left: 5px;
 }
 
 #timeline a:hover {
@@ -96,14 +61,15 @@ p {
 }
 
 #timeline a.pageActive {
+    padding-left: 10px;
     color: white;
     background-color: blue;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 #timeline a.pageActive:hover {
-    color: white;
+    color: white !important;
 }
 
 #filters {
@@ -121,7 +87,6 @@ p {
     font-size: 14px;
     text-decoration: none;
     color: black;
-    padding-right: 10px;
 }
 
 #filters a:hover {
@@ -131,6 +96,7 @@ p {
 #filters a.filtersActive {
     color: white;
     background-color: blue;
+    padding-right: 10px;
     padding-top: 2px;
     padding-bottom: 2px;
 }
@@ -140,11 +106,35 @@ p {
 }
 
 #content {
+    width: 700px;
     padding: 0px 20px 0px 20px;
     overflow: scroll;
     height: 100%;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE 10+ */
+}
+
+#contentHeader {
+    position: fixed;
+    margin-top: -34px;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    padding: 0px 2px 12px 2px;
+    border-bottom: 2px solid black;
+}
+
+#contentHeader a {
+    color: black;
+    text-decoration: none;
+}
+
+#contentHeader a:hover {
+    color: blue;
+}
+
+#contentHeader #contentLinks a {
+    margin-left: 10px;
 }
 
 #content::-webkit-scrollbar {
@@ -154,7 +144,7 @@ p {
 
 .item {
     height: 150px;
-    width: 700px;
+    width: 100%;
     background-position: center;
     background-size: cover;
     display: flex;

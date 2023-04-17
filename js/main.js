@@ -1,11 +1,13 @@
 window.onload = init;
 
 let items = {};
+let header;
 let tl;
 let cont;
 let filters;
 
 function init() {
+    header = document.querySelector("#contentHeader");
     tl = document.querySelector("#timeline");
     cont = document.querySelector("#content");
     filters = document.querySelector("#filters");
@@ -49,6 +51,9 @@ function buildTimeline() {
 }
 
 function buildContent() {
+    cont.innerHTML = "";
+    cont.appendChild(header);
+
     for (let i = 0; i < data.projects.length; i++) {
         let currentProj = data.projects[i];
 
@@ -86,6 +91,7 @@ function buildContent() {
 function buildContentFromFilter(tagName) {
     //clear out content div
     cont.innerHTML = "";
+    cont.appendChild(header);
 
     for (let i = 0; i < items[tagName].length; i++) {
         let currentProj = items[tagName][i]
@@ -180,6 +186,7 @@ function buildFilters() {
 function buildPage(projName) {
     //clear out content div
     cont.innerHTML = "";
+    cont.appendChild(header);
 
     for (let i = 0; i < data.projects.length; i++) {
 
