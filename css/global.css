@@ -84,6 +84,7 @@ p {
     display: block;
     text-decoration: none;
     color: black;
+    padding-left: 5px;
 }
 
 #timeline a:hover {
@@ -92,6 +93,17 @@ p {
 
 #timeline a:visited {
     color: black;
+}
+
+#timeline a.pageActive {
+    color: white;
+    background-color: blue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#timeline a.pageActive:hover {
+    color: white;
 }
 
 #filters {
@@ -109,10 +121,22 @@ p {
     font-size: 14px;
     text-decoration: none;
     color: black;
+    padding-right: 10px;
 }
 
 #filters a:hover {
     color: blue;
+}
+
+#filters a.filtersActive {
+    color: white;
+    background-color: blue;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#filters a.filtersActive:hover {
+    color: white;
 }
 
 #content {
@@ -138,6 +162,7 @@ p {
     align-content: flex-end;
     margin: 0px 0px 25px 0px;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .itemText {
@@ -171,10 +196,11 @@ p {
 .pageTitle {
     font-style: italic;
     padding-left: 10px;
+    line-height: 0.8em;
 }
 
 .pageHeaderInfo {
-    margin: -10px 0px 10px 10px;
+    margin: 0px 0px 10px 10px;
     display: flex;
 }
 
@@ -187,7 +213,7 @@ p {
 }
 
 .pageContent p {
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 16px;
 }
 

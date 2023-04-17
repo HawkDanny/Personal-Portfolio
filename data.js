@@ -74,7 +74,11 @@ let data = {
                 },
                 {
                     element: 'p',
-                    text: 'In <i>Good Sex</i> you stand back to back with a partner, each of you holding a controller. Then through '
+                    text: 'In <i>Good Sex</i> you stand back to back with a partner, each of you holding a controller. When your partner interacts with their analog stick correctly your controller vibrates, and vice versa. And then through the power of a couple of words banned from being said out loud ("vibrate," "joystick"), you\'ve got quite a sexy game.'
+                },
+                {
+                    element: 'p',
+                    text: 'It\'s fun to appropriate xbox controllers from their usual game context via sexy theming, but also through the mechanics of the game. As the game progresses and players\' focus intensifies on their singular analog stick, they\'ll often need to reposition their grip on the controller, or use both hands to explore the possible options, maybe switch their grip as they get tired, using different fingers, etc. Approaching the controller as an object and not as a convention laden tool frees more video game familiar players to stop trying to game the system and begin communicating with their partners.'
                 },
                 {
                     element: 'p',
@@ -107,8 +111,15 @@ let data = {
             invertTitleColor: false,
             page: [
                 {
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oB1wsnuzzj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
+                {
                     element: 'p',
-                    text: ''
+                    text: 'I was approached to participate in a conversation about my <a href="https://twitter.com/HawkDanny/status/1313881230312714241?s=20">viral thread of folk game tiktoks</a> for <a href="https://nowplaythis.net/2021-festival/">Now Play This 2021</a>. Their theme that year was to explore the relationship between play, games, and the climate crisis. The show itself built toward its theme on each separate day, with later days in the schedule focusing more directly on understanding, fixing, and relating to the climate crisis. My conversation was featured on the first day, where the focus was on how fun and play exists in society, especially society that was still deeply affected by covid.'
+                },
+                {
+                    element: 'p',
+                    text: 'A fun tidbit - at some point during the conversation I played <a href="https://twitter.com/HawkDanny/status/1313882073057366016">this game</a>, let me know if you think you have a guess as to where hehehe.'
                 }
             ]
         },
@@ -126,7 +137,15 @@ let data = {
                 },
                 {
                     element: 'p',
-                    text: ''
+                    text: 'The first game in <a href=""><i>The Lifetime Contract</i></a>, <i>How To Be Born</i> is a game where you use a controller. It has some small elements of inductive logic, inspired by <a href="https://en.wikipedia.org/wiki/Eleusis_(card_game)">Eleusis</a>.'
+                },
+                {
+                    element: 'p',
+                    text: 'Created originally for <a href="https://www.twitch.tv/videos/983399024">Nicole He\'s Birth Stream</a>'
+                },
+                {
+                    element: 'p',
+                    text: 'Written about in <a href="https://letterclub.games/2021/09/06/recognizing-play/">LETTERCLUB.GAMES</a>.'
                 }
             ]
         },
@@ -141,7 +160,11 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'I picked up streaming after a year or so of self-isolation during covid, and as a reflection of my desire to play more small and experimental games, I began streaming four games from itch.io every Monday. I would sift through the itch.io "Fresh" feed, their youtube channel, and also their featured games list to find games.'
+                },
+                {
+                    element: 'p',
+                    text: 'You can watch the collection of VODs <a href="https://www.twitch.tv/collections/vrKQBcjdpxa5Gg">here</a>.'
                 }
             ]
         },
@@ -156,7 +179,11 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'In 2020 I was approached to contribute an essay on <a href="https://twitter.com/HawkDanny/status/1313881230312714241">my viral thread</a> of folk game tiktoks to <a href="https://newrules.website/"<i>New Rules</i></a>, a collection of writing on play and games during the first year of the pandemic compiled by Holly Gramazio. I formalized my thoughts into an essay on the structure of tiktok and how it fits with play, and in particular with folk games. There are a lot of similarities with what games work well in an algorithm with what work well teaching each other on the playground. Thank you to Holly for the wonderful editing and work that she put into this great collection.'
+                },
+                {
+                    element: 'p',
+                    text: 'You can read my full essay <a href="https://newrules.website/2021/01/12/danny-hawk-folk-games-flash-communities-and-tiktok/">here</a>.'
                 }
             ]
         },
@@ -174,7 +201,7 @@ let data = {
                 },
                 {
                     element: 'p',
-                    text: ''
+                    text: 'An improv sax performance created for the final <a href="file:///C:/Users/danny/Desktop/Personal-Portfolio/index.html?p=Anything+But+Games">Anything But Games</a> that I organized.'
                 }
             ]
         },

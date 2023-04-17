@@ -87,8 +87,6 @@ function buildContentFromFilter(tagName) {
     //clear out content div
     cont.innerHTML = "";
 
-    console.log(tagName);
-
     for (let i = 0; i < items[tagName].length; i++) {
         let currentProj = items[tagName][i]
 
@@ -120,6 +118,17 @@ function buildContentFromFilter(tagName) {
         itemText.appendChild(logline);
 
         cont.appendChild(item);
+
+        //grab the current filter and set it active, remove active from "all"
+        for (let j = 0; j < filters.children.length; j++) {
+            let elem = filters.children[j];
+
+            if (elem.innerText == "all")
+                elem.className = "";
+
+            if (elem.innerText == tagName)
+                elem.className = "filtersActive";
+        }
     }
 }
 
@@ -221,6 +230,24 @@ function buildPage(projName) {
                 let pageElement = document.createElement(currentProj.page[j].element);
                 pageElement.innerHTML = currentProj.page[j].text;
                 pageContent.appendChild(pageElement);
+            }
+        }
+
+        //set the correct timeline link to active
+        for (let j = 0; j < tl.children.length; j++) {
+            let elem = tl.children[j];
+
+            if (elem.innerText == projName)
+                elem.className = "pageActive";
+        }
+
+        //remove active from "all"
+        for (let j = 0; j < filters.children.length; j++) {
+            let elem = filters.children[j];
+
+            if (elem.innerText == "all") {
+                elem.className = "";
+                break;
             }
         }
 
