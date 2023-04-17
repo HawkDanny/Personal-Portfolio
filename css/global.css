@@ -188,6 +188,17 @@ p {
 
 .pageContent p {
     margin-top: 25px;
+    font-size: 16px;
+}
+
+.pageContent a {
+    color: blue;
+    text-decoration: none;
+}
+
+.pageContent a:hover {
+    color: blue;
+    text-decoration: underline;
 }
 
 .pageContent iframe {

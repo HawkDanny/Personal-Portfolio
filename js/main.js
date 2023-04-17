@@ -219,7 +219,7 @@ function buildPage(projName) {
                 pageContent.innerHTML += currentProj.page[j].html;
             else {
                 let pageElement = document.createElement(currentProj.page[j].element);
-                pageElement.innerText = currentProj.page[j].text;
+                pageElement.innerHTML = currentProj.page[j].text;
                 pageContent.appendChild(pageElement);
             }
         }

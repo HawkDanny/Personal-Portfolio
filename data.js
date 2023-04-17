@@ -5,13 +5,21 @@ let data = {
             year: 2023,
             logline: "My lifelong binding contract",
             role: "fool",
-            tags: ["video game", "art"],
+            tags: ["art"],
             headerImageURL: "",
             invertTitleColor: false,
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: '<i>The Lifetime Contract</i> is a binding agreement I signed with myself to create an indefinite series of works beginning with my game <a href="index.html?p=How+To+Be+Born"><i>How To Be Born</i></a>, with a contractual obligation that I release each game in the series with a funding goal that when met obligates me to make its sequel, for the rest of my life.'
+                },
+                {
+                    element: 'p',
+                    text: 'The contract starts with <i>How To Be Born</i> because it represents both a really fun and freeing development process and also an interesting design style, along with being a thematically appropriate beginning to a lifelong series. I considered having some throughline constraint that each entry must adhere to, but the idea of having a lifelong constraint seems ill-advised'
+                },
+                {
+                    element: 'p',
+                    text: 'This project is inspired by <a href="https://www.ndbooks.com/book/the-complete-stories/">The Complete Stories of Clarice Lispector</a>, a collection of short stories written across decades throughout Lispector\'s life which when compiled reads like a fictional representation of a lifetime of shifting perspective and values. I\'m compelled by the idea of an intentional series of work that reflects my shifting style and aesthetics, peppering my other work throughout my career.'
                 }
             ]
         },
@@ -26,7 +34,11 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'Since 2021, every Monday I stream a collection of games with my friend <a href="https://mut.media">Moochi</a>, each of us curating a few games for the other to play. It\'s a great way to play lots of games either of us would never usually play, and a great reason to talk game designer each week.'
+                },
+                {
+                    element: 'p',
+                    text: 'You can watch all of the VODs <a href="twitch.tv/hawkdanny/videos">here.</a>'
                 }
             ]
         },
@@ -62,7 +74,11 @@ let data = {
                 },
                 {
                     element: 'p',
-                    text: ''
+                    text: 'In <i>Good Sex</i> you stand back to back with a partner, each of you holding a controller. Then through '
+                },
+                {
+                    element: 'p',
+                    text: 'Showcased at <a href="https://www.wonderville.nyc/events/love-me-play-me-2-17">Wonderville</a> on February 17th, 2022'
                 }
             ]
         },
