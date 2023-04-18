@@ -216,7 +216,11 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: '<a href="https://twitter.com/emilyrakoonce">Emily Koonce</a> and I organized a four hour game jam focused on playing and creating folk games.'
+                },
+                {
+                    element: 'p',
+                    text: 'We broke the session into three parts, '
                 }
             ]
         },
