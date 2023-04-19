@@ -1,13 +1,12 @@
 let data = {
     projects: [
-        {
+        /*{
             name: "The Lifetime Contract",
             year: 2023,
             logline: "My lifelong binding contract",
             role: "fool",
             tags: ["art"],
             headerImageURL: "",
-            invertTitleColor: false,
             page: [
                 {
                     element: 'p',
@@ -22,15 +21,14 @@ let data = {
                     text: 'This project is inspired by <a href="https://www.ndbooks.com/book/the-complete-stories/">The Complete Stories of Clarice Lispector</a>, a collection of short stories written across decades throughout Lispector\'s life which when compiled reads like a fictional representation of a lifetime of shifting perspective and values. I\'m compelled by the idea of an intentional series of work that reflects my shifting style and aesthetics, peppering my other work throughout my career.'
                 }
             ]
-        },
+        },*/
         {
             name: "GAMER POTLUCK",
             year: 2023,
             logline: "Weekly livestream playing curated games",
             role: "co-host",
-            tags: ["streaming"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            tags: ['streaming', 'selected'],
+            headerImageURL: "media/potluck header.png",
             page: [
                 {
                     element: 'p',
@@ -47,9 +45,8 @@ let data = {
             year: 2023,
             logline: "A comedy video game about a town of birds",
             role: "developer, designer, art director",
-            tags: ["video game"],
+            tags: ['video game', 'selected'],
             headerImageURL: "media/homepage/birdtown_homepage.png",
-            invertTitleColor: false,
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube.com/embed/J6_313EJJb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -65,9 +62,8 @@ let data = {
             year: 2022,
             logline: "\"Oh yeah, that's it. Keep doing what you're doing.\"",
             role: "creator",
-            tags: ["video game"],
+            tags: ['video game'],
             headerImageURL: "media/homepage/goodsex_homepage.png",
-            invertTitleColor: false,
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AQ1MWlxuarA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -87,13 +83,12 @@ let data = {
             ]
         },
         {
-            name: "Social Media Games - Play and Make",
+            name: "Social Media Games,<br> Play and Make",
             year: 2021,
             logline: "How to create tiktok games",
             role: "co-speaker",
-            tags: ["talk"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            tags: ['talk'],
+            headerImageURL: "media/tiktok dodge.jpg",
             page: [
                 {
                     element: 'p',
@@ -106,9 +101,8 @@ let data = {
             year: 2021,
             logline: "In conversation with Now Play This",
             role: "speaker",
-            tags: ["talk"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            tags: ['talk'],
+            headerImageURL: "media/ispy2.jpg",
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oB1wsnuzzj0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -128,9 +122,8 @@ let data = {
             year: 2021,
             logline: "Downloadable interactive tutorial",
             role: "creator",
-            tags: ["video game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            tags: ['video game', 'selected'],
+            headerImageURL: "media/htbb header.png",
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KGbTTfgkVUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -155,8 +148,7 @@ let data = {
             logline: "A weekly streaming playing through experimental games from itch.io",
             role: "host",
             tags: ["streaming"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/itchio monday header.jpg",
             page: [
                 {
                     element: 'p',
@@ -175,7 +167,6 @@ let data = {
             role: "author",
             tags: ["writing"],
             headerImageURL: "media/homepage/newrules_homepage.png",
-            invertTitleColor: true,
             page: [
                 {
                     element: 'p',
@@ -194,7 +185,6 @@ let data = {
             role: "composer, performer",
             tags: ["video"],
             headerImageURL: "media/homepage/sax_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ns9mnYG6kfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -212,7 +202,6 @@ let data = {
             role: "co-organizer",
             tags: ["event"],
             headerImageURL: "media/homepage/folk_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     element: 'p',
@@ -231,7 +220,6 @@ let data = {
             role: "organizer",
             tags: ["event"],
             headerImageURL: "media/homepage/abg_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     element: 'p',
@@ -246,7 +234,6 @@ let data = {
             role: "developer, designer, composer",
             tags: ["video game"],
             headerImageURL: "media/homepage/newtrees_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     element: 'p',
@@ -261,7 +248,6 @@ let data = {
             role: "creator",
             tags: ["tool"],
             headerImageURL: "media/homepage/tabs_homepage.jpg",
-            invertTitleColor: false,
             page: [
                 {
                     element: 'p',
@@ -276,7 +262,6 @@ let data = {
             role: "co-designer",
             tags: ["card game"],
             headerImageURL: "media/homepage/court_homepage.jpg",
-            invertTitleColor: false,
             page: [
                 {
                     element: 'p',
@@ -291,7 +276,6 @@ let data = {
             role: "creator",
             tags: ["video game"],
             headerImageURL: "media/homepage/imagine_homepage.jpg",
-            invertTitleColor: false,
             page: [
                 {
                     element: 'p',
@@ -305,8 +289,7 @@ let data = {
             logline: "An exploration in radical softness",
             role: "co-designer, programmer",
             tags: ["video game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/square up header.png",
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/k52Y-yWPCIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -319,8 +302,7 @@ let data = {
             logline: "Cooperative chopsticks simulator",
             role: "co-creator",
             tags: ["video game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/perfect ramen header.png",
             page: [
                 {
                     element: 'p',
@@ -334,8 +316,7 @@ let data = {
             logline: "A realtime strategy party game",
             role: "co-creator",
             tags: ["board game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/damit header.jpg",
             page: [
                 {
                     element: 'p',
@@ -350,7 +331,6 @@ let data = {
             role: "creator",
             tags: ["art"],
             headerImageURL: "media/homepage/rock_homepage.jpg",
-            invertTitleColor: false,
             page: [
                 {
                     element: 'p',
@@ -365,7 +345,6 @@ let data = {
             role: "creator",
             tags: ["video game", "physical computing"],
             headerImageURL: "media/homepage/boop2_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dJwRSW0mXaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
@@ -383,7 +362,6 @@ let data = {
             role: "creator",
             tags: ["art", "physical computing"],
             headerImageURL: "media/homepage/beautiful_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     element: 'p',
@@ -397,9 +375,11 @@ let data = {
             logline: "An interactive comparison of Godzilla (1954) and Godzilla (1956)",
             role: "creator",
             tags: ["creative code"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/gojira header.png",
             page: [
+                {
+                    html: '<img src="media/gojira.gif" alt="gojira gif" width="665" height="491">'
+                },
                 {
                     element: 'p',
                     text: ''
@@ -413,7 +393,6 @@ let data = {
             role: "creator",
             tags: ["video game"],
             headerImageURL: "media/homepage/narwhal_homepage.jpg",
-            invertTitleColor: true,
             page: [
                 {
                     element: 'p',
@@ -435,7 +414,6 @@ let data = {
             role: "developer and designer, song from Zammuto",
             tags: ["art", "creative code"],
             headerImageURL: "media/homepage/dog_homepage.jpg",
-            invertTitleColor: false,
             page: [
                 {
                     element: 'p',
@@ -449,8 +427,7 @@ let data = {
             logline: "A competitive game where you share the spacebar",
             role: "creator",
             tags: ["video game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/boop1 header.png",
             page: [
                 {
                     element: 'p',
@@ -459,13 +436,12 @@ let data = {
             ]
         },
         {
-            name: "The Death of Mr. Montague",
+            name: "The Death of <br>Mr. Montague",
             year: 2016,
             logline: "A card game about making up extravagant lies",
             role: "co-designer",
             tags: ["board game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/montagueHeader2.jpg",
             page: [
                 {
                     element: 'p',
@@ -479,8 +455,7 @@ let data = {
             logline: "My first video game",
             role: "creator",
             tags: ["video game"],
-            headerImageURL: "",
-            invertTitleColor: false,
+            headerImageURL: "media/switchblade header.png",
             page: [
                 {
                     element: 'p',
