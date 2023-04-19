@@ -83,7 +83,7 @@ let data = {
             ]
         },
         {
-            name: "Social Media Games,<br> Play and Make",
+            name: "Social Media Games, Play and Make",
             year: 2021,
             logline: "How to create tiktok games",
             role: "co-speaker",
@@ -436,7 +436,7 @@ let data = {
             ]
         },
         {
-            name: "The Death of <br>Mr. Montague",
+            name: "The Death of Mr. Montague",
             year: 2016,
             logline: "A card game about making up extravagant lies",
             role: "co-designer",
