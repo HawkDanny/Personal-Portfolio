@@ -16,9 +16,9 @@ let filterOptions = [
     'card game',
     'art',
     'writing',
-    'talk',
+    'speaking',
+    'streaming',
     'event',
-    'streaming'
 ];
 
 function init() {

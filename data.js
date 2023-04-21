@@ -1,12 +1,12 @@
 let data = {
     projects: [
-        /*{
+        {
             name: "The Lifetime Contract",
             year: 2023,
             logline: "My lifelong binding contract",
             role: "fool",
-            tags: ["art"],
-            headerImageURL: "",
+            tags: ['art', 'selected'],
+            headerImageURL: "https://www.employmentandlaborlawblog.com/wp-content/uploads/sites/566/2018/08/shutterstock_310318895.jpg",
             page: [
                 {
                     element: 'p',
@@ -21,7 +21,7 @@ let data = {
                     text: 'This project is inspired by <a href="https://www.ndbooks.com/book/the-complete-stories/">The Complete Stories of Clarice Lispector</a>, a collection of short stories written across decades throughout Lispector\'s life which when compiled reads like a fictional representation of a lifetime of shifting perspective and values. I\'m compelled by the idea of an intentional series of work that reflects my shifting style and aesthetics, peppering my other work throughout my career.'
                 }
             ]
-        },*/
+        },
         {
             name: "GAMER POTLUCK",
             year: 2023,
@@ -45,7 +45,7 @@ let data = {
             year: 2023,
             logline: "A comedy video game about a town of birds",
             role: "developer, designer, art director",
-            tags: ['video game', 'selected'],
+            tags: ['game', 'video game', 'selected'],
             headerImageURL: "media/homepage/birdtown_homepage.png",
             page: [
                 {
@@ -62,7 +62,7 @@ let data = {
             year: 2022,
             logline: "\"Oh yeah, that's it. Keep doing what you're doing.\"",
             role: "creator",
-            tags: ['video game'],
+            tags: ['game', 'video game', 'selected'],
             headerImageURL: "media/homepage/goodsex_homepage.png",
             page: [
                 {
@@ -87,7 +87,7 @@ let data = {
             year: 2021,
             logline: "How to create tiktok games",
             role: "co-speaker",
-            tags: ['talk'],
+            tags: ['speaking'],
             headerImageURL: "media/tiktok dodge.jpg",
             page: [
                 {
@@ -101,7 +101,7 @@ let data = {
             year: 2021,
             logline: "In conversation with Now Play This",
             role: "speaker",
-            tags: ['talk'],
+            tags: ['speaking'],
             headerImageURL: "media/ispy2.jpg",
             page: [
                 {
@@ -122,7 +122,7 @@ let data = {
             year: 2021,
             logline: "Downloadable interactive tutorial",
             role: "creator",
-            tags: ['video game', 'selected'],
+            tags: ['game', 'video game', 'selected'],
             headerImageURL: "media/htbb header.png",
             page: [
                 {
@@ -147,7 +147,7 @@ let data = {
             year: 2021,
             logline: "A weekly streaming playing through experimental games from itch.io",
             role: "host",
-            tags: ["streaming"],
+            tags: ['streaming'],
             headerImageURL: "media/itchio monday header.jpg",
             page: [
                 {
@@ -165,7 +165,7 @@ let data = {
             year: 2021,
             logline: "An essay on how folk games have adapted to an algorithmic world",
             role: "author",
-            tags: ["writing"],
+            tags: ['writing', 'selected'],
             headerImageURL: "media/homepage/newrules_homepage.png",
             page: [
                 {
@@ -183,7 +183,7 @@ let data = {
             year: 2020,
             logline: "Improv jazz over falls",
             role: "composer, performer",
-            tags: ["video"],
+            tags: ['video', 'art'],
             headerImageURL: "media/homepage/sax_homepage.jpg",
             page: [
                 {
@@ -200,7 +200,7 @@ let data = {
             year: 2020,
             logline: "DIY folk games",
             role: "co-organizer",
-            tags: ["event"],
+            tags: ['event'],
             headerImageURL: "media/homepage/folk_homepage.jpg",
             page: [
                 {
@@ -218,7 +218,7 @@ let data = {
             year: 2020,
             logline: "An open mic series about everything else",
             role: "organizer",
-            tags: ["event"],
+            tags: ['event'],
             headerImageURL: "media/homepage/abg_homepage.jpg",
             page: [
                 {
@@ -232,7 +232,7 @@ let data = {
             year: 2020,
             logline: "A story of passing time",
             role: "developer, designer, composer",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/homepage/newtrees_homepage.jpg",
             page: [
                 {
@@ -246,7 +246,7 @@ let data = {
             year: 2020,
             logline: "painful productivity",
             role: "creator",
-            tags: ["tool"],
+            tags: ['tool'],
             headerImageURL: "media/homepage/tabs_homepage.jpg",
             page: [
                 {
@@ -260,7 +260,7 @@ let data = {
             year: 2019,
             logline: "A card game for a deck of cards",
             role: "co-designer",
-            tags: ["card game"],
+            tags: ['game', 'card game'],
             headerImageURL: "media/homepage/court_homepage.jpg",
             page: [
                 {
@@ -274,7 +274,7 @@ let data = {
             year: 2019,
             logline: "Think about spring",
             role: "creator",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/homepage/imagine_homepage.jpg",
             page: [
                 {
@@ -288,7 +288,7 @@ let data = {
             year: 2019,
             logline: "An exploration in radical softness",
             role: "co-designer, programmer",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/square up header.png",
             page: [
                 {
@@ -301,7 +301,7 @@ let data = {
             year: 2018,
             logline: "Cooperative chopsticks simulator",
             role: "co-creator",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/perfect ramen header.png",
             page: [
                 {
@@ -315,7 +315,7 @@ let data = {
             year: 2018,
             logline: "A realtime strategy party game",
             role: "co-creator",
-            tags: ["board game"],
+            tags: ['game', 'board game'],
             headerImageURL: "media/damit header.jpg",
             page: [
                 {
@@ -329,7 +329,7 @@ let data = {
             year: 2018,
             logline: "A collection of virtual rocks",
             role: "creator",
-            tags: ["art"],
+            tags: ['art'],
             headerImageURL: "media/homepage/rock_homepage.jpg",
             page: [
                 {
@@ -343,7 +343,7 @@ let data = {
             year: 2018,
             logline: "The game where you share and compete",
             role: "creator",
-            tags: ["video game", "physical computing"],
+            tags: ['game', 'video game', 'physical computing'],
             headerImageURL: "media/homepage/boop2_homepage.jpg",
             page: [
                 {
@@ -360,7 +360,7 @@ let data = {
             year: 2018,
             logline: "Three interactive artworks about beauty",
             role: "creator",
-            tags: ["art", "physical computing"],
+            tags: ['art', 'physical computing'],
             headerImageURL: "media/homepage/beautiful_homepage.jpg",
             page: [
                 {
@@ -374,7 +374,7 @@ let data = {
             year: 2018,
             logline: "An interactive comparison of Godzilla (1954) and Godzilla (1956)",
             role: "creator",
-            tags: ["creative code"],
+            tags: ['creative code'],
             headerImageURL: "media/gojira header.png",
             page: [
                 {
@@ -391,7 +391,7 @@ let data = {
             year: 2017,
             logline: "Put a vive controller on your forehead",
             role: "creator",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/homepage/narwhal_homepage.jpg",
             page: [
                 {
@@ -412,7 +412,7 @@ let data = {
             year: 2017,
             logline: "A love letter to my favorite song",
             role: "developer and designer, song from Zammuto",
-            tags: ["art", "creative code"],
+            tags: ['art', 'creative code'],
             headerImageURL: "media/homepage/dog_homepage.jpg",
             page: [
                 {
@@ -426,7 +426,7 @@ let data = {
             year: 2016,
             logline: "A competitive game where you share the spacebar",
             role: "creator",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/boop1 header.png",
             page: [
                 {
@@ -440,7 +440,7 @@ let data = {
             year: 2016,
             logline: "A card game about making up extravagant lies",
             role: "co-designer",
-            tags: ["board game"],
+            tags: ['game', 'board game', 'card game'],
             headerImageURL: "media/montagueHeader2.jpg",
             page: [
                 {
@@ -454,7 +454,7 @@ let data = {
             year: 2015,
             logline: "My first video game",
             role: "creator",
-            tags: ["video game"],
+            tags: ['game', 'video game'],
             headerImageURL: "media/switchblade header.png",
             page: [
                 {
