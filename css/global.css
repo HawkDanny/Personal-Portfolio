@@ -125,17 +125,25 @@ p {
 }
 
 #contentHeader a {
-    color: black;
+    color: blue;
     text-decoration: none;
 }
 
 #contentHeader a:hover {
-    color: blue;
+    text-decoration: underline;
 }
 
 #contentHeader #contentLinks a {
+    color: black;
+    text-decoration: none;
     margin-left: 10px;
 }
+
+#contentHeader #contentLinks a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
 
 #content::-webkit-scrollbar {
     background: transparent; /* Chrome/Safari/Webkit */
@@ -245,8 +253,53 @@ p {
     margin-top: 25px;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1090px) {
     #timeline {
         display: none;
+    }
+}
+
+@media (max-width: 915px) {
+    #page {
+        width: 100vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #filters {
+        display: none;
+    }
+
+    #content {
+        overflow:visible;
+        width: 90vw;
+    }
+    
+    #contentHeader {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        width: auto;
+        max-width: 700px;
+        border-bottom: none;
+    }
+
+    #contentHeader p {
+        margin-bottom: 50px;
+    }
+
+    #contentHeader #contentLinks a {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    .page {
+        width: auto;
+        max-width: 700px;
+    }
+
+    .pageContent p {
+        width: auto;
+        max-width: 500px;
     }
 }

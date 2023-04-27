@@ -27,7 +27,7 @@ function init() {
     cont = document.querySelector("#content");
     filters = document.querySelector("#filters");
 
-
+    buildItemsList();
     buildFilters();
     buildTimeline();
 
@@ -37,7 +37,36 @@ function init() {
     else if (url.searchParams.get('f') != null)
         buildContentFromFilter(url.searchParams.get('f'));
     else
-        buildContent();
+        buildContentFromFilter("all");
+}
+
+function buildItemsList() {
+    
+    //Create an "all" items
+    items["all"] = [];
+
+    //create and populate an entry in items for each filter
+    for (let i = 0; i < data.projects.length; i++) {
+        let currentProj = data.projects[i];
+
+        //add the currentProj to the all item list
+        items["all"][items["all"].length] = currentProj;
+
+        for (let j = 0; j < currentProj.tags.length; j++)
+        {
+            let currentTag = currentProj.tags[j];
+            
+            //add to appropriate items arrays to track all the items by tag
+            if (items.hasOwnProperty(currentTag)) {
+                let list = items[currentTag];
+                list[list.length] = currentProj;
+            } else {
+                //create a new list in items for a new tag
+                let list = items[currentTag] = [];
+                list[0] = currentProj;
+            }
+        }
+    }
 }
 
 function buildTimeline() {
@@ -65,51 +94,16 @@ function buildTimeline() {
     }
 }
 
-function buildContent() {
-    cont.innerHTML = "";
-    cont.appendChild(header);
-
-    for (let i = 0; i < data.projects.length; i++) {
-        let currentProj = data.projects[i];
-
-        //create item
-        let item = document.createElement('div');
-        item.className = "item";
-        item.addEventListener('click',  function() {
-            let gotoURL = new URL(window.location.href.split('?')[0]);
-            gotoURL.searchParams.append('p', currentProj.name);
-            window.location = gotoURL;
-        }, false);
-        item.style.backgroundImage = "url('" + currentProj.headerImageURL + "')";
-
-        //create itemText
-        let itemText = document.createElement('div');
-        itemText.className = "itemText";
-        item.appendChild(itemText);
-
-        //create title
-        let title = document.createElement("h1");
-        title.innerHTML = currentProj.name.toUpperCase();
-        itemText.appendChild(title);
-
-        //create logline
-        let logline = document.createElement("p");
-        logline.innerText = currentProj.logline;
-        itemText.appendChild(logline);
-
-        cont.appendChild(item);
-    }
-}
-
-function buildContentFromFilter(tagName) {
+function buildContentFromFilter(filterName) {
     //clear out content div
     cont.innerHTML = "";
     cont.appendChild(header);
 
-    document.querySelector('#worksof').innerHTML = "The " + tagName + " work of Danny Hawk";
+    //set the appropriate content header
+    setContentHeader(filterName);
 
-    for (let i = 0; i < items[tagName].length; i++) {
-        let currentProj = items[tagName][i]
+    for (let i = 0; i < items[filterName].length; i++) {
+        let currentProj = items[filterName][i]
 
         //create item
         let item = document.createElement('div');
@@ -138,17 +132,52 @@ function buildContentFromFilter(tagName) {
 
         cont.appendChild(item);
 
-        //grab the current filter and set it active, remove active from "all"
-        for (let j = 0; j < filters.children.length; j++) {
-            let elem = filters.children[j];
+    }
 
-            if (elem.innerText == "all")
-                elem.className = "";
+    //grab the current filter and set it active, remove active from "all"
+    for (let j = 0; j < filters.children.length; j++) {
+        let elem = filters.children[j];
 
-            if (elem.innerText == tagName)
-                elem.className = "filtersActive";
+        if (elem.innerText == "all")
+            elem.className = "";
+
+        if (elem.innerText == filterName)
+            elem.className = "filtersActive";
+    }
+}
+
+function setContentHeader(filterName) {
+
+    //URL that links to the next filter in the filters bar
+    let nextFilterURL = new URL(window.location.href.split('?')[0]);
+
+    //Get the next filter in our list of filters
+    for (let i = 0; i < filterOptions.length; i++)
+    {
+        //if we get to the end, it's the 0th so we don't need to add a filter param
+        if (i == filterOptions.length - 1) {
+            break;
+        }
+        else if (filterOptions[i] == filterName) {
+            nextFilterURL.searchParams.append('f', filterOptions[i+1]);
+            break;
         }
     }
+    
+    //set the exact wording of the header, and the href the nextFilter link
+    let wording = ""
+    switch (filterName) {
+        case "all":
+            wording = "The <a href='" + nextFilterURL + "'>complete</a> work of Danny Hawk";
+            break;
+        case "art":
+            wording = "The <a href='" + nextFilterURL + "'>artwork</a> of Danny Hawk";
+            break;
+        default:
+            wording = "The <a href='" + nextFilterURL + "'>" + filterName + "</a> work of Danny Hawk";
+            break;
+    }
+    document.querySelector('#worksof').innerHTML = wording;
 }
 
 function buildFilters() {
@@ -167,26 +196,6 @@ function buildFilters() {
             filter.href = "index.html";
         }
         filters.appendChild(filter);
-    }
-
-
-    for (let i = 0; i < data.projects.length; i++) {
-        let currentProj = data.projects[i];
-
-        for (let j = 0; j < currentProj.tags.length; j++)
-        {
-            let currentTag = currentProj.tags[j];
-
-            //add to appropriate items arrays to track all the items by tag
-            if (items.hasOwnProperty(currentTag)) {
-                let list = items[currentTag];
-                list[list.length] = currentProj;
-            } else {
-                //create a new list in items for a new tag
-                let list = items[currentTag] = [];
-                list[0] = currentProj;
-            }
-        }
     }
 }
 
