@@ -37,7 +37,7 @@ function init() {
     else if (url.searchParams.get('f') != null)
         buildContentFromFilter(url.searchParams.get('f'));
     else
-        buildContentFromFilter("all");
+        buildContentFromFilter("selected");
 }
 
 function buildItemsList() {
@@ -193,7 +193,6 @@ function buildFilters() {
         //specifics for all
         if (filter.innerText == "all") {
             filter.className = "filtersActive";
-            filter.href = "index.html";
         }
         filters.appendChild(filter);
     }
@@ -254,6 +253,12 @@ function buildPage(projName) {
         for (let j = 0; j < currentProj.page.length; j++) {
             if (currentProj.page[j].html != null)
                 pageContent.innerHTML += currentProj.page[j].html;
+            else if (currentProj.page[j].youtube != null) {
+                let yt = document.createElement('div');
+                yt.className = "pageYT";
+                yt.innerHTML = currentProj.page[j].youtube;
+                pageContent.appendChild(yt);
+            }
             else {
                 let pageElement = document.createElement(currentProj.page[j].element);
                 pageElement.innerHTML = currentProj.page[j].text;

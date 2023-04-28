@@ -18,7 +18,7 @@ let data = {
                 },
                 {
                     element: 'p',
-                    text: 'This project is inspired by <a href="https://www.ndbooks.com/book/the-complete-stories/">The Complete Stories of Clarice Lispector</a>, a collection of short stories written across decades throughout Lispector\'s life which when compiled reads like a fictional representation of a lifetime of shifting perspective and values. I\'m compelled by the idea of an intentional series of work that reflects my shifting style and aesthetics, peppering my other work throughout my career.'
+                    text: 'This project is inspired by Zach Gage\'s <a href="http://www.stfj.net/duel/">Duel</a>, and also by <a href="https://www.ndbooks.com/book/the-complete-stories/">The Complete Stories of Clarice Lispector</a>, a collection of short stories written across decades throughout Lispector\'s life which when compiled reads like a fictional representation of a lifetime of shifting perspective and values. I\'m compelled by the idea of an intentional series of work that reflects my shifting style and aesthetics, peppering my other work throughout my career.'
                 }
             ]
         },
@@ -139,6 +139,9 @@ let data = {
                 {
                     element: 'p',
                     text: 'Written about in <a href="https://letterclub.games/2021/09/06/recognizing-play/">LETTERCLUB.GAMES</a>.'
+                },
+                {
+                    html: '<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/921985"><a href="https://hawkdanny.itch.io/how-to-be-born">How To Be Born by Danny Hawk</a></iframe>'
                 }
             ]
         },
@@ -205,11 +208,23 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: '<a href="https://twitter.com/emilyrakoonce">Emily Koonce</a> and I organized a four hour game jam focused on playing and creating folk games.'
+                    text: '<a href="https://twitter.com/emilyrakoonce">Emily Koonce</a> and I organized a four hour game jam focused on playing and creating folk games. '
                 },
                 {
                     element: 'p',
-                    text: 'We broke the session into three parts, '
+                    text: 'We broke the session into three parts, opening with a short presentation from the two of us talking about our own relationships and understandings of folk games from the point of view of players and also designers. We offered a couple heuristics to begin thinking about the design of a good folk game, like how the rules are often explainable in a couple sentences, or that the main activity of the game is sometimes just fun in itself. A lot of folk games have rules that require no objects or tools, but have highly varied play experiences depending on where you play them.'
+                },
+                {
+                    element: 'p',
+                    text: 'Then we pretty quickly started playing a curated itenerary of games, GAME, GAME, GAME, GAME, GAME, GAME. This was definitely a crucial element of the game jam, first to let people experience a range of different folk games, but importantly to get everyone playing and moving, building our own play community.'
+                },
+                {
+                    element: 'p',
+                    text: 'We carried that play community into making games, with a process that was deeply organic and playful. Groups formed quickly but members were swapping from group to group all the time. Games were created and played, with changes to their rules happening concurrently with their play, from minute to minute games would mutate into something new through discussion or sometimes unspoken playfulness. Each attendee was probably involved in the creation of perhaps a dozen different games, and when the exploration of a game reached a natural conclusion or a lull, we would gather and play a handful of folk games that attendess knew and shared with us.'
+                },
+                {
+                    element: 'p',
+                    text: 'When planning this event, Emily and I wanted to engage with and think about the design of folk games. We were inspired by the playfulness of <a href="">ITP\'s Stupid Hackathon</a> and wanted to similarly push back on game jam culture in the way that Stupid Hackathon bucked the conventions of the usual tech hackathon. However, through the natural rhythm of play and an energetic community of attendees, we arrived somewhere much more similar to a New Games Festival, with a kind of swirling and mutating group of people playing games with increasingly little reservation. It felt like playing outside as kids and I was stunned by how easily that feeling could be created and captured. In my memory Folk Game Game Jam is a beautiful and sunny day.'
                 }
             ]
         },
@@ -223,7 +238,11 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'In the fall of 2019 I inherited Anything But Games from <a href="https://brendanbyrne.info/">Brendan Byrne</a> and I proceeded to organize it for my 2nd year as an mfa. Originally created as a way of getting MFAs at the NYU Game Center to share all of the interesting things they did before attending the game center, it quickly became a creative stage where people could give talks, performances, screenings, demos, and any other miscellaneous ideas. The only rule was that if you mentioned games you were booed.'
+                },
+                {
+                    element: 'p',
+                    text: 'You can find a history of Anything But Games events <a href="https://www.nyugamecenter.info/calendar-+-events/anything-but-games">here</a>'
                 }
             ]
         },
@@ -236,22 +255,14 @@ let data = {
             headerImageURL: "media/homepage/newtrees_homepage.jpg",
             page: [
                 {
-                    element: 'p',
-                    text: ''
-                }
-            ]
-        },
-        {
-            name: "Three Tabs",
-            year: 2020,
-            logline: "painful productivity",
-            role: "creator",
-            tags: ['tool'],
-            headerImageURL: "media/homepage/tabs_homepage.jpg",
-            page: [
+                    html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7bRAxK8KvRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
                 {
                     element: 'p',
-                    text: ''
+                    text: 'For Global Game Jam 2020, I collaborated with <a href="https://twitter.com/varunsaxena416">Varuna Saxena</a> and <a href="https://twitter.com/toby_do">Toby Do</a> with a goal of creating a tiny vignette game. We won "Best Visuals" at NYU\'s Global Game Jam site.'
+                },
+                {
+                    html: '<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/563624"><a href="https://tobydo.itch.io/new-trees">New Trees by tobydo</a></iframe>'
                 }
             ]
         },
@@ -265,12 +276,24 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'Created with <a href="https://www.alejvilla.com/">Alejandra Villenueva</a> and <a href="https://koonce.itch.io/">Emily Koonce</a> as part of Traditional Card Games Literacy, a class taught by <a href="https://twitter.com/jessefuchs">Jesse Fuchs</a>.'
+                },
+                {
+                    element: 'p',
+                    text: 'Our design ethos for creating a game for a 52 card deck is not to make some startlingly designed game, but rather something more like a nice snack. When playing through a few dozen different reference games we found ourselves enjoying the card games that sat somewhere in the design space of easy to engage with but also easy to ignore. Card games are great for chatting with your friends over :)'
+                },
+                {
+                    element: 'p',
+                    text: 'We based Court on a misinterpretation of the rules of the game <a href="https://boardgamegeek.com/boardgame/92415/skull">Skull</a>, and then added some a betting mechanic to it.'
+                },
+                {
+                    element: 'p',
+                    text: 'Here\'s the <a href="media/court rules.pdf">rules pdf</a>'
                 }
             ]
         },
         {
-            name: "Imagine",
+            name: "Imagine Spring",
             year: 2019,
             logline: "Think about spring",
             role: "creator",
@@ -279,11 +302,18 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'Created as part of a Prototype Studio, a game-a-week class I took as part of my MFA at the NYU Game Center. The week\'s prompt was "Spring," and I ended up creating a game about imagining spring.'
+                },
+                {
+                    element: 'p',
+                    text: 'I wanted to play with the idea of players closing their eyes, and what it means to be playing a game that you aren\'t actively controlling with all of the societal expectations of a video game meaning direct control. To me the game is in the continued choice to keep your eyes closed knowing that this game controls with WASD and mouse. I was often asked whether I intended for players to open their eyes or keep them closed, in my mind neither is the correct choice but the presence of the tension is whats playful.'
+                },
+                {
+                    html: '<iframe height="167" frameborder="0" src="https://itch.io/embed/374237" width="552"><a href="https://hawkdanny.itch.io/imagine-spring">Imagine Spring by Danny Hawk</a></iframe>'
                 }
             ]
         },
-        {
+        /*{
             name: "Square Up",
             year: 2019,
             logline: "An exploration in radical softness",
@@ -293,9 +323,13 @@ let data = {
             page: [
                 {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/k52Y-yWPCIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                },
+                {
+                    element: 'p',
+                    text: 'Created with Chris Kindred, Elizabeth Ballou, Virginia Wilkerson, and Siddarth Govindan'
                 }
             ]
-        },
+        },*/
         {
             name: "Perfect Ramen",
             year: 2018,
@@ -306,7 +340,10 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'A slow moving physics game created with <a href="https://twitter.com/ghaoyuxin">Yuxin Gao</a>. We wanted to create a co-op game where you control a singular chopstick and have to work with a partner in order to operate as a pair.'
+                },
+                {
+                    html: '<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/344961"><a href="https://hawkdanny.itch.io/perfect-ramen">Perfect Ramen by Danny Hawk</a></iframe>'
                 }
             ]
         },
@@ -320,7 +357,7 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'A realtime 1v3 board game pitting three beavers against one river. The team of beaver players must work together to build, dismantle, and rebuild their dams in order to stop the river from reaching their home, all while not talking. The river player must play a strategic game of realtime yahtzee in order to flow over and around the beaver dams.'
                 }
             ]
         },
@@ -334,7 +371,20 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'Between undergrad and grad school, I wanted to try and "learn shaders," so I did daily explorations into unity\'s shader graph with the self-applied constraint of using a new rock from this <a href="https://www.lmhpoly.com/game-assets/low-poly-rocks-pack">low poly rock pack</a>. '
+                },
+                {
+                    element: 'p',
+                    text: 'A full catalogue can be found <a href="https://www.instagram.com/lit.rocks/">here</a>'
+                },
+                {
+                    html: '<img src="http://placekitten.com/400/400">'
+                },
+                {
+                    html: '<img src="http://placekitten.com/400/400">'
+                },
+                {
+                    html: '<img src="http://placekitten.com/400/400">'
                 }
             ]
         },
@@ -421,6 +471,7 @@ let data = {
                 }
             ]
         },
+        /*
         {
             name: "Boop 1",
             year: 2016,
@@ -434,7 +485,8 @@ let data = {
                     text: ''
                 }
             ]
-        },
+        },*/
+        /*
         {
             name: "The Death of Mr. Montague",
             year: 2016,
@@ -448,7 +500,8 @@ let data = {
                     text: ''
                 }
             ]
-        },
+        },*/
+        /*
         {
             name: "Switch Blade",
             year: 2015,
@@ -462,6 +515,6 @@ let data = {
                     text: ''
                 }
             ]
-        },
+        },*/
     ]
 }

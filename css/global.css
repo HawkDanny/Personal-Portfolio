@@ -237,6 +237,10 @@ p {
     font-size: 16px;
 }
 
+.pageContent img {
+    margin: 25px;
+}
+
 .pageContent a {
     color: blue;
     text-decoration: none;
@@ -296,6 +300,11 @@ p {
     .page {
         width: auto;
         max-width: 700px;
+    }
+
+    .pageContent iframe {
+        width: 400px;
+        height: 225px;
     }
 
     .pageContent p {
