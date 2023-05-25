@@ -1,6 +1,6 @@
 let data = {
     projects: [
-        {
+        /*{
             name: "The Lifetime Contract",
             year: 2023,
             logline: "My lifelong binding contract",
@@ -21,7 +21,7 @@ let data = {
                     text: 'This project is inspired by Zach Gage\'s <a href="http://www.stfj.net/duel/">Duel</a>, and also by <a href="https://www.ndbooks.com/book/the-complete-stories/">The Complete Stories of Clarice Lispector</a>, a collection of short stories written across decades throughout Lispector\'s life which when compiled reads like a fictional representation of a lifetime of shifting perspective and values. I\'m compelled by the idea of an intentional series of work that reflects my shifting style and aesthetics, peppering my other work throughout my career.'
                 }
             ]
-        },
+        },*/
         {
             name: "GAMER POTLUCK",
             year: 2023,
@@ -49,11 +49,14 @@ let data = {
             headerImageURL: "media/homepage/birdtown_homepage.png",
             page: [
                 {
-                    html: '<iframe width="560" height="315" src="https://www.youtube.com/embed/J6_313EJJb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+                    html: "<p>Bird Town is a comedy video game about a town of birds created with <a href='https://www.instagram.com/mibdoodle/'>Michelle Bao</a>. It began as my thesis at the NYU Game Center and was later selected as part of the 2021-2022 NYU Game Center Incubator. While a thesis project, it has a thematic focus on meta-modernism and the game had a 15 minute time limit. Not a time loop, but rather every playthrough of the game would provide a different story based on how you explored and interacted with the world. You can see a trailer of this version <a href='https://www.youtube.com/watch?v=SYcbyfcF9X0'>here</a>, and you can see me talk about it in my cohort's showcase <a href='https://youtu.be/YeGoQbdcmEI?t=10709'>here</a>.</p>"
+                },
+                {
+                    html: "<p>Bird Town was later accepted into the NYU Game Center's Incubator for 2021-2022, where we grew the game to focus on the intertwined stories, dropping the 15 minute timer to allow players to play at their own pace while allowing the world to react and changed based on player action. After too long, we recognized that the design pillar of the game was comedy, and the player's movement and interaction system was overhauled to give them the tools for comedic expression. You can see a trailer of this version <a href='https://www.youtube.com/watch?v=J6_313EJJb0'>here</a>, and you can see us talk about it in the incubator showcase <a href='https://youtu.be/Kx4JR0euzeI?t=1129'>here</a>.</p>"
                 },
                 {
                     element: 'p',
-                    text: "Bird Town is a comedy video game about a town of birds where you play as Margo in the final 15 minutes of her town's summer festival. Each playthrough of the game is a real time fifteen minutes where you decide how to spend your day, whether its getting into hijinks or talking with neighbors, going on bite sized adventures or taking a nap. It's your day and you can do whatever you want."
+                    text: 'Bird Town\'s development is currently on a hiatus in order to focus on other projects.'
                 }
             ]
         },
@@ -91,9 +94,8 @@ let data = {
             headerImageURL: "media/tiktok dodge.jpg",
             page: [
                 {
-                    element: 'p',
-                    text: ''
-                }
+                    html: '<p>For <a href="http://www.playfestival.de/">PLAY - Creative Gaming Festival</a>, I ran a workshop with <a href="https://twitter.com/emilyrakoonce">Emily Koonce</a> on the creation and culture of social media folk games. It was an online adaptation of the work Emily and I had done creating Folk Game Game Jam, filtered through the new lens of social media games and tiktok.</p>'
+                },
             ]
         },
         {
@@ -125,13 +127,13 @@ let data = {
             tags: ['game', 'video game', 'selected'],
             headerImageURL: "media/htbb header.png",
             page: [
-                {
+                /*{
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KGbTTfgkVUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
                 },
                 {
                     element: 'p',
                     text: 'The first game in <a href=""><i>The Lifetime Contract</i></a>, <i>How To Be Born</i> is a game where you use a controller. It has some small elements of inductive logic, inspired by <a href="https://en.wikipedia.org/wiki/Eleusis_(card_game)">Eleusis</a>.'
-                },
+                },*/
                 {
                     element: 'p',
                     text: 'Created originally for <a href="https://www.twitch.tv/videos/983399024">Nicole He\'s Birth Stream</a>'
@@ -215,8 +217,7 @@ let data = {
                     text: 'We broke the session into three parts, opening with a short presentation from the two of us talking about our own relationships and understandings of folk games from the point of view of players and also designers. We offered a couple heuristics to begin thinking about the design of a good folk game, like how the rules are often explainable in a couple sentences, or that the main activity of the game is sometimes just fun in itself. A lot of folk games have rules that require no objects or tools, but have highly varied play experiences depending on where you play them.'
                 },
                 {
-                    element: 'p',
-                    text: 'Then we pretty quickly started playing a curated itenerary of games, GAME, GAME, GAME, GAME, GAME, GAME. This was definitely a crucial element of the game jam, first to let people experience a range of different folk games, but importantly to get everyone playing and moving, building our own play community.'
+                    html: '<p>Then we pretty quickly started playing a curated itenerary of games (Chopsticks, Zen Counting, Patterns Game, Four Corners, Sardines), which was certainly a crucial element of the game jam. First to let people experience a range of different folk games, but importantly to get everyone playing and moving, building our own play community.</p>'
                 },
                 {
                     element: 'p',
@@ -289,6 +290,27 @@ let data = {
                 {
                     element: 'p',
                     text: 'Here\'s the <a href="media/court rules.pdf">rules pdf</a>'
+                }
+            ]
+        },
+        {
+            name: "Garden (2016-2019)",
+            year: 2019,
+            logline: "A garden of my entire camera roll",
+            role: "creator",
+            tags: ['game', 'video game', 'art'],
+            headerImageURL: "media/homepage/garden-homepage.jpg",
+            page: [
+                {
+                    element: 'p',
+                    text: 'Created as part of a Prototype Studio, a game-a-week class I took as part of my MFA at the NYU Game Center. The week\'s prompt was "Portrait," and I ended up creating a garden where you plant flowers made out of a random selection from my entire camera roll.'
+                },
+                {
+                    element: 'p',
+                    text: 'The access to everything creates a deeply personal experience that is frightening to submit myself to, but the random delivery of these pictures creates an impersonal and hard to decipher context for each.'
+                },
+                {
+                    html: '<iframe height="167" frameborder="0" src="https://itch.io/embed/2054680" width="552"><a href="https://hawkdanny.itch.io/garden">Garden (2016-2019) by Danny Hawk</a></iframe>'
                 }
             ]
         },
@@ -376,15 +398,6 @@ let data = {
                 {
                     element: 'p',
                     text: 'A full catalogue can be found <a href="https://www.instagram.com/lit.rocks/">here</a>'
-                },
-                {
-                    html: '<img src="http://placekitten.com/400/400">'
-                },
-                {
-                    html: '<img src="http://placekitten.com/400/400">'
-                },
-                {
-                    html: '<img src="http://placekitten.com/400/400">'
                 }
             ]
         },
@@ -400,11 +413,15 @@ let data = {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dJwRSW0mXaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
                 },
                 {
+                    html: '<p>Danny Hawk\'s Boop Game is an iteration on <a href="https://dannyhawk.com/boop/index.html">a prototype I made</a> of a competitive game where players share a piece of their controls. In he updated iteration I placed the shared control further away from the players and on a pedestal in an attempt to make the use of it more of a commitment, but it mostly resulted in players ignoring the option.</p>'
+                },
+                {
                     element: 'p',
-                    text: ''
+                    text: 'I think the idea of a competitive game with shared controls is worth exploring still, just that Danny Hawk\'s Boop Game is not really the design or control scheme for it.'
                 }
             ]
         },
+        /*
         {
             name: "Beautiful Series",
             year: 2018,
@@ -415,10 +432,10 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'Small interactive pieces I made around the theme of beauty while I was learning physical computing.'
                 }
             ]
-        },
+        },*/
         {
             name: "Gojira",
             year: 2018,
@@ -428,12 +445,12 @@ let data = {
             headerImageURL: "media/gojira header.png",
             page: [
                 {
-                    html: '<img src="media/gojira.gif" alt="gojira gif" width="665" height="491">'
+                    element: 'p',
+                    text: 'The 1956 release of Godzilla that was released in the US was a recut and reshoot of the original 1954 version that recontextualizes much of the movie for a US audience. This interactive comparison plays both movies side by side, scene by scene so you can see the subtle and unsubtle ways that the film was changed.'
                 },
                 {
-                    element: 'p',
-                    text: ''
-                }
+                    html: '<img src="media/gojira.gif" alt="gojira gif" width="665" height="491">'
+                },
             ]
         },
         {
@@ -445,15 +462,14 @@ let data = {
             headerImageURL: "media/homepage/narwhal_homepage.jpg",
             page: [
                 {
-                    element: 'p',
-                    text: 'test test'
-                },
-                {
                     html: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mC3KTQK0pqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
                 },
                 {
                     element: 'p',
-                    text: 'test test'
+                    text: 'VR was sold on the idea of extremely immersive experiences that assume your removal from the reality around you. Narwhal Picnic was my foray into playing in that gap between the immersion and reality.'
+                },
+                {
+                    html: "<p>I sold my Vive soon after prototyping this. You can download the unity project <a href='https://github.com/HawkDanny/NarwhalPicnic'>here</a></p>"
                 }
             ]
         },
@@ -467,7 +483,10 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: ''
+                    text: 'The artist Zammuto wrote a song titled "My Dog\'s Eyes" and the first time I heard it I literally stopped in my tracks, it would end up my favorite song. The words are an outdated list of children\'s favorite things, and I use the words themselves to construct the moments they describe. This piece is my love letter to the song.'
+                },
+                {
+                    html: '<p>You can watch it <a href="mydogseyes.html">here</a></p>'
                 }
             ]
         },

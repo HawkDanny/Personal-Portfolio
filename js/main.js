@@ -32,10 +32,13 @@ function init() {
     buildTimeline();
 
     let url = new URL(window.location);
-    if (url.searchParams.get('p') != null)
-        buildPage(url.searchParams.get('p'));
-    else if (url.searchParams.get('f') != null)
-        buildContentFromFilter(url.searchParams.get('f'));
+    let p = url.searchParams.get('p'); //page
+    let f = url.searchParams.get('f'); //filter
+
+    if (p != null)
+        buildPage(p);
+    else if (f != null)
+        buildContentFromFilter(f);
     else
         buildContentFromFilter("selected");
 }
@@ -197,7 +200,6 @@ function buildFilters() {
         filters.appendChild(filter);
     }
 }
-
 
 /* Example HTML
 <div class="page">
