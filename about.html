@@ -14,19 +14,15 @@
     <meta charset="utf-8">
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,600,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Judson:ital@0;1&family=Open+Sans&display=swap" rel="stylesheet">
 
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/f95239c1ec.js"></script>
 
-    <!--Fitty-->
-    <script src="js/fitty.min.js"></script>
-    
-    <!--My JavaScript-->
-    <script src="js/main.js"></script>
-
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="css/global2.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -36,34 +32,45 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
 
-    <title>About | Danny Hawk</title>
+    <title>Danny Hawk | Homepage</title>
 </head>
 <body>
-    <nav>
-        <div class="navSidebar">
-            <a href="index.html" class="danny" style="font-size: 24.5px;">DANNY HAWK</a>
-            <div class="navLinks" style="border-bottom: none;">
-                <a class="active" href="about.html">ABOUT</a>
-                <p>•</p>
-                <a href="DannyHawk_Resume.pdf">RESUME</a>
-            </div>
-            <div class="social">
-                <a href="https://hawkdanny.itch.io/"><i id="itch" class="fab fa-itch-io"></i></a>
-                <a href="https://www.linkedin.com/in/hawkdanny/"><i id="linkedin" class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fab fa-twitter"></i></a>
-                <a href="https://github.com/hawkdanny"><i id="github" class="fab fa-github"></i></a>
-                <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fab fa-twitch"></i></i></a>
-                <a href="https://soundcloud.com/dannyhawkmusic"><i id="soundcloud" class="fab fa-soundcloud"></i></a>
-            </div>
-        </div>
-    </nav>
+    <!--Preload images-->
+    <div style="display: none;">
+        <img src="media/homepage/narwhal_homepage.jpg"/>
+        <img src="media/homepage/rock_homepage.jpg"/>
+        <img src="media/homepage/imagine_homepage.jpg"/>
+        <img src="media/homepage/dog_homepage.jpg"/>
+        <img src="media/homepage/boop2_homepage.jpg"/>
+        <img src="media/homepage/beautiful_homepage.jpg"/>
+        <img src="media/homepage/goodsex_homepage.png"/>
+        <img src="media/homepage/birdtown_homepage.png"/>
+        <img src="media/homepage/newrules_homepage.jpg"/>
+    </div>
 
-    <div class="about">
-        <div class="me">
-            <p>game design<br>game development<br>creative coding</p>
-            <p>NYU Game Design MFA 2020<br>RIT Game Design & Development 2018</p>
-            <p>If you want to reach me, email <a class="meLink" href="mailto:hello@dannyhawk.com">hello@dannyhawk.com</a></p>
-            <p>I have a twitter, <a class="meLink" href="https://twitter.com/HawkDanny">@hawkdanny</a>. Pronouns are he/him.</p>
+
+    <div id="page">
+        <div id="content">
+            <div id="contentHeader" style="border: 0px;">
+                <p id="worksof"></p>
+                <div id="contentLinks">
+                    <a href="index.html">Back</a>
+                    <a href="https://hawkdanny.itch.io/"><i id="itch" class="fab fa-itch-io"></i></a>
+                    <a href="https://twitter.com/hawkdanny"><i id="twitter" class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/hawkdanny"><i id="github" class="fab fa-github"></i></a>
+                    <a href="https://www.twitch.tv/hawkdanny"><i id="twitch" class="fab fa-twitch"></i></i></a>
+                </div>
+            </div>
+
+            <div id="about">
+                <div id="aboutInfo">
+                    <p>I'm based in Brooklyn NY USA, where I make a mixture of experimental and commercial games.</p>
+                    <p>I'm a member of [name pending], a cool games collective and sometimes event space.</p>
+                    <p>I love teaching, and I've taught game design and development classes as an adjunct professor at NYU, Parsons, CUNY Hunter, and Long Island University.</p>
+                    <p>You can contact me via <span style="color: blue;">hello [at] dannyhawk.com</span></p>
+                </div>
+                <img src="media/me and juno sm.png" width="250px" height="268px">
+            </div>
         </div>
     </div>
 </body>

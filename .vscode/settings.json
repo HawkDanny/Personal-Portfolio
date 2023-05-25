@@ -1,6 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "editor.minimap.enabled": false,
-    "editor.autoClosingBrackets": false,
-    "html.autoClosingTags": false
+    "editor.autoClosingBrackets": "never",
+    "html.autoClosingTags": false,
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never"
 }
