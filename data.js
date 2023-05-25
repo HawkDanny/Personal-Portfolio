@@ -35,8 +35,7 @@ let data = {
                     text: 'Since 2021, every Monday I stream a collection of games with my friend <a href="https://mut.media">Moochi</a>, each of us curating a few games for the other to play. It\'s a great way to play lots of games either of us would never usually play, and a great reason to talk game designer each week.'
                 },
                 {
-                    element: 'p',
-                    text: 'You can watch all of the VODs <a href="twitch.tv/hawkdanny/videos">here.</a>'
+                    html: '<p>You can watch all of the VODs <a href="twitch.tv/hawkdanny/videos">here.</a></p>'
                 }
             ]
         },
@@ -135,12 +134,10 @@ let data = {
                     text: 'The first game in <a href=""><i>The Lifetime Contract</i></a>, <i>How To Be Born</i> is a game where you use a controller. It has some small elements of inductive logic, inspired by <a href="https://en.wikipedia.org/wiki/Eleusis_(card_game)">Eleusis</a>.'
                 },*/
                 {
-                    element: 'p',
-                    text: 'Created originally for <a href="https://www.twitch.tv/videos/983399024">Nicole He\'s Birth Stream</a>'
+                    html: '<p>Created originally for <a href="https://www.twitch.tv/videos/983399024">Nicole He\'s Birth Stream</a>.</p>'
                 },
                 {
-                    element: 'p',
-                    text: 'Written about in <a href="https://letterclub.games/2021/09/06/recognizing-play/">LETTERCLUB.GAMES</a>.'
+                    html: '<p>Written about in <a href="https://letterclub.games/2021/09/06/recognizing-play/">LETTERCLUB.GAMES</a>.</p>'
                 },
                 {
                     html: '<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/921985"><a href="https://hawkdanny.itch.io/how-to-be-born">How To Be Born by Danny Hawk</a></iframe>'
@@ -178,8 +175,7 @@ let data = {
                     text: 'In 2020 I was approached to contribute an essay on <a href="https://twitter.com/HawkDanny/status/1313881230312714241">my viral thread</a> of folk game tiktoks to <a href="https://newrules.website/"<i>New Rules</i></a>, a collection of writing on play and games during the first year of the pandemic compiled by Holly Gramazio. I formalized my thoughts into an essay on the structure of tiktok and how it fits with play, and in particular with folk games. There are a lot of similarities with what games work well in an algorithm with what work well teaching each other on the playground. Thank you to Holly for the wonderful editing and work that she put into this great collection.'
                 },
                 {
-                    element: 'p',
-                    text: 'You can read my full essay <a href="https://newrules.website/2021/01/12/danny-hawk-folk-games-flash-communities-and-tiktok/">here</a>.'
+                    html: '<p>You can read my full essay <a href="https://newrules.website/2021/01/12/danny-hawk-folk-games-flash-communities-and-tiktok/">here</a>.</p>'
                 }
             ]
         },
@@ -288,8 +284,7 @@ let data = {
                     text: 'We based Court on a misinterpretation of the rules of the game <a href="https://boardgamegeek.com/boardgame/92415/skull">Skull</a>, and then added some a betting mechanic to it.'
                 },
                 {
-                    element: 'p',
-                    text: 'Here\'s the <a href="media/court rules.pdf">rules pdf</a>'
+                    html: '<p>Here\'s the <a href="media/court rules.pdf">rules pdf</a>.</p>'
                 }
             ]
         },
@@ -396,8 +391,7 @@ let data = {
                     text: 'Between undergrad and grad school, I wanted to try and "learn shaders," so I did daily explorations into unity\'s shader graph with the self-applied constraint of using a new rock from this <a href="https://www.lmhpoly.com/game-assets/low-poly-rocks-pack">low poly rock pack</a>. '
                 },
                 {
-                    element: 'p',
-                    text: 'A full catalogue can be found <a href="https://www.instagram.com/lit.rocks/">here</a>'
+                    html: '<p>A full catalogue can be found <a href="https://www.instagram.com/lit.rocks/">here</a>.</p>'
                 }
             ]
         },
@@ -486,7 +480,7 @@ let data = {
                     text: 'The artist Zammuto wrote a song titled "My Dog\'s Eyes" and the first time I heard it I literally stopped in my tracks, it would end up my favorite song. The words are an outdated list of children\'s favorite things, and I use the words themselves to construct the moments they describe. This piece is my love letter to the song.'
                 },
                 {
-                    html: '<p>You can watch it <a href="mydogseyes.html">here</a></p>'
+                    html: '<p>You can watch it <a href="mydogseyes.html">here</a>.</p>'
                 }
             ]
         },
