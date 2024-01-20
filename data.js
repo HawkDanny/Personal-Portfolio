@@ -32,7 +32,7 @@ let data = {
             page: [
                 {
                     element: 'p',
-                    text: 'Since 2021, every Monday I stream a collection of games with my friend <a href="https://mut.media">Moochi</a>, each of us curating a few games for the other to play. It\'s a great way to play lots of games either of us would never usually play, and a great reason to talk game designer each week.'
+                    text: 'Since 2021, every Monday I stream a collection of games with my friend <a href="https://mut.media">Moochi</a>, each of us curating a few games for the other to play. It\'s a great way to play lots of games either of us would never usually play, and a great reason to talk game design each week.'
                 },
                 {
                     html: '<p>You can watch all of the VODs <a href="twitch.tv/hawkdanny/videos">here.</a></p>'
