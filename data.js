@@ -147,7 +147,7 @@ let data = {
         {
             name: "Itch.io Monday",
             year: 2021,
-            logline: "A weekly streaming playing through experimental games from itch.io",
+            logline: "A weekly stream playing through experimental games from itch.io",
             role: "host",
             tags: ['streaming'],
             headerImageURL: "media/itchio monday header.jpg",
