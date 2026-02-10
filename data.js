@@ -23,6 +23,22 @@ let data = {
             ]
         },*/
         {
+            name: "Car Guy",
+            year: 2024,
+            logline: "My forthcoming game about a car guy",
+            role: "developer, designer, art director",
+            tags: ['game', 'video game', 'selected'],
+            headerImageURL: "https://hawkdanny.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F0d3f53bc-08a0-4f91-8aef-67006eeb6576%2F7c3e1f93-e50d-424a-8f10-83f8c7d335c8%2FUntitled.png?table=block&id=22184264-7bd4-42fc-9dd3-52262ba5e23e&spaceId=0d3f53bc-08a0-4f91-8aef-67006eeb6576&width=2000&userId=&cache=v2",
+            page: [
+                {
+                    html: "<p>My current project is Car Guy, a challenging exploration game about reaching the top of car guy's world. It features robust guy physics married with finely tuned car controls, which you learn master as you explore and climb his world.</p>"
+                },
+                {
+                    html: '<p>You can read my devlog <a href="carguygame.com/blog">here.</a></p>'
+                }
+            ]
+        },
+        {
             name: "GAMER POTLUCK",
             year: 2023,
             logline: "Weekly livestream playing curated games",
@@ -44,7 +60,7 @@ let data = {
             year: 2023,
             logline: "A comedy video game about a town of birds",
             role: "developer, designer, art director",
-            tags: ['game', 'video game', 'selected'],
+            tags: ['game', 'video game'],
             headerImageURL: "media/homepage/birdtown_homepage.png",
             page: [
                 {
@@ -147,7 +163,7 @@ let data = {
         {
             name: "Itch.io Monday",
             year: 2021,
-            logline: "A weekly streaming playing through experimental games from itch.io",
+            logline: "A weekly stream playing through experimental games from itch.io",
             role: "host",
             tags: ['streaming'],
             headerImageURL: "media/itchio monday header.jpg",
